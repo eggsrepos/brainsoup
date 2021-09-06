@@ -1,0 +1,115 @@
+// BASE STRUCTURE
+
+body, .wrapper, .nav-links {
+  display: flex;
+}
+
+body {
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+.wrapper {
+    margin: 0 auto; //centers wrapper within major subsections
+    padding: 2em;
+    max-width: 100%;
+    justify-content: center;
+}
+
+main {
+  flex: 1;
+  background-color: $accentcolor;  
+}
+
+header, footer {
+  color: $accentcolor;
+  background-color: $darkcolor;
+}
+
+
+// NAVIGATION CONTENT
+
+.nav-content {  
+  width: 1000px;
+}
+
+.logo {
+  margin: 0 1.5em;
+
+  &:hover {
+    animation: glitch1 .5s infinite;
+    
+    &:nth-child(2) {
+      color: #67f3da;
+      animation: glitch2 .5s infinite;
+      }
+    
+    &:nth-child(3) {
+      color: #f16f6f;
+      animation: glitch3 .5s infinite;
+      }
+    }  
+}
+
+.nav-links {
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 28%;
+}
+
+
+.flex-right {
+  align-items: flex-end;
+}
+
+.flex-left {
+  align-items: flex-start;
+}
+
+// MAIN SECTION
+.main-content {
+  width: 1100px;
+  align-items: flex-start;
+}
+
+.content-box { 
+  margin: 0 .5em;
+  border: 2px solid $darkcolor;
+  max-width: 100%;
+  box-shadow: -0.4em 0.4em $darkcolor;
+  overflow: hidden;
+}
+
+  .primary {
+    padding: 2.4em;
+    background-color: $primboxcolor;
+    width: 70%;
+  }
+
+  .side-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+    .side {
+      padding: 1.8em;
+      background-color: $accentcolor2;
+      font-weight: 400;  
+      margin-bottom: 1em;
+    }
+
+    .side2 {     
+      @extend .side;
+    }
+    
+  
+  // FOOTER SECTION
+
+.footer-content {  
+  width: 1000px;
+  padding: 1em; //override wrapper padding
+}

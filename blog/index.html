@@ -1,0 +1,37 @@
+---
+layout: default
+title: Blog
+---
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+<div class="blog-post">
+  <div class="entry-header">
+    <a href="{{ post.url }}">
+          <div class="entry-header--time">{{ post.date | date: '%B %d, %Y' }}</div>
+          <h1 class="entry-header--h1">{{ post.title }}</h1>
+    </a>
+      </div>
+      {{ post.excerpt }}
+      {% if post.excerpt != post.content %}
+    <a href="{{ site.baseurl }}{{ post.url }}">(continue reading)</a>
+{% endif %}
+  </div>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="left" href="{{ paginator.next_page_path }}">&larr; Older</a>    
+  {% else %}
+  <span class="hidden">&larr; Older</span>
+  {% endif %}  
+  <span class="center">
+    {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>{% if paginator.previous_page %}
+  <a class="right" href="{{ paginator.previous_page_path }}">
+    Newer &rarr;
+  </a>
+  {% else %}
+  <span class="hidden">Newer &rarr;</span>
+{% endif %}
+</div>

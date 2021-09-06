@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include mainfont;
+  @include fluid-type(1.2rem, 1.5rem);
+}
+
+a {
+  text-decoration: none;
+  color: $accentcolor3;
+  font-weight: 500;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+h1 {
+  @include accentfont;
+  @include fluid-type(2.4rem, 3rem);
+  text-shadow: -0.05em 0.05em $textshadow;
+  margin: 1em 0;
+
+  &:first-child {
+    margin-top:0;
+  }
+}
+
+h2 {
+  @include accentfont;  
+  @include fluid-type(1.7rem, 2.1rem);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
