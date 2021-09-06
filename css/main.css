@@ -197,12 +197,12 @@ h1 {
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
 }
 
 @media screen and (min-width: 32rem) {
   h1 {
-    font-size: calc(2.4rem + 0.6 * ((100vw - 32rem) / 68));
+    font-size: calc(2.2rem + 0.8 * ((100vw - 32rem) / 68));
   }
 }
 
@@ -394,12 +394,12 @@ header, footer {
 }
 
 .nav-links a {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 @media screen and (min-width: 32rem) {
   .nav-links a {
-    font-size: calc(1.8rem + 0.7 * ((100vw - 32rem) / 68));
+    font-size: calc(1.7rem + 0.8 * ((100vw - 32rem) / 68));
   }
 }
 
@@ -559,12 +559,12 @@ figcaption {
 }
 
 .side--h1 {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 32rem) {
   .side--h1 {
-    font-size: calc(1.1rem + 0.3 * ((100vw - 32rem) / 68));
+    font-size: calc(1rem + 0.4 * ((100vw - 32rem) / 68));
   }
 }
 
@@ -576,7 +576,7 @@ figcaption {
 
 .socials img {
   width: auto;
-  max-width: 25%;
+  max-width: 30%;
 }
 
 .socials li {

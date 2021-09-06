@@ -8,7 +8,7 @@
  
   & a {
     @include accentfont(900, uppercase, 1.5);
-    @include fluid-type(1.8rem, 2.5rem);
+    @include fluid-type(1.7rem, 2.5rem);
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px; 
     -webkit-text-stroke-color: $accentcolor3;
@@ -122,7 +122,7 @@ figcaption {
 .side--h1 {
   padding: 0.4em;
   background-color: $darkcolor;
-  @include fluid-type (1.1rem, 1.4rem);
+  @include fluid-type (1rem, 1.4rem);
   text-shadow: none;
 }
 
@@ -130,7 +130,7 @@ figcaption {
   
   & img {
     width: auto;
-    max-width: 25%;
+    max-width: 30%;
   }
 
   & li {

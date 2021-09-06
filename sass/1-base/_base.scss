@@ -37,7 +37,7 @@ p:last-child {
 
 h1 {
   @include accentfont;
-  @include fluid-type(2.4rem, 3rem);
+  @include fluid-type(2.2rem, 3rem);
   text-shadow: -0.05em 0.05em $textshadow;
   margin: 1em 0;
 
