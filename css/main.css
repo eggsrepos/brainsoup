@@ -305,7 +305,7 @@ header, footer {
 
 .nav-links {
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 28%;
   align-items: center;
 }
@@ -577,7 +577,7 @@ figcaption {
 
 .socials img {
   width: auto;
-  max-width: 30%;
+  max-width: 50%;
 }
 
 .socials li {
