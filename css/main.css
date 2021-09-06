@@ -395,12 +395,12 @@ header, footer {
 }
 
 .nav-links a {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 32rem) {
   .nav-links a {
-    font-size: calc(1.7rem + 0.8 * ((100vw - 32rem) / 68));
+    font-size: calc(1.5rem + 1 * ((100vw - 32rem) / 68));
   }
 }
 

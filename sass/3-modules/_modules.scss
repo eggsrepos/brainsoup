@@ -8,7 +8,7 @@
  
   & a {
     @include accentfont(900, uppercase, 1.5);
-    @include fluid-type(1.7rem, 2.5rem);
+    @include fluid-type(1.5rem, 2.5rem);
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px; 
     -webkit-text-stroke-color: $accentcolor3;
