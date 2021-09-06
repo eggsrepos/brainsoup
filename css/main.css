@@ -306,6 +306,7 @@ header, footer {
   flex-direction: column;
   justify-content: space-evenly;
   width: 28%;
+  align-items: center;
 }
 
 .flex-right {
@@ -358,18 +359,18 @@ header, footer {
 }
 
 .welcome {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 @media screen and (min-width: 32rem) {
   .welcome {
-    font-size: calc(1.5rem + 0.5 * ((100vw - 32rem) / 68));
+    font-size: calc(1.4rem + 0.3 * ((100vw - 32rem) / 68));
   }
 }
 
 @media screen and (min-width: 100rem) {
   .welcome {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
 
