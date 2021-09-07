@@ -16,51 +16,60 @@
 	</head>	
 	<body>		
 		<header>
-			<div class="wrapper nav-content">		
-				<ul class="nav-links">
-					<li class="link1"><a href="/about/">Who?</a></li>
-					<li class="link2"><a href="/blog/">The Soup</a></li>
+			<div class="wrapper header">
+				<ul class="site-header--nav">
+					<li class="link1"><a class="site-header--link" href="/about/">Who?</a></li>
+					<li class="link2"><a class="site-header--link" href="/blog/">The Soup</a></li>
 				</ul>
-				<a class="logo" href="/" alt="Brain Soup"><img src="/assets/bslogo.png"></a>
-				<ul class="nav-links">
-					<li class="link3"><a href="/gallery/">Eye Bleach</a></li>
-					<li class="link4"><a href="/archive/">Archive</a></li>
+				<div class="site-header--logo">
+					<a href="/" alt="Brain Soup">
+						<img class="site-header--logo" src="/assets/bslogo.png" width="300px" height="300px">
+					</a>
+				</div>
+				<ul class="site-header--nav">
+					<li class="link3"><a class="site-header--link" href="/gallery/">Eye Bleach</a></li>
+					<li class="link4"><a class="site-header--link" href="/archive/">Archive</a></li>
 				</ul>
 			</div>
 		</header>			
 		<main>
-			<div class="wrapper main-content"> 
-				<div class="side-container">
-					<div class="content-box side">
-						<h1 class="side--h1">Me on the web</h1>
+			<div class="wrapper main"> 
+				<div class="side-box-wrap">
+					<div class="side-box box-border">
+						<h1 class="side-box--h1">Me on the web</h1>
 						<ul class="socials">
-							<li class="tooltip" data-text="Email me">
-							 	<a href="mailto:art.anfm@gmail.com">
+							<li>
+							 	<a href="mailto:art.anfm@gmail.com" title="Email me">
 									<img src="/assets/icons/email.png" class=>
 							 	</a>
 							</li>
-							<li class="tooltip" data-text="Stalk me">
-								<a href="https://www.instagram.com/anarelaxis">
+							<li>
+								<a href="https://www.instagram.com/anarelaxis" title="Stalk me">
 									<img src="/assets/icons/instagram.png">
 								</a>
 							</li>
-							<li class="tooltip" data-text="See my art">
-								<a href="https://www.behance.net/anfm">
+							<li>
+								<a href="https://www.behance.net/anfm" title="See my art">
 									<img src="/assets/icons/behance.png">
 								</a>
 							</li>
+							<li>
+								<a href="https://steamcommunity.com/id/pizzakween" title="Game with me">
+									<img src="/assets/icons/steam.png">
+								</a>
+							</li>
 					</div>
-					<div class="content-box side2 hidden">
-						
-					</div>
+					<!-- <div class="side-box box-border">
+						<h1 class="side-box--h1">Explore tags</h1>
+					</div> -->
 			    </div>
-				<div class="content-box primary">
+				<div class="primary-box box-border">
 					{{ content }}
 				</div>	
 			</div>		
 		</main>		
 		<footer>
-			<div class="wrapper footer-content">
+			<div class="wrapper footer">
 				<span>Copyright © 2021, An Pham.</span>
 			</div>
 		</footer>	

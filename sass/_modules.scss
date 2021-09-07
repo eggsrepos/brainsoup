@@ -1,0 +1,233 @@
+// HEADER SECTION MODULES
+
+.site-header--nav {
+  flex-direction: column;
+  justify-content: center;
+  width: 14em;
+  gap: 6em;
+  text-align: center;
+}
+
+.site-header--link {
+  @include accentfont;
+  font-size: $text-3xl;
+  letter-spacing: 0.1em;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px; 
+  -webkit-text-stroke-color: $accentcolor3;
+  border-top: .1em solid $accentcolor2;
+  border-bottom: .1em solid $accentcolor2;
+  padding-top: .1em;
+  padding-bottom: .1em;
+
+  &:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23d6bb44' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E"), url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23d6bb44' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: top, bottom;
+    background-repeat: repeat-x, repeat-x; 
+    background-size: 20%;
+    border-top: 0;
+    border-bottom: 0;
+    padding-top: .2em;
+    padding-bottom: .2em;
+  }  
+}
+
+.site-header--logo {
+  min-width: 50px;
+  max-width: 100%;
+  height: auto;
+  align-self: center;
+
+  &:hover {
+    animation: glitch1 .5s infinite;
+    
+    &:nth-child(2) {
+      color: #67f3da;
+      animation: glitch2 .5s infinite;
+      }
+    
+    &:nth-child(3) {
+      color: #f16f6f;
+      animation: glitch3 .5s infinite;
+      }
+    }  
+}
+
+
+@media (max-width:768px) {  
+  
+  .site-header--logo {
+    width: 250px;
+    height: auto;
+  }
+}
+
+@media (max-width:576px) {
+  
+  .site-header--logo {
+    width: 200px;
+    height: auto;
+  }
+}
+
+
+// MAIN SECTION MODULES
+
+.blog-post, .page-header {
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid $lightcolor;
+  margin-bottom: 3em;
+}
+
+.page-header {
+
+  h1, p {
+    margin: 0 auto;    
+    text-shadow: -0.05em 0.05em $textshadow;
+  }
+}
+
+.entry-header {
+  margin-bottom: 2em;
+}
+
+.entry-header--time {
+  margin-bottom: .25em;
+  display: block;
+  @include accentfont(500, uppercase);
+  color: $darkcolor;
+}
+
+.entry-header--h1 {
+  margin-bottom: 0;
+  padding: 0 .25em;
+  display: inline-block;
+  background-color: $darkcolor;
+  color: $lightcolor;
+}
+
+.about {  
+  font-size: $text-xl;
+}
+
+
+.bio-box {
+  margin-bottom: 2em;
+  overflow: hidden; //to clear block elements after it
+}
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+  line-height: 1;
+}
+
+.bio-box--pic {
+  float: left;
+  margin: 0 2em 2em 0;
+  max-width: 18em;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bio-box--pic {
+    max-width: 16em;    
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bio-box--pic {
+    max-width: 14em;    
+  }
+}
+
+@media (max-width: 499.98px) {
+  .bio-box--pic {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.gallery {
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  img + img {
+    margin-top: 3em;
+  }
+}
+
+.side-box--h1 {
+  display: inline-block;
+  padding: 0.2em 0.3em; 
+  background-color: $darkcolor;
+  font-size: $text-lg;
+  text-shadow: none;
+  line-height: 1;
+}
+
+.socials {
+  
+  img {
+    width: auto;
+  }
+
+  li {
+    display: inline;
+    margin: 0.1em;
+  }
+}
+
+.pagination {
+  @include accentfont(500, uppercase);
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.tooltip {
+  line-height: 1;
+  position: relative; /* making the .tooltip span a container for the tooltip text */
+}
+
+.tooltip:before {
+  content: attr(data-text); /* here's the magic */
+  position: absolute;
+  
+  margin-left: 4em; /* and add a small left margin */
+
+  
+  /* basic styles */
+  padding: 0.3em;
+  border-radius: 2px;
+  border: solid .1em $lightcolor;
+  background: transparent;
+  color: $lightcolor;
+  text-align:center;
+
+  display:none; /* hide by default */
+}
+
+.tooltip:hover:before {
+  display:block;
+}
+
+
+.hidden {
+  visibility: hidden;
+}
+
+.box-border {  
+  border: 2px solid $darkcolor;
+  box-shadow: -0.4em 0.4em $darkcolor;
+}

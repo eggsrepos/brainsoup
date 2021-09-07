@@ -2,7 +2,7 @@
 layout: default
 title: Archive
 ---
-<h1 class="page-header">Explore previous posts</h1>
+<div class="page-header"><h1>Explore previous posts</h1></div>
 <ul class="myposts">
 {% for post in site.posts %}
     <li><a href="{{ post.url }}">{{ post.title}}</a>

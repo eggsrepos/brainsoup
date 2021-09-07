@@ -1,0 +1,102 @@
+// BASE STRUCTURE
+
+body, .wrapper, .site-header--nav {
+  display: flex;
+}
+
+body {
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+main {
+  flex: 1;
+  background-color: $accentcolor;
+}
+
+header, footer {
+  color: $accentcolor;
+  background-color: $darkcolor;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  width: calc(100% - 2em);
+  justify-content: center;
+}
+
+// HEADER
+
+.header {
+  gap: 1.5em;
+}
+
+// MAIN
+
+.main {
+  align-items: flex-start;
+  gap: 1.5em;
+}
+
+
+.side-box-wrap {
+  width: 15em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  position: sticky;
+  top: 1em;
+  max-height: calc(100vh - 2em);
+}
+
+.primary-box {
+  max-width: 55em;
+  padding: 3.5em;
+  background-color: $primboxcolor;
+}
+
+.side-box {
+  overflow-y: scroll;
+  scrollbar-color: $darkcolor $accentcolor2;
+  scrollbar-width: thin;
+  padding: 1.2em;
+  background-color: $accentcolor2;
+  font-weight: 400;  
+  text-align: center;
+}
+
+
+@media (max-width:991.98px) {
+  .main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .side-box-wrap {
+    width: 20em;
+    max-width: 100%;
+    order: 2;
+    justify-content: center;
+    position: static;
+    flex-direction: row;
+  }
+
+  .side-box {
+    width: 100%;
+    word-break: break-word;
+    overflow: hidden;
+  }
+}
+
+
+// FOOTER
+    
+.footer {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
