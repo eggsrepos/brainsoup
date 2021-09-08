@@ -5,7 +5,7 @@ date: 2021-09-06
 category: personal
 tag: [blogging, coding, css, sass]
 ---
-<img src="/assets/eyebleach/07.jpg">
+
 <p>After almost 2 weeks of blood, sweat and tears (only the sweat part is literal) I've finally launched this godforsaken thing.
 </p>
 <p>It technically didn't have to take this long—50% of the work was spent on refining my knowledge of CSS and learning useful things like SASS in order to optimize the shit out of my code. My life might be a mess but my CSS styles don't have to be. <!--more-->
