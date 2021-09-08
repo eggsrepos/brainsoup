@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">	
 	<head>	
+		{% include GoogleTagManager_head.liquid %}
 		<title>{{ page.title}} | {{ site.title }}</title>		
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -14,32 +15,16 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	</head>	
-	<body>		
+	<body>	
+		{% include GoogleTagManager_body.liquid %}	
 		<header>
-
 			<!-- START BURGER NAV -->
 			<div class="burger">
 				<div id="menuToggle">
-					<!--
-					A fake / hidden checkbox is used as click reciever,
-					so you can use the :checked selector on it.
-					-->
-					<input type="checkbox" />
-					
-					<!--
-					Some spans to act as a hamburger.
-					
-					They are acting like a real hamburger,
-					not that McDonalds stuff.
-					-->
+					<input type="checkbox" />					
 					<span></span>
 					<span></span>
-					<span></span>
-					
-					<!--
-					Too bad the menu has to be inside of the button
-					but hey, it's pure CSS magic.
-					-->
+					<span></span>					
 					<ul class="menu">
 						<a class="nav-item" href="/about/">
 							<li>Who?</li>
@@ -58,8 +43,7 @@
 			</div>
 						<!--- END OF BURGER NAV-->
 
-				<div class="wrapper site-header">					
-
+				<div class="wrapper site-header">
 					<ul class="site-header--nav">
 						<li class="link1">
 							<a class="site-header--link" href="/about/">Who?</a>
@@ -68,12 +52,10 @@
 							<a class="site-header--link" href="/blog/">The Soup</a>
 						</li>
 					</ul>
-
-					<div class="site-header--logo">
-						<a href="/" alt="Brain Soup">
-							<img class="site-header--logo" src="/assets/bslogo.png" width="300px" height="300px">
-						</a>
-					</div>
+					
+					<a href="/" alt="Brain Soup">
+						<img class="site-header--logo" src="/assets/bslogo.png" width="300px" height="300px">
+					</a>				
 
 					<ul class="site-header--nav">
 						<li class="link3">
@@ -93,7 +75,7 @@
 						<ul class="socials">
 							<li>
 							 	<a href="mailto:art.anfm@gmail.com" title="Email me">
-									<img src="/assets/icons/email.png" class=>
+									<img src="/assets/icons/email.png">
 							 	</a>
 							</li>
 							<li>
@@ -111,10 +93,11 @@
 									<img src="/assets/icons/steam.png">
 								</a>
 							</li>
-					</div>
-					<!-- <div class="side-box box-border">
+					    </ul>					 
+			        </div>
+				  <!-- <div class="side-box box-border">
 						<h1 class="side-box--h1">Explore tags</h1>
-					</div> -->
+					    </div> -->
 			    </div>
 				<div class="primary-box box-border">
 					{{ content }}
@@ -123,7 +106,7 @@
 		</main>		
 		<footer>
 			<div class="wrapper site-footer">
-				<span>Copyright © 2021, An Pham.</span>
+				<span>Copyright © 2021, An Pham</span>
 			</div>
 		</footer>	
 	</body>
