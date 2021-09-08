@@ -2,7 +2,7 @@
 layout: default
 title: Gallery
 ---
-<div class="page-header">
+<div class="page-header header-shadow">
   <h1>Eye Bleach Gallery</h1>
   <p>Curated internet pictures for your viewing pleasure.</p>
 </div>

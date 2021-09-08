@@ -374,6 +374,9 @@ header, footer {
 
 .page-header h1, .page-header p {
   margin: 0 auto;
+}
+
+.header-shadow h1, .header-shadow p {
   text-shadow: -0.05em 0.05em #444;
 }
 
@@ -424,18 +427,15 @@ figcaption {
 }
 
 @media (max-width: 767.98px) {
+  figcaption {
+    font-size: 0.875em;
+  }
   .bio-box--pic {
     max-width: 16em;
   }
 }
 
-@media (max-width: 575.98px) {
-  .bio-box--pic {
-    max-width: 14em;
-  }
-}
-
-@media (max-width: 499.98px) {
+@media (max-width: 649.98px) {
   .bio-box--pic {
     float: none;
     margin-left: auto;

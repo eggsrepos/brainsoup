@@ -2,7 +2,7 @@
 layout: default
 title: About
 ---
-<div class="page-header"><h1>Who the hell are you?</h1></div>
+<div class="page-header header-shadow"><h1>Who the hell are you?</h1></div>
   <div class="about">
     <div class="bio-box">
       <figure class="bio-box--pic">
