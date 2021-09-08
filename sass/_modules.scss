@@ -11,7 +11,7 @@
 .site-header--link {
   @include accentfont;
   font-size: $text-3xl;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px; 
   -webkit-text-stroke-color: $accentcolor3;
@@ -222,12 +222,21 @@ figcaption {
   display:block;
 }
 
+.box-border {  
+  border: 2px solid $darkcolor;
+  box-shadow: -0.4em 0.4em $darkcolor;
+}
+
+.read-more {
+  background-color: $accentcolor3;
+  color: $lightcolor;
+}
+
 
 .hidden {
   visibility: hidden;
 }
 
-.box-border {  
-  border: 2px solid $darkcolor;
-  box-shadow: -0.4em 0.4em $darkcolor;
+.center-text {
+  text-align: center;
 }

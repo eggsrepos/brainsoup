@@ -254,7 +254,8 @@ header, footer {
 }
 
 .primary-box {
-  max-width: 55em;
+  width: 55em;
+  max-width: 100%;
   padding: 3.5em;
   background-color: #9E99D5;
 }
@@ -276,7 +277,7 @@ header, footer {
     align-items: center;
   }
   .side-box-wrap {
-    width: 20em;
+    width: 17em;
     max-width: 100%;
     order: 2;
     justify-content: center;
@@ -308,7 +309,7 @@ header, footer {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.875em;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   -webkit-text-fill-color: transparent;
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
@@ -506,11 +507,20 @@ figcaption {
   display: block;
 }
 
+.box-border {
+  border: 2px solid #000000;
+  box-shadow: -0.4em 0.4em #000000;
+}
+
+.read-more {
+  background-color: #a7ffa3;
+  color: #fcfcfc;
+}
+
 .hidden {
   visibility: hidden;
 }
 
-.box-border {
-  border: 2px solid #000000;
-  box-shadow: -0.4em 0.4em #000000;
+.center-text {
+  text-align: center;
 }

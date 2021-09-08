@@ -13,7 +13,7 @@ title: Blog
       </div>
       {{ post.excerpt }}
       {% if post.excerpt != post.content %}
-    <a href="{{ site.baseurl }}{{ post.url }}">(continue reading)</a>
+    <a href="{{ site.baseurl }}{{ post.url }}" "read-more">continue reading</a>
 {% endif %}
   </div>
 {% endfor %}

@@ -54,7 +54,8 @@ header, footer {
 }
 
 .primary-box {
-  max-width: 55em;
+  width: 55em;
+  max-width: 100%;
   padding: 3.5em;
   background-color: $primboxcolor;
 }
@@ -78,7 +79,7 @@ header, footer {
   }
 
   .side-box-wrap {
-    width: 20em;
+    width: 17em;
     max-width: 100%;
     order: 2;
     justify-content: center;
