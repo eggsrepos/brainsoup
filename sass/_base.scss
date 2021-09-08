@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+  overflow-x: hidden;
 }
 
 *, *:before, *:after {
@@ -24,23 +25,21 @@ h1, h2 {
 }
 
 h1 {
-  font-size: $text-4xl;
-}
-
-h2 {
   font-size: $text-3xl;
 }
 
+h2 {
+  font-size: $text-2xl;
+}
 
-@media (max-width: 767.98px) {
-  
+
+@media (max-width: 767.98px) {  
   body {
    font-size: $text-base;
   }
 }
 
-@media (max-width: 575.98px) {
-  
+@media (max-width: 575.98px) {  
   body {
    font-size: $text-sm;
   }

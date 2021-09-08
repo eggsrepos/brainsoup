@@ -16,24 +16,77 @@
 	</head>	
 	<body>		
 		<header>
-			<div class="wrapper header">
-				<ul class="site-header--nav">
-					<li class="link1"><a class="site-header--link" href="/about/">Who?</a></li>
-					<li class="link2"><a class="site-header--link" href="/blog/">The Soup</a></li>
-				</ul>
-				<div class="site-header--logo">
-					<a href="/" alt="Brain Soup">
-						<img class="site-header--logo" src="/assets/bslogo.png" width="300px" height="300px">
-					</a>
+
+			<!-- START BURGER NAV -->
+			<div class="burger">
+				<div id="menuToggle">
+					<!--
+					A fake / hidden checkbox is used as click reciever,
+					so you can use the :checked selector on it.
+					-->
+					<input type="checkbox" />
+					
+					<!--
+					Some spans to act as a hamburger.
+					
+					They are acting like a real hamburger,
+					not that McDonalds stuff.
+					-->
+					<span></span>
+					<span></span>
+					<span></span>
+					
+					<!--
+					Too bad the menu has to be inside of the button
+					but hey, it's pure CSS magic.
+					-->
+					<ul class="menu">
+						<a class="nav-item" href="/about/">
+							<li>Who?</li>
+						</a>						
+						<a class="nav-item" href="/blog/">
+							<li>The Soup</li>
+						</a>
+						<a class="nav-item" href="/gallery/">
+							<li>Eye Bleach</li>
+						</a>
+						<a class="nav-item" href="/archive/">
+							<li>Archive</li>
+						</a>
+					</ul>
 				</div>
-				<ul class="site-header--nav">
-					<li class="link3"><a class="site-header--link" href="/gallery/">Eye Bleach</a></li>
-					<li class="link4"><a class="site-header--link" href="/archive/">Archive</a></li>
-				</ul>
 			</div>
+						<!--- END OF BURGER NAV-->
+
+				<div class="wrapper site-header">					
+
+					<ul class="site-header--nav">
+						<li class="link1">
+							<a class="site-header--link" href="/about/">Who?</a>
+						</li>
+						<li class="link2">
+							<a class="site-header--link" href="/blog/">The Soup</a>
+						</li>
+					</ul>
+
+					<div class="site-header--logo">
+						<a href="/" alt="Brain Soup">
+							<img class="site-header--logo" src="/assets/bslogo.png" width="300px" height="300px">
+						</a>
+					</div>
+
+					<ul class="site-header--nav">
+						<li class="link3">
+							<a class="site-header--link" href="/gallery/">Eye Bleach</a>
+						</li>
+						<li class="link4">
+							<a class="site-header--link" href="/archive/">Archive</a>
+						</li>
+					</ul>
+				</div>
 		</header>			
 		<main>
-			<div class="wrapper main"> 
+			<div class="wrapper site-main"> 
 				<div class="side-box-wrap">
 					<div class="side-box box-border">
 						<h1 class="side-box--h1">Me on the web</h1>
@@ -69,7 +122,7 @@
 			</div>		
 		</main>		
 		<footer>
-			<div class="wrapper footer">
+			<div class="wrapper site-footer">
 				<span>Copyright © 2021, An Pham.</span>
 			</div>
 		</footer>	

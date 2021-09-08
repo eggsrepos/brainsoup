@@ -10,13 +10,22 @@ title: Blog
           <div class="entry-header--time">{{ post.date | date: '%B %d, %Y' }}</div>
           <h1 class="entry-header--h1">{{ post.title }}</h1>
     </a>
-      </div>
-      {{ post.excerpt }}
-      {% if post.excerpt != post.content %}
-    <a href="{{ site.baseurl }}{{ post.url }}" "read-more">continue reading</a>
-{% endif %}
   </div>
+    {% if post.content contains '<!--more-->' %}
+      <div>
+          {{ post.content | split:'<!--more-->' | first }}
+      </div>
+      <input type="checkbox" class="read-more-state" id="{{ page.url }}"/>
+      <div class="read-more">
+          {{ post.content | split:'<!--more-->' | last }}
+      </div>
+      <label for="{{ page.url }}" class="read-more-trigger"></label>
+    {% else %}
+      {{ post.content }}
+    {% endif %}
+</div>
 {% endfor %}
+
 
 <!-- Pagination links -->
 <div class="pagination">
