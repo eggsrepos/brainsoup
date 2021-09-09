@@ -21,39 +21,18 @@ header, footer {
 }
 
 .wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  margin: 3em auto;
   width: calc(100% - 2em);
   justify-content: center;
 }
 
-// HEADER
 
-.site-header {
+.site-header, .site-main, .side-box-wrap {
   gap: 1.5em;
 }
 
-.site-header--logo {
-  max-width: 100%;
-  height: auto;
-  align-self: center;
+// HEADER
 
-  &:hover {
-    animation: glitch1 .5s infinite;
-    
-    &:nth-child(2) {
-      color: #67f3da;
-      animation: glitch2 .5s infinite;
-      }
-    
-    &:nth-child(3) {
-      color: #f16f6f;
-      animation: glitch3 .5s infinite;
-      }
-    }  
-}
 
 .site-header--nav {
   flex-direction: column;
@@ -61,30 +40,6 @@ header, footer {
   width: 14em;
   gap: 6em;
   text-align: center;
-}
-
-.site-header--link {
-  @include accentfont;
-  font-size: $text-3xl;
-  letter-spacing: 0.05em;
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px; 
-  -webkit-text-stroke-color: $accentcolor3;
-  border-top: .1em solid $accentcolor2;
-  border-bottom: .1em solid $accentcolor2;
-  padding-top: .1em;
-  padding-bottom: .1em;
-
-  &:hover {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23d6bb44' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E"), url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23d6bb44' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-    background-position: top, bottom;
-    background-repeat: repeat-x, repeat-x; 
-    background-size: 20%;
-    border-top: 0;
-    border-bottom: 0;
-    padding-top: .2em;
-    padding-bottom: .2em;
-  }  
 }
 
 @media (max-width:991.98px) {
@@ -107,10 +62,9 @@ header, footer {
   display: none;
 }
 
-
 // ACTIVATE BURGER NAV
 
-@media (max-width:575.98px) {
+@media (max-width: 635px) {
   .site-header--logo {
     width: 200px;
     height: auto;
@@ -127,118 +81,90 @@ header, footer {
 
 // BURGER NAV CONTROLS
 
-
-#menuToggle
-{
+#menuToggle  {
   display: block;
   position: relative;
   top: 50px;
-  left: 50px;
-  
-  z-index: 1;
-  
+  left: 50px;  
+  z-index: 1;  
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle a
-{
+#menuToggle a  {
   text-decoration: none;
   color: $darkcolor;
-  @include accentfont;
-  
+  @include accentfont;  
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
+#menuToggle a:hover  {
   color: $lightcolor;
 }
 
-
-#menuToggle input
-{
+#menuToggle input  {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
   top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
+  left: -5px;  
+  cursor: pointer;  
   opacity: 0;
-  z-index: 2; 
-  
+  z-index: 2;   
   -webkit-touch-callout: none;
 }
 
-
-#menuToggle span
-{
+#menuToggle span  {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
-  position: relative;
-  
+  position: relative;  
   background: $accentcolor3;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
+  border-radius: 3px;  
+  z-index: 1;  
+  transform-origin: 4px 0px;  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child  {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2)  {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span  {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3)  {
   opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
+  transform: rotate(0deg) scale(0.2, 0.2);  }
 
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2)  {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-.menu
-{
+.menu  {
   position: absolute;
   width: 100%;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  border: solid 3px $darkcolor;
-  
+  border: solid 3px $darkcolor;  
   background: $accentcolor3;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
+  /* to stop flickering of text in safari */  
   transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
+  transform: translate(-100%, 0);  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
@@ -247,9 +173,7 @@ header, footer {
   font-size: $text-3xl;
 }
 
-
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul  {
   transform: none;
 }
 
@@ -257,15 +181,13 @@ header, footer {
 
 .site-main {
   align-items: flex-start;
-  gap: 1.5em;
 }
 
-
 .side-box-wrap {
-  width: 15em;
+  width: 15em;  
+  max-width: 100%;  
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
   position: sticky;
   top: 1em;
   max-height: calc(100vh - 2em);
@@ -279,13 +201,13 @@ header, footer {
 }
 
 .side-box {
-  overflow-y: scroll;
-  scrollbar-color: $darkcolor $accentcolor2;
-  scrollbar-width: thin;
   padding: 1.2em;
   background-color: $accentcolor2;
   font-weight: 400;  
-  text-align: center;
+  text-align: center;overflow-y: scroll;
+  scrollbar-color: $darkcolor $accentcolor2;
+  scrollbar-width: thin;  
+  word-break: break-word;
 }
 
 
@@ -297,8 +219,7 @@ header, footer {
   }
 
   .side-box-wrap {
-    width: 17em;
-    max-width: 100%;
+    width: 17em; //increase when add second side box
     order: 2;
     justify-content: center;
     position: static;
@@ -306,12 +227,9 @@ header, footer {
   }
 
   .side-box {
-    width: 100%;
-    word-break: break-word;
     overflow: hidden;
   }
 }
-
 
 // FOOTER
     
@@ -326,5 +244,3 @@ header, footer {
    font-size: $text-xs;
   }
 }
-
-

@@ -1,48 +1,27 @@
+//HEADER MODULES
+.site-header--logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.glitch-hover {
+
+  &:hover {
+    animation: glitch1 .5s infinite;
+    
+    &:nth-child(2) {
+      color: #67f3da;
+      animation: glitch2 .5s infinite;
+      }
+    
+    &:nth-child(3) {
+      color: #f16f6f;
+      animation: glitch3 .5s infinite;
+      }
+    }  
+}
+
 // MAIN SECTION MODULES
-
-
-.blog-post, .page-header {
-  padding-bottom: 1.5em;
-  border-bottom: 1px solid $lightcolor;
-  margin-bottom: 3em;
-}
-
-.blog-post {
-  padding-bottom: 2em;
-}
-
-.page-header {
-  h1, p {
-    margin: 0 auto;
-  }
-}
-
-.header-shadow {
-  h1, p {     
-  text-shadow: -0.05em 0.05em $textshadow;
-  }
-}
-
-.entry-header {
-  margin-bottom: 2em;
-}
-
-.entry-header--time {
-  margin-bottom: .25em;
-  display: block;
-  @include accentfont(500, uppercase);
-  color: $darkcolor;
-}
-
-.entry-header--h1 {
-  margin-bottom: 0;
-  padding-left: 0.3em;
-  padding-right: 0.3em;
-  display: inline-block;
-  background-color: $darkcolor;
-  color: $lightcolor;
-}
-
 
 .primary-box img {
   display: block;
@@ -51,32 +30,29 @@
   width: 90%;
 }
 
-//ABOUT PAGE STYLING
-
-.about {  
-  font-size: $text-xl;
+.blog-post {
+  padding-bottom: 2em;
+  border-bottom: 1px solid $lightcolor;
 }
+
+* + .blog-post {
+  margin-top: 3em;
+}
+//ABOUT PAGE STYLING
 
 .bio-box {
   margin-bottom: 2em;
   overflow: hidden; //to clear block elements after it
 }
 
-figcaption {
-  font-style: italic;
-  font-size: $text-sm;
-  text-align: center;
-  line-height: 1;
-  margin-top: 1em;
-}
-
 .bio-box--pic {
   float: left;
-  margin: 0 1em 1em 0;
   max-width: 17em;
+  margin: 0 1.5em 1em 0;
 
   img {
-    max-width: 100%;
+    margin: 0;
+    width: 100%;
   }
 }
 
@@ -87,7 +63,7 @@ figcaption {
   }
 }
 
-@media (max-width: 649.98px) {
+@media (max-width: 635px) {
   .bio-box--pic {    
     float: none;
     margin-left: auto;
@@ -104,22 +80,32 @@ figcaption {
   }
 }
 
+
 //SIDE BOX STYLING
 
-.side-box--h1 {
-  display: inline-block;
-  padding: 0.3em; 
-  background-color: $darkcolor;
-  font-size: $text-lg;
-  line-height: 1;
-}
 
 .socials {
   li {
     display: inline;
-    margin: 0.1em;
+    margin: 0.15em;
+  }
+
+  img {
+    width: 2em;
+    height: 2em;
+    fill: $lightcolor;
   }
 }
+
+.icons-social {
+  width: 32px;
+  height: 32px;
+  fill: $lightcolor;
+
+  &:hover {
+    fill: $primboxcolor;
+  }
+} 
 
 //JEKYLL STYLING
 
@@ -127,17 +113,7 @@ figcaption {
   @include accentfont(500, uppercase);
   display: flex;
   justify-content: space-between;
-}
-
-.read-more-link {
-  padding: 0.15em 0.3em;
-  background-color: $lightcolor;
-  color: $primboxcolor;
-
-  &:hover {    
-  background-color: $primboxcolor;
-  color: $lightcolor;
-  }
+  margin-top: 2em;
 }
 
 .read-more {
@@ -168,14 +144,13 @@ content: 'Show less \2191';
 }
 
 .read-more-trigger {
-cursor: pointer;
-padding: 0.15em 0.3em;
-background-color: $lightcolor;
-color: $primboxcolor;
-display: inline-block;
-font-size: $text-sm;
-text-align: center;
-font-weight: 800;
+  padding: 0.15em 0.3em;
+  background-color: $lightcolor;
+  color: $primboxcolor;
+  display: inline-block;
+  font-size: $text-sm;
+  text-align: center;
+  font-weight: 800;
   &:hover {    
   background-color: $primboxcolor;
   color: $lightcolor;
