@@ -24,27 +24,30 @@
 
 //nav link hover tilt
 .link1 {  
-  transform: rotate(20deg)
+  transform: rotate(20deg);
+  transition: transform .2s ease-in-out;
 }
 
 .link2 {  
-  transform: rotate(-15deg)
+  transform: rotate(-15deg);
+  transition: transform .2s ease-in-out;
 }
 
 .link3 {  
-  transform: rotate(-17deg)
+  transform: rotate(-17deg);
+  transition: transform .2s ease-in-out;
+
 }
 
 .link4 {  
-  transform: rotate(19deg)
+  transform: rotate(19deg);
+  transition: transform .2s ease-in-out;
 }
 
-.link5 {
-  transform: rotate(14deg);
-}
 
 .link1:hover, .link2:hover, .link3:hover, .link4:hover, .link5:hover{
   transform: none;
+  transition: transform .1s ease;
 }
 
 .body-content a {
