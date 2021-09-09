@@ -47,7 +47,7 @@
   transform: none;
 }
 
-.primary-box--content a {
+.body-content a {
   position: relative;
   overflow: hidden;
   text-decoration: none;
@@ -144,7 +144,7 @@ figcaption {
 }
 
 .side-box--h1 {
-  font-size: $text-lg;
+  font-size: $text-xl;
   line-height: 1;
   position: relative;
   z-index: 1;

@@ -108,12 +108,6 @@
   }
 }
 
-html {
-  box-sizing: border-box;
-  font-size: 100%;
-  overflow-x: hidden;
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -121,6 +115,17 @@ html {
 html, body {
   margin: 0;
   padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -200,7 +205,7 @@ header, footer {
 
 .wrapper {
   margin: 3em auto;
-  width: calc(100% - 2em);
+  width: calc(100% - 3em);
   justify-content: center;
 }
 
@@ -258,16 +263,10 @@ header, footer {
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  /* Safari */
   position: sticky;
-  top: 1em;
+  top: 3em;
   max-height: calc(100vh - 2em);
-}
-
-.primary-box {
-  width: 45em;
-  max-width: 100%;
-  padding: 3em;
-  background-color: #9E99D5;
 }
 
 .side-box {
@@ -281,6 +280,13 @@ header, footer {
   word-break: break-word;
 }
 
+.primary-box {
+  width: 45em;
+  max-width: 100%;
+  padding: 3em;
+  background-color: #9E99D5;
+}
+
 @media (max-width: 991.98px) {
   .site-main {
     flex-direction: column;
@@ -291,11 +297,7 @@ header, footer {
     width: 17em;
     order: 2;
     justify-content: center;
-    position: static;
     flex-direction: row;
-  }
-  .side-box {
-    overflow: hidden;
   }
 }
 
@@ -430,7 +432,7 @@ header, footer {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 100%;
 }
 
 .blog-post {
@@ -476,6 +478,10 @@ header, footer {
   margin-top: 3em;
 }
 
+.socials {
+  margin-top: .5em;
+}
+
 .socials li {
   display: inline;
   margin: 0.15em;
@@ -485,10 +491,104 @@ header, footer {
   width: 30px;
   height: 30px;
   fill: #fcfcfc;
+  position: relative;
 }
 
 .socials--icon:hover {
   fill: #9E99D5;
+}
+
+a.email:before {
+  z-index: 1;
+  position: absolute;
+  color: #000000;
+  background-color: #fcfcfc;
+  box-shadow: -5px 5px #444;
+  font-size: 0.875em;
+  line-height: 1em;
+  padding: .5em;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  transform: rotate(-6deg);
+  content: "Email me!";
+}
+
+a.email:hover:before {
+  opacity: 1;
+  top: -16px;
+  left: -15px;
+  transform: rotate(-8deg);
+}
+
+a.ig:before {
+  z-index: 1;
+  position: absolute;
+  color: #000000;
+  background-color: #fcfcfc;
+  box-shadow: -5px 5px #444;
+  font-size: 0.875em;
+  line-height: 1em;
+  padding: .5em;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  content: "Stalk me!";
+}
+
+a.ig:hover:before {
+  opacity: 1;
+  top: 145px;
+  left: 55px;
+  transform: rotate(4deg);
+}
+
+a.behance:before {
+  z-index: 1;
+  position: absolute;
+  color: #000000;
+  background-color: #fcfcfc;
+  box-shadow: -5px 5px #444;
+  font-size: 0.875em;
+  line-height: 1em;
+  padding: .5em;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  content: "See my art!";
+}
+
+a.behance:hover:before {
+  opacity: 1;
+  top: -30px;
+  left: 110px;
+  transform: rotate(7deg);
+}
+
+a.steam:before {
+  z-index: 1;
+  position: absolute;
+  color: #000000;
+  background-color: #fcfcfc;
+  box-shadow: -5px 5px #444;
+  font-size: 0.875em;
+  line-height: 1em;
+  padding: .5em;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  content: "Game with me!";
+}
+
+a.steam:hover:before {
+  opacity: 1;
+  top: 150px;
+  left: 145px;
+  transform: rotate(-12deg);
 }
 
 .pagination {
@@ -540,6 +640,20 @@ header, footer {
 .read-more-trigger:hover {
   background-color: #9E99D5;
   color: #fcfcfc;
+}
+
+.back-to-top-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.875em;
+  text-align: center;
+  color: #000000;
+  background-color: #d6e081;
+  border: 1px solid #000000;
+  padding: 0.3em 0.5em;
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
 }
 
 .box-border {
@@ -606,14 +720,14 @@ header, footer {
   transform: none;
 }
 
-.primary-box--content a {
+.body-content a {
   position: relative;
   overflow: hidden;
   text-decoration: none;
   z-index: 1;
 }
 
-.primary-box--content a::before {
+.body-content a::before {
   position: absolute;
   content: "";
   background: rgba(167, 255, 163, 0.5);
@@ -625,7 +739,7 @@ header, footer {
   z-index: -1;
 }
 
-.primary-box--content a:hover:before {
+.body-content a:hover:before {
   left: 0;
   bottom: -1px;
   width: 100%;
@@ -704,7 +818,7 @@ figcaption {
 }
 
 .side-box--h1 {
-  font-size: 1.125em;
+  font-size: 1.25em;
   line-height: 1;
   position: relative;
   z-index: 1;

@@ -5,7 +5,7 @@ title: About
 <div class="primary-box--header header-shadow">
   <h1>Who the hell are you?</h1>
 </div>
-<div class="primary-box--content about">
+<div class="body-content about">
   <div class="bio-box">
     <figure class="bio-box--pic">
         <img src="/assets/selfieportrait.png">

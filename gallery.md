@@ -6,7 +6,7 @@ title: Gallery
   <h1>Eye Bleach Gallery</h1>
   <p>Curated internet pictures for your viewing pleasure.</p>
 </div>
-<div class="primary-box--content">
+<div class="body-content">
   <div class="gallery">    
   <img src="/assets/eyebleach/01.jpg">
   <img src="/assets/eyebleach/02.jpg">

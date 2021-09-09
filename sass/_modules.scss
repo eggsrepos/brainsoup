@@ -126,7 +126,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 100%;
 }
 
 .blog-post {
@@ -184,6 +184,7 @@
 //SIDE BOX
 
 .socials {
+  margin-top: .5em;
 
   li {
     display: inline;
@@ -195,11 +196,76 @@
   width: 30px;
   height: 30px;
   fill: $lightcolor;
+  position: relative;
 
   &:hover {
     fill: $primboxcolor;
   }
 } 
+
+a.email {
+
+ &:before {
+  @include popupbox;
+  transform: rotate(-6deg);
+  content: "Email me!";
+ }
+
+  &:hover:before { 
+    opacity: 1;
+    top: -16px;
+    left: -15px;
+    transform: rotate(-8deg);    
+  }
+}
+
+a.ig {
+
+  &:before {
+   @include popupbox;
+   content: "Stalk me!";
+  }
+ 
+   &:hover:before { 
+     opacity: 1;     
+     top: 145px;
+     left: 55px;
+     transform: rotate(4deg);
+     
+   }
+ }
+
+ a.behance {
+
+  &:before {
+   @include popupbox;
+   content: "See my art!";
+  }
+ 
+   &:hover:before { 
+     opacity: 1;     
+     top: -30px;
+     left: 110px;
+     transform: rotate(7deg);
+     
+   }
+ }
+
+ a.steam {
+
+  &:before {
+   @include popupbox;
+   content: "Game with me!";
+  }
+ 
+   &:hover:before { 
+     opacity: 1;     
+     top: 150px;
+     left: 145px;
+     transform: rotate(-12deg);
+     
+   }
+ }
 
 //JEKYLL STYLING
 
@@ -251,6 +317,19 @@ content: 'Show less \2191';
   }
 }
 
+.back-to-top-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: $text-sm;
+  text-align: center;
+  color: $darkcolor;
+  background-color: $accentcolor;
+  border: 1px solid $darkcolor;
+  padding: 0.3em 0.5em;
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+}
 
 // REUSEABLES
 

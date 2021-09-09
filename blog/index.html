@@ -3,7 +3,6 @@ layout: default
 title: Blog
 ---
 
-<div class="primary-box--content">
   {% for post in paginator.posts %}
   <div class="blog-post">
     <div class="blog-post--header">
@@ -12,6 +11,7 @@ title: Blog
             <h1 class="blog-post--h1">{{ post.title }}</h1>
       </a>
     </div>
+    <div class="body-content">
       {% if post.content contains '<!--more-->' %}
         <div>
             {{ post.content | split:'<!--more-->' | first }}
@@ -24,9 +24,9 @@ title: Blog
       {% else %}
         {{ post.content }}
       {% endif %}
-  </div>
+    </div>   
+  </div> 
   {% endfor %}
-</div>
 
 
 <!-- Pagination links -->

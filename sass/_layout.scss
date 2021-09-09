@@ -22,7 +22,7 @@ header, footer {
 
 .wrapper {
   margin: 3em auto;
-  width: calc(100% - 2em);
+  width: calc(100% - 3em);
   justify-content: center;
 }
 
@@ -30,6 +30,7 @@ header, footer {
 .site-header, .site-main, .side-box-wrap {
   gap: 1.5em;
 }
+
 
 // HEADER
 
@@ -91,9 +92,21 @@ header, footer {
   max-width: 100%;  
   display: flex;
   flex-direction: column;
+  position: -webkit-sticky; /* Safari */  
   position: sticky;
-  top: 1em;
+  top: 3em;
   max-height: calc(100vh - 2em);
+}
+
+.side-box {
+  padding: 1em;
+  background-color: $accentcolor2;
+  font-weight: 400;  
+  text-align: center;
+  overflow-y: scroll;
+  scrollbar-color: $darkcolor $accentcolor2;
+  scrollbar-width: thin;  
+  word-break: break-word;
 }
 
 .primary-box {
@@ -102,17 +115,6 @@ header, footer {
   padding: 3em;
   background-color: $primboxcolor;
 }
-
-.side-box {
-  padding: 1em;
-  background-color: $accentcolor2;
-  font-weight: 400;  
-  text-align: center;overflow-y: scroll;
-  scrollbar-color: $darkcolor $accentcolor2;
-  scrollbar-width: thin;  
-  word-break: break-word;
-}
-
 
 @media (max-width:991.98px) {
   .site-main {
@@ -125,12 +127,7 @@ header, footer {
     width: 17em; //increase when add second side box
     order: 2;
     justify-content: center;
-    position: static;
     flex-direction: row;
-  }
-
-  .side-box {
-    overflow: hidden;
   }
 }
 
