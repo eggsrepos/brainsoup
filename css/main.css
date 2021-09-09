@@ -274,9 +274,6 @@ header, footer {
   background-color: #babd1c;
   font-weight: 400;
   text-align: center;
-  overflow-y: scroll;
-  scrollbar-color: #000000 #babd1c;
-  scrollbar-width: thin;
   word-break: break-word;
 }
 
@@ -499,7 +496,7 @@ header, footer {
 }
 
 a.email:before {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   color: #000000;
   background-color: #fcfcfc;
@@ -510,7 +507,11 @@ a.email:before {
   opacity: 0;
   top: 0;
   left: 0;
+  pointer-events: none;
   transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -moz-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -o-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   transform: rotate(-6deg);
   content: "Email me!";
 }
@@ -523,7 +524,7 @@ a.email:hover:before {
 }
 
 a.ig:before {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   color: #000000;
   background-color: #fcfcfc;
@@ -534,7 +535,11 @@ a.ig:before {
   opacity: 0;
   top: 0;
   left: 0;
+  pointer-events: none;
   transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -moz-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -o-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   content: "Stalk me!";
 }
 
@@ -546,7 +551,7 @@ a.ig:hover:before {
 }
 
 a.behance:before {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   color: #000000;
   background-color: #fcfcfc;
@@ -557,7 +562,11 @@ a.behance:before {
   opacity: 0;
   top: 0;
   left: 0;
+  pointer-events: none;
   transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -moz-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -o-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   content: "See my art!";
 }
 
@@ -569,7 +578,7 @@ a.behance:hover:before {
 }
 
 a.steam:before {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   color: #000000;
   background-color: #fcfcfc;
@@ -580,7 +589,11 @@ a.steam:before {
   opacity: 0;
   top: 0;
   left: 0;
+  pointer-events: none;
   transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -moz-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -o-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   content: "Game with me!";
 }
 
