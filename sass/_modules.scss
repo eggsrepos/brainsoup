@@ -206,15 +206,17 @@
 a.email {
 
  &:before {
-  @include popupbox;
+  @include popupbox;  
+  top: 5em;
+  left: 0;
   transform: rotate(-6deg);
   content: "Email me!";
  }
 
   &:hover:before { 
     opacity: 1;
-    top: -16px;
-    left: -15px;
+    top: .5em;
+    left: -1em;
     transform: rotate(-8deg);    
   }
 }
@@ -223,14 +225,16 @@ a.ig {
 
   &:before {
    @include popupbox;
+   top: 5em;
+   left: 4em;
    content: "Stalk me!";
   }
  
    &:hover:before { 
      opacity: 1;     
-     top: 145px;
-     left: 55px;
-     transform: rotate(4deg);
+     top: 9.5em;
+     left: 4em;
+     transform: rotate(6deg);
      
    }
  }
@@ -239,15 +243,16 @@ a.ig {
 
   &:before {
    @include popupbox;
+   top: 5em;
+   left: 6em;
    content: "See my art!";
   }
  
    &:hover:before { 
      opacity: 1;     
-     top: -30px;
-     left: 110px;
-     transform: rotate(7deg);
-     
+     top: -1.5em;
+     left: 7em;
+     transform: rotate(9deg);     
    }
  }
 
@@ -255,13 +260,15 @@ a.ig {
 
   &:before {
    @include popupbox;
+   top: 5em;
+   left: 8em;
    content: "Game with me!";
   }
  
    &:hover:before { 
      opacity: 1;     
-     top: 150px;
-     left: 145px;
+     top: 8.5em;
+     left: 10em;
      transform: rotate(-12deg);
      
    }
