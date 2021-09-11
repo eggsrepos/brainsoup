@@ -1,10 +1,4 @@
 //HEADER 
-
-.site-header--logo {
-  max-width: 100%;
-  height: auto;
-}
-
 .glitch-hover {
 
   &:hover {
@@ -37,7 +31,7 @@
 #menuToggle a  {
   text-decoration: none;
   color: $darkcolor;
-  @include accentfont;  
+  @include accentfont (uppercase);  
   transition: color 0.3s ease;
 }
 
@@ -64,7 +58,7 @@
   height: 4px;
   margin-bottom: 5px;
   position: relative;  
-  background: $accentcolor3;
+  background: $accentcolor;
   border-radius: 3px;  
   z-index: 1;  
   transform-origin: 4px 0px;  
@@ -102,7 +96,7 @@
   padding: 50px;
   padding-top: 125px;
   border: solid 3px $darkcolor;  
-  background: $accentcolor3;
+  background: $accentcolor;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */  
@@ -113,7 +107,7 @@
 
 .menu li {
   padding: 10px 0;
-  font-size: $text-3xl;
+  font-size: $text-2xl;
 }
 
 #menuToggle input:checked ~ ul  {
@@ -121,74 +115,119 @@
 }
 
 // MAIN SECTION
-
-.primary-box img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+.primary-box--content {
+  margin-bottom: var(--space-xl);
 }
 
-.blog-post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightcolor;
+.row-spacing > * + * {
+  margin-top: var(--row-margin-top);
 }
 
-* + .blog-post {
-  margin-top: 3em;
+.rs-small > * + * {
+  --row-margin-top: var(--space-m);
+}
+
+.body-spacing > * + * {  
+  margin-top: var(--body-margin-top);
+}
+
+:not(h1) + h2 {
+  --body-margin-top: var(--space-l);
+}
+
+.bs-large  {
+  font-size: var(--step-1);
+
+  & > * + *{
+    --body-margin-top: var(--space-m);
+  }
+
+  & > :not(h1) + h2 {
+    --body-margin-top: var(--space-xl);
+  }
+}
+
+.myposts li {
+  margin: var(--space-2xs);
+}
+
+.blog-sig:after {
+   content: "EgG";
+   font-family: "jrugpunk", sans-serif;
+   font-size: var(--step-5);
 }
 
 //ABOUT PAGE
 
-.bio-box {
-  margin-bottom: 2em;
-  overflow: hidden; //to clear block elements after it
-}
-
 .bio-box--pic {
   float: left;
-  max-width: 17em;
-  margin: 0 1.5em 1em 0;
-
-  img {
-    margin: 0;
-    width: 100%;
-  }
+  max-width: 20rem;
+  margin: 0 var(--space-l) var(--space-m) 0;
 }
 
-@media (max-width: 767.98px) {
-
-  .bio-box--pic {
-    max-width: 16em;    
-  }
-}
-
-@media (max-width: 635px) {
+@media (max-width: 610px) {
   .bio-box--pic {    
     float: none;
-    margin-left: auto;
-    margin-right: auto;    
+    margin-inline: auto;
+    margin-bottom: var(--space-l);
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 30%;
+  left: 60%;  
+  transform: translate(-50%, 0);
+  background: rgba(white, .8);
+  z-index: 3;  
+  padding: .5em;
+  text-align: center;  
+  color: $darkcolor;
+  visibility: hidden;
+
+  &:target {
+    visibility: visible;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    margin-block: .3em;
+  }
+
+  span {    
+    font-size: var(--step-0);
+  }
+}
+
+.close {
+  font-size: var(--step-4);
+  display: inline-block;
+  line-height: 1;
+
+  &:hover {
+    color: white;
   }
 }
 
 //GALLERY PAGE
 
 .gallery {
-
-  img + img {
-    margin-top: 3em;
-  }
+  text-align: center;
 }
-
 
 //SIDE BOX
 
-.socials {
-  margin-top: .5em;
+.socials--list {
+  text-align: center;
+  margin-top: var(--space-xs);
 
   li {
     display: inline;
-    margin: 0.15em;
+    margin: var(--space-3xs);
+    font-size: var(--step-1);
   }
 }
 
@@ -196,7 +235,6 @@
   width: 30px;
   height: 30px;
   fill: $lightcolor;
-  position: relative;
 
   &:hover {
     fill: $primboxcolor;
@@ -232,7 +270,7 @@ a.ig {
  
    &:hover:before { 
      opacity: 1;     
-     top: 9.5em;
+     top: 8em;
      left: 4em;
      transform: rotate(6deg);
      
@@ -276,13 +314,6 @@ a.ig {
 
 //JEKYLL STYLING
 
-.pagination {
-  @include accentfont(500, uppercase);
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2em;
-}
-
 .read-more {
   opacity: 0;
   max-height: 0;
@@ -303,21 +334,23 @@ display: inherit;
 }
 
 .read-more-state ~ .read-more-trigger:before {
-content: 'Continue reading \2193';
+content: 'Continue \2193';
 }
 
 .read-more-state:checked ~ .read-more-trigger:before {
 content: 'Show less \2191';
 }
 
-.read-more-trigger {
+.read-more-trigger {  
+  display: inline-block;
+  margin-top: var(--space-xs);
   padding: 0.15em 0.3em;
+  text-align: center;
   background-color: $lightcolor;
   color: $primboxcolor;
-  display: inline-block;
   font-size: $text-sm;
-  text-align: center;
   font-weight: 800;
+  
   &:hover {    
   background-color: $primboxcolor;
   color: $lightcolor;
@@ -328,27 +361,35 @@ content: 'Show less \2191';
   display: inline-block;
   text-decoration: none;
   font-size: $text-sm;
-  text-align: center;
   color: $darkcolor;
   background-color: $accentcolor;
   border: 1px solid $darkcolor;
   padding: 0.3em 0.5em;
   position: fixed;
-  bottom: 2em;
-  right: 2em;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1;
 }
 
-// REUSEABLES
+// UTILITIES
 
-.box-border {  
-  border: 2px solid $darkcolor;
-  box-shadow: -0.4em 0.4em $darkcolor;
+.nomargin {
+  margin: 0;
 }
 
 .hidden {
   visibility: hidden;
 }
 
+.box-border {  
+  border: 2px solid $darkcolor;
+  box-shadow: -0.4em 0.4em $darkcolor;
+}
+
 .center-text {
   text-align: center;
+}
+
+.header-shadow {
+  text-shadow: -0.05em 0.05em $textshadow;
 }

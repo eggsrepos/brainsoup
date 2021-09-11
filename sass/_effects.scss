@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'jrugpunk';
+  src: url('/assets/fonts/jrugpunk.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
 //logo hover effect
 @keyframes glitch2 {
     0% {
@@ -108,4 +113,3 @@
       opacity: 0.5;
     }
   }
-                

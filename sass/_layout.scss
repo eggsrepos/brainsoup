@@ -21,42 +21,36 @@ header, footer {
 }
 
 .wrapper {
-  margin: 3em auto;
-  width: calc(100% - 3em);
+  margin: 3rem auto;
+  width: calc(100% - 3rem);
   justify-content: center;
 }
 
-
 .site-header, .site-main, .side-box-wrap {
-  gap: 1.5em;
+  gap: 1rem;
 }
-
 
 // HEADER
 
+img.site-header--logo {
+  min-width: 225px;
+  max-width: 300px;
+  height: auto;
+}
+
+@media (max-width: $breakpoint-1) {  
+  img.site-header--logo {
+    min-width: unset;
+    max-width: 225px;
+  }
+}
 
 .site-header--nav {
   flex-direction: column;
   justify-content: center;
-  width: 14em;
+  width: 15rem;
   gap: 6em;
   text-align: center;
-}
-
-@media (max-width:991.98px) {
-  .site-header--link {
-    font-size: $text-2xl;
-  }
-}
-
-@media (max-width: 767.98px) {    
-  .site-header--logo {
-    width: 250px;
-    height: auto;
-  }
-  .site-header--link {
-    font-size: $text-2xl;
-  }
 }
 
 .burger {
@@ -65,12 +59,7 @@ header, footer {
 
 // ACTIVATE BURGER NAV
 
-@media (max-width: 635px) {
-  .site-header--logo {
-    width: 200px;
-    height: auto;
-  }
-
+@media (max-width: $breakpoint-1) {
   .site-header--nav {
     display: none;
   }
@@ -85,36 +74,33 @@ header, footer {
 
 .site-main {
   align-items: flex-start;
-  margin-bottom: 5em; //override initial wrapper margin
+  margin-bottom: 5rem; //override initial wrapper margin
 }
 
 .side-box-wrap {
-  width: 15em;  
   max-width: 100%;  
   display: flex;
   flex-direction: column;
   position: -webkit-sticky; /* Safari */  
   position: sticky;
-  top: 3em;
-  max-height: calc(100vh - 2em);
+  top: 3rem;
 }
 
 .side-box {
-  padding: 1em;
-  background-color: $accentcolor2;
-  font-weight: 400;  
   text-align: center;
-  word-break: break-word;
+  width: 20rem;
+  padding: var(--space-s);
+  background-color: $accentcolor2;
 }
 
 .primary-box {
-  width: 45em;
+  width: 52rem;
   max-width: 100%;
-  padding: 3em;
+  padding: var(--space-xl);
   background-color: $primboxcolor;
 }
 
-@media (max-width:991.98px) {
+@media (max-width: 1016.98px) {
   .site-main {
     flex-direction: column;
     justify-content: center;
@@ -122,7 +108,6 @@ header, footer {
   }
 
   .side-box-wrap {
-    width: 17em; //increase when add second side box
     order: 2;
     justify-content: center;
     flex-direction: row;
@@ -132,13 +117,5 @@ header, footer {
 // FOOTER
     
 .site-footer {
-  margin-top: 1em; //override default wrapper margin
-  margin-bottom: 1em; //override default wrapper margin
-  font-size: $text-sm;
-}
-
-@media (max-width: 767.98px) {  
-   .site-footer {
-   font-size: $text-xs;
-  }
+  margin-block: 1rem; //override default wrapper margin
 }
