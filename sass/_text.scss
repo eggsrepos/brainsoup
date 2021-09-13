@@ -100,14 +100,6 @@ a .blog-post__title {
   }
 }
 
-.blog-post__category {
-  
-   &:before {
-     content: url('/assets/icons/topic_24dp.svg');
-     position: relative;
-     bottom: -5px;
-   }
-}
 
 // ARCHIVE
 
