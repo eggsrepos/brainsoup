@@ -4,7 +4,7 @@
   font-weight: 400; 
 }
 
-@mixin accentfont($texttransform: null, $fontweight: 700) {
+@mixin accentfont($texttransform, $fontweight: 700) {
   font-family: 'Work Sans', sans-serif;
   font-weight: $fontweight;
   text-transform: $texttransform;
@@ -15,7 +15,6 @@
   font-weight: 700;
   text-transform: uppercase;
 }
-
 
 @mixin popupbox {
   word-break:initial;
@@ -34,20 +33,4 @@
   -moz-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
  -o-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
  -webkit-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
-}
-
-@mixin headerhighlight($bgcolor) {
-  content: " ";
-  height: 70%;
-  width: 100%;
-  margin-left: -4px;
-  margin-right: -4px;
-  position: absolute;
-  background: $bgcolor;
-  transform: rotate(2deg);
-  top: 7px;
-  left: -1px;
-  border-radius: 16% 12% 13% 14%;
-  padding: 10px 3px 3px 10px;
-  z-index: -1;
 }

@@ -2,12 +2,12 @@
 layout: default
 title: Gallery
 ---
-<div class="primary-box--content row-spacing">
-  <div class="page-header">
-    <h1 class="header-highlight--primary grungeheader">Eye Bleach Gallery</h1>
-    <p class="header-shadow">Curated internet pictures for your viewing pleasure.</p>
+<div class="content-wrap">
+  <div class="page-header-wrap page-header--divider">
+    <h1 class="page-header">Eye Bleach Gallery</h1>
+    <p class="page-desc">Curated internet pictures for your viewing pleasure.</p>
   </div>
-  <div class="body body-spacing gallery">   
+  <div class="gallery">   
     <img src="/assets/eyebleach/01.jpg">
     <img src="/assets/eyebleach/02.jpg">
     <img src="/assets/eyebleach/03.JPG">

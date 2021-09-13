@@ -112,7 +112,7 @@
   --space-2xl: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-2xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
   --space-3xl: calc(((var(--fc-3xl-min) / 16) * 1rem) + (var(--fc-3xl-max) - var(--fc-3xl-min)) * var(--fluid-bp));
 
-  --body-margin-top: var(--space-s);
+
   --row-margin-top: var(--space-l);
 }
 
@@ -133,30 +133,28 @@ html {
   }
 }
 
-body {
+body, h1, h2, p, ul, ol, figure {
   margin: 0;
+}
+
+body {
   @include primaryfont;
   font-size: var(--step-0);
   line-height: 1.6;
 }
 
-h1, h2, p, ul {
-  margin: 0;
-}
 
 h1, h2 {
+  @include accentfont(uppercase);
   line-height: 1.125;
 }
 
 h1 {
-  @include accentfont;
   font-size: var(--step-4);
-  color: $lightcolor;
 }
 
 h2 {
-  @include accentfont;
-  font-size: var(--step-3);
+  font-size: var(--step-2);
 }
 
 a {
@@ -174,7 +172,6 @@ ul {
 }
 
 img {
-  width: 100%;
   max-width: 100%;
   height: auto;
 }

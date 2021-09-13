@@ -2,7 +2,7 @@
 layout: post
 title:  Baby's First Post
 date: 2021-09-06
-category: personal
+category: Personal
 tag: [blogging, coding, css, sass]
 ---
 

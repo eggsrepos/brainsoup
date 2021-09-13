@@ -2,30 +2,30 @@
 layout: default
 title: Blog
 ---
-<div class="primary-box--content row-spacing">
+<div class="content-wrap">
   {% for post in paginator.posts %}
-  <article class="row-spacing rs-small">    
-    <a href="{{ post.url }}">
-      <div class="blog-post--header">
-        <p class="blog-post--time">{{ post.date  | date: '%B %d, %Y' }}</p>
-        <h1 class="blog-post--title">{{ post.title }}</h1>
-      </div>    
-    </a>
-    {% if post.content contains '<!--more-->' %}
-    <div class="body-spacing">
-        {{ post.content | split:'<!--more-->' | first }}
-    </div>
-    <input type="checkbox" class="read-more-state" id="{{ post.url }}"/>
-    <div class="read-more nomargin body-spacing blog-sig">
-        {{ post.content | split:'<!--more-->' | last }}
-    </div>
-    <label for="{{ post.url }}" class="read-more-trigger"></label>
-  {% else %}
-      {{ post.content }}
-  {% endif %}
-  </article>
+      <div class="blog-post__header">
+        <div class="blog-post__time">{{ post.date  | date: '%B %d, %Y' }}</div>        
+        <a href="{{ post.url }}">
+          <h1 class="blog-post__title">{{ post.title }}</h1>
+        </a>
+      </div> 
+      {% if post.content contains '<!--more-->' %}
+      <div class="content-body">
+        <div>
+          {{ post.content | split:'<!--more-->' | first }}
+        </div>
+        <input type="checkbox" class="read-more-state" id="{{ post.url }}"/>
+        <div class="read-more content-body content-body--blog">
+          {{ post.content | split:'<!--more-->' | last }}
+        </div>
+        <label for="{{ post.url }}" class="read-more-trigger"></label>   
+      </div>
+    {% else %}
+        {{ post.content }}
+    {% endif %}
   {% endfor %}  
-</div>
+
 <hr>
   
   <!-- Pagination links -->
@@ -45,3 +45,5 @@ title: Blog
     <span class="hidden">Newer &rarr;</span>
   {% endif %}
   </div>
+
+</div>

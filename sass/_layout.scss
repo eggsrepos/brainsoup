@@ -1,6 +1,6 @@
 // BASE STRUCTURE
 
-body, .wrapper, .site-header--nav {
+body, .wrap, .site-nav, .side-wrap {
   display: flex;
 }
 
@@ -20,37 +20,34 @@ header, footer {
   background-color: $darkcolor;
 }
 
-.wrapper {
+.wrap {
   margin: 3rem auto;
-  width: calc(100% - 3rem);
+  width: calc(100% - 4rem);
   justify-content: center;
-}
-
-.site-header, .site-main, .side-box-wrap {
-  gap: 1rem;
+  gap: 2rem;
 }
 
 // HEADER
 
-img.site-header--logo {
+.logo {
   min-width: 225px;
   max-width: 300px;
   height: auto;
 }
 
 @media (max-width: $breakpoint-1) {  
-  img.site-header--logo {
+  .logo {
     min-width: unset;
     max-width: 225px;
   }
 }
 
-.site-header--nav {
+.site-nav {
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;  
+  text-align: center;
   width: 15rem;
   gap: 6em;
-  text-align: center;
 }
 
 .burger {
@@ -60,7 +57,7 @@ img.site-header--logo {
 // ACTIVATE BURGER NAV
 
 @media (max-width: $breakpoint-1) {
-  .site-header--nav {
+  .site-nav {
     display: none;
   }
 
@@ -72,50 +69,36 @@ img.site-header--logo {
 
 // MAIN
 
-.site-main {
+.wrap--main {
   align-items: flex-start;
   margin-bottom: 5rem; //override initial wrapper margin
 }
 
-.side-box-wrap {
-  max-width: 100%;  
-  display: flex;
+.side-wrap {
+  max-width: 100%;
   flex-direction: column;
   position: -webkit-sticky; /* Safari */  
   position: sticky;
-  top: 3rem;
+  top: 2rem;
 }
 
-.side-box {
-  text-align: center;
-  width: 20rem;
-  padding: var(--space-s);
-  background-color: $accentcolor2;
-}
 
-.primary-box {
-  width: 52rem;
-  max-width: 100%;
-  padding: var(--space-xl);
-  background-color: $primboxcolor;
-}
 
 @media (max-width: 1016.98px) {
-  .site-main {
+  .wrap--main {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 
-  .side-box-wrap {
-    order: 2;
-    justify-content: center;
+  .side-wrap {
+    order: 2;    
     flex-direction: row;
+    justify-content: center;
   }
 }
 
 // FOOTER
     
-.site-footer {
+.wrap--footer {
   margin-block: 1rem; //override default wrapper margin
 }
