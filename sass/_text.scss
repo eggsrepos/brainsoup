@@ -62,7 +62,7 @@
 .page-desc {
   margin-top: var(--space-xs);
   text-align: center;
-  font-style: italic;
+  @include accentfont(null, 500);
 }
 
 .side-header {

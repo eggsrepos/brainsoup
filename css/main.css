@@ -424,7 +424,8 @@ header, footer {
 .page-desc {
   margin-top: var(--space-xs);
   text-align: center;
-  font-style: italic;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
 }
 
 .side-header {
