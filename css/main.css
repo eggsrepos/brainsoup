@@ -462,12 +462,6 @@ a .blog-post__title:hover {
   box-shadow: none;
 }
 
-.blog-post__category:before {
-  content: url("/assets/icons/topic_24dp.svg");
-  position: relative;
-  bottom: -5px;
-}
-
 .archive-list__title {
   border-bottom: 2px solid #000000e0;
   font-size: 1.5em;
@@ -490,6 +484,7 @@ a .blog-post__title:hover {
 }
 
 figcaption {
+  font-size: var(--step--1);
   font-style: italic;
   text-align: center;
 }
@@ -948,6 +943,10 @@ figcaption {
 
 .content-body--about h2 {
   font-size: var(--step-3);
+}
+
+.content-body--about figcaption {
+  font-size: var(--step-0);
 }
 
 .read-more {
