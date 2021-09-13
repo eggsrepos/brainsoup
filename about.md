@@ -7,7 +7,7 @@ title: About
   <div class="page-header-wrap">
     <h1 class="page-header">Who the hell are you?</h1>
   </div>
-    <div class="content-body">
+    <div class="content-body content-body--about">
       <figure class="bio-pic float-md-left">
           <img src="/assets/selfieportrait.png">
           <figcaption>Figure 1: Overcooked egg.</figcaption>

@@ -2,7 +2,6 @@
 layout: default
 title: Archive
 ---
-
 <div class="content-wrap">
     <div class="page-header-wrap">
         <h1 class="page-header">Explore previous posts</h1>

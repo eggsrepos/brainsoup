@@ -329,7 +329,7 @@
   left: 60%;  
   transform: translate(-50%, 0);
   background: rgba(white, .8);
-  z-index: 3;  
+  z-index: 2;  
   padding: .5em;
   text-align: center;  
   color: $darkcolor;
@@ -410,8 +410,19 @@
    ul li, ol li {
     margin-top: var(--space-xs);
   }
+
 }
 
+.content-body--about {
+  --space-m: var(--space-l);
+  --space-xl: var(--space-2xl);
+  --space-xs: var(--space-s); 
+  font-size: var(--step-1);
+
+  h2 {
+    font-size: var(--step-3);
+  }
+}
 
 //JEKYLL STYLING
 
