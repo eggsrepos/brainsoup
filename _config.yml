@@ -16,6 +16,3 @@ defaults:
       values:
         layout: "post"
         comments: false
-reCaptcha:
-  siteKey: 6LcNBmccAAAAAKvSqFQk5J1UxK0mUPUgUxYYkbow
-  secret: 6LdI-GccAAAAAIOkHUyRfKWn0zMlUwjpYbuiT6k4

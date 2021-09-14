@@ -8,7 +8,3 @@ comments:
   filename: "entry{@timestamp}"
   format: "yaml"
   path: "_data/comments"
-  reCaptcha:
-    enabled: true
-  siteKey: 6LcNBmccAAAAAKvSqFQk5J1UxK0mUPUgUxYYkbow
-  secret: 6LdI-GccAAAAAIOkHUyRfKWn0zMlUwjpYbuiT6k4
