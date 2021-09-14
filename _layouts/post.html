@@ -11,20 +11,19 @@ title: {{ post.title }}
         <div class="content-body content-body--blog">
             {{ content }}   
         </div> 
-        
-        <hr>
-
-        <div class="pagination">   
-            {% if page.previous.url %}
-                <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Older</a>
-            {% else %}
-            <span class="hidden">&larr; Older</span>
-            {% endif %}
-            {% if page.next.url %}
-                <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Newer &rarr;</a>
-            {% else %}
-            <span class="hidden">Newer &rarr;</span>
-            {% endif %}
-        </div>
     </article>
+        
+    <div class="pagination">   
+        {% if page.previous.url %}
+            <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Older</a>
+        {% else %}
+        <span class="hidden">&larr; Older</span>
+        {% endif %}
+        {% if page.next.url %}
+            <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Newer &rarr;</a>
+        {% else %}
+        <span class="hidden">Newer &rarr;</span>
+        {% endif %}
+    </div>
+
 </div>

@@ -72,13 +72,10 @@
 
 //BLOG
 
-.blog-post__header {
-  margin-bottom: var(--space-m);
-}
-
 .blog-post__time {
   margin-bottom: .2em;
   @include accentfont (uppercase, 500);
+  color: $darkcolor;
 }
 
 .blog-post__title {
@@ -141,5 +138,4 @@ figcaption {
   @include accentfont(uppercase, 500);
   display: flex;
   justify-content: space-between;
-  margin-top: var(--space-m);
 }

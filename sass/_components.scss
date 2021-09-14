@@ -380,13 +380,17 @@
 }
 
 // BLOG
-.blog-post:not(:last-child) {
+
+.blog-post {
   padding-bottom: var(--space-xl);
   border-bottom: 1px solid $lightcolor;
+
+  > *:first-child {    
+  margin-bottom: var(--space-l);
+  }
 }
 
 .content-body--blog {
-
  &:after {
   content: "EgG";
   font-family: "jrugpunk", sans-serif;
@@ -477,7 +481,6 @@ content: 'Show less \2191';
   display: inline-block;
   margin-top: var(--space-xs);
   padding: 0.15em 0.3em;
-  text-align: center;
   background-color: $lightcolor;
   color: $primboxcolor;
   font-size: $text-sm;
