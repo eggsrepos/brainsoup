@@ -4,6 +4,7 @@ title: Blog
 ---
 <div class="content-wrap">
   {% for post in paginator.posts %}
+  <article class="blog-post">
       <div class="blog-post__header">
         <div class="blog-post__time">{{ post.date  | date: '%B %d, %Y' }}</div>        
         <a href="{{ post.url }}">
@@ -12,22 +13,18 @@ title: Blog
       </div> 
       {% if post.content contains '<!--more-->' %}
       <div class="content-body">
-        <div>
           {{ post.content | split:'<!--more-->' | first }}
-        </div>
-        <input type="checkbox" class="read-more-state" id="{{ post.url }}"/>
-        <div class="read-more content-body content-body--blog">
-          {{ post.content | split:'<!--more-->' | last }}
-        </div>
-        <label for="{{ post.url }}" class="read-more-trigger"></label>   
       </div>
+      <input type="checkbox" class="read-more-state" id="{{ post.url }}"/>
+      <div class="read-more content-body content-body--blog">
+        {{ post.content | split:'<!--more-->' | last }}
+      </div>
+      <label for="{{ post.url }}" class="read-more-trigger"></label>   
     {% else %}
         {{ post.content }}
     {% endif %}
+  </article>
   {% endfor %}  
-
-<hr>
-  
   <!-- Pagination links -->
   <div class="pagination">
     {% if paginator.next_page %}

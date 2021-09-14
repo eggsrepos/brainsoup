@@ -29,16 +29,10 @@ header, footer {
 
 // HEADER
 
-.logo {
-  min-width: 225px;
-  max-width: 300px;
-  height: auto;
-}
-
-@media (max-width: $breakpoint-1) {  
-  .logo {
-    min-width: unset;
-    max-width: 225px;
+@media (min-width: $breakpoint-1) {  
+  .logo {    
+    min-width: 300px;
+    height: auto;
   }
 }
 

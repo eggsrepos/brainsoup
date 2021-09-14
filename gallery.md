@@ -16,7 +16,6 @@ title: Gallery
   <img src="/assets/eyebleach/06.jpg">
   <img src="/assets/eyebleach/07.jpg">
   <img src="/assets/eyebleach/08.jpg">
-  <img src="/assets/eyebleach/09.jpg">
-  
+  <img src="/assets/eyebleach/09.jpg">  
   </div>
 </div>

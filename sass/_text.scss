@@ -72,6 +72,10 @@
 
 //BLOG
 
+.blog-post__header {
+  margin-bottom: var(--space-m);
+}
+
 .blog-post__time {
   margin-bottom: .2em;
   @include accentfont (uppercase, 500);

@@ -375,6 +375,10 @@
 }
 
 // BLOG
+.blog-post:not(:last-child) {
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid $lightcolor;
+}
 
 .content-body--blog {
 
@@ -382,6 +386,12 @@
   content: "EgG";
   font-family: "jrugpunk", sans-serif;
   font-size: var(--step-5);
+  }
+}
+
+.content-body {
+  img {
+    width: 100%;
   }
 }
 
