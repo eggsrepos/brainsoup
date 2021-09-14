@@ -36,7 +36,7 @@ tags: relationships breakups bass "emotional abuse"
 
 <p>I still feel pangs of anger when I think about X and the things he did to me. Some days when I ruminate too much I even wish he were dead. For the most part, however, I feel much more stable and content than I ever have. I can pick up Doom and play a song X had taught me without being overcome with painful memories.</p>
 
-<p>And that is why Doom is so important to me. It's just not a cheap instrument. It's not a reminder of one of the worst times of my life.</p>
+<p>And that is why Doom is so important to me. It's not just a cheap instrument. It's not a reminder of one of the worst times of my life.</p>
 
 <p>It's a totem for my newfound resilience and strength. I can reconcile the darkest days of my life with the best days, and the dualisms that can exist in others. Life isn't perfect, and people most certainly aren't. I'm going forward with my life knowing that whatever happens to me, it doesn't have to become baggage.</p>
 
