@@ -3,10 +3,7 @@
     <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
     <input type="hidden" id="comment-replying-to-uid" name="fields[replying_to_uid]" value="">
     <input type="hidden" name="options[slug]" value="{{ page.slug }}">
-    {% if site.reCaptcha.enabled %}
-    <input type="hidden" name="options[reCaptcha][siteKey]" value="6LcNBmccAAAAAKvSqFQk5J1UxK0mUPUgUxYYkbow">
-    <input type="hidden" name="options[reCaptcha][secret]"  value="RkKPme6HCJAEndQvuoM0LMnB99UhV0jEeFOVnJXvKPj/okse7eWAHACkmDpgrGMOvbdd6Ge9HliP+wOfJypr0L6C4UMnMQhSlmfdaSbTS6iaZhPccBb2yXJoV9B3XpnV9FgNztaC4kVTk9H3YM1v0vttIm0hR3AiJWUuLqMQPEHw5nbUbAOjPLStUQXZ+oZBrHhabCo2wC+alzByTT+rh1KTdeheG1pJSVq9awflVopJuYdsIut4HwT3RjMHfJ9Ew+s3GL2x6JHas15SRFlDomFPzkBgRJxD/3PXQLf4CWQ27mnMe3uy3tey5ELgAGbRhuwHrYGaeeoo9HPgCsMJXtGrUvRRj5VJx7ZfrzclZVNnmUCmmJjC7fpRuOSKNHQ5VR0gYcTfn54GnAFzySj/q9BhVWod/IQmIfyph1rJPKMg/VJgc29uAhFHsvGJG5nCKhygC4zMAbhBAf/8+2P2AA8OvzOVNG+hb2J8TGE6PjtPoGsd4SA1Z8gaSfwD7HQlWaRgIsp5O9Z10//V6avwPbkT52Wn1BB4hBY22zFdzyKbLRKNlYpwpI6E5drH2K0kqsMTgqJooOcL1bubOqJKSxsX2j5+M+d+U6bfjTzXxbAoBjaSFZxHOijEOiOJqDwQI6l+C1/LsC00S8wQEwtKlLzSG4T+VUrHahVLT7ghooE=">
-    {% endif %}
+ 
     
     <div class="textfield">
       <label for="comment-form-message"><h2>Add Comment<small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">(cancel reply)</a></small></h2>
