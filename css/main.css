@@ -313,7 +313,7 @@ header, footer {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 15rem;
+  max-width: 15rem;
   gap: 6em;
 }
 
@@ -845,6 +845,12 @@ figcaption {
   box-shadow: none;
 }
 
+@media (max-width: 575.98px) {
+  .archive-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .bio-pic {
   max-width: 20rem;
   margin-inline: auto;
@@ -960,6 +966,7 @@ figcaption {
   opacity: 0;
   max-height: 0;
   font-size: 0;
+  margin-top: var(--space-m);
   transition: .25s ease;
   display: none;
 }
