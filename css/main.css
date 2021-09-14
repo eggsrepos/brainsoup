@@ -302,6 +302,10 @@ header, footer {
   gap: 2rem;
 }
 
+.logo {
+  max-width: 250px;
+}
+
 @media (min-width: 575.98px) {
   .logo {
     min-width: 300px;
