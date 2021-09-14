@@ -12,6 +12,9 @@ title: {{ post.title }}
             {{ content }}   
         </div> 
     </article>
+{% if page.comments == true %}
+  {% include comments.html %}
+{% endif %}
         
     <div class="pagination">   
         {% if page.previous.url %}

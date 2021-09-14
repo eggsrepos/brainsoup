@@ -1,7 +1,3 @@
-reCaptcha:
-  siteKey: 6LcNBmccAAAAAKvSqFQk5J1UxK0mUPUgUxYYkbow
-  secret: rC2rXmarDl0qaJuBfoPqbaobSpdRbC9Y2w6dmc1OCbwf43CIRh5endUpwLy6wuq+kQpNs0J3XOmiTiXv33P+tv3US2s8X4p45chOX5JFDnKsXckuR2RnKkVjcnZ+NLRr1ubjKeJhqUOCrqWIn1NfcV+0U9Kgo1J8Sdbm0e/sEDCNuub1pGqt3Hju0bHRzl37ZtWguQ9MlN7NOMkzaFol0knyqAU/Y/lWtGDcGkXORXF9cl6LbKUOILkkt1WyaBiWVNPOJrPwyxFs4JUhYQzReaCoixuFhprKyYNckrs4Ur/SUsvyv1mcO/isx2sYrw2LWSeze3HCLmlbbArEUPhup+SsMTFS+Ohc2i6C4kFSP7d3hwMIHPZV7P3yWjFIVaw1Q0eAKyrRklJnKVTysAmE1Ii/ekPSi/1XrQe1nf6zxhYJ2yVH5gIg69L47p/aM7X4cVaFVbLfCuJXHx+931SKbGbd4LxDgBlDGBFU1+jgr2CBpNgLsm53ZRHWtoVUAWQVicVJQdRHXdTjrS0Poc3isQ0mmXda5QO+BZXYAXz9lv+B3vIocaD8csUc18zkWylTpMIpNoaK1kIqLMXI/Q2CRHOy4IJi0OMXMKMuuvfxjdFvz2h8CBbkQIF0BGWwmVnlVkIn5wVMM3FK+TYtHiz5tTAFMtQgTfIowwuZ/rNwBZE=
-
 markdown: kramdown
 kramdown:
   input: GFM
@@ -11,4 +7,16 @@ plugins:
 
 paginate: 4
 paginate_path: "/blog/page:num/"
-permalink: pretty
+permalink: /:categories/:title
+defaults:
+    -
+      scope:
+        path: ""
+        type: "posts"
+      values:
+        layout: "post"
+        comments: false
+reCaptcha:
+  siteKey: 6LcNBmccAAAAAKvSqFQk5J1UxK0mUPUgUxYYkbow
+  secret: Q/rfLTY67fGSg9PeMpvsv9Qt+GxHknJFb+MZB+5gHutd9XGH1InK33zpRl46FfsYhbkBZUq/f4nVOEzudcwwZb2gG2prANZd7NGVZLrzQO3BK+x65mPAN0VCPW6KvGDfhiK/Teuoz7c1We71YKuMpsLqGQ/HXFC551gWGtI5oUlzUwX/d6fSpBuq1curumD46RsSI91YGRPX9EKLYTGfZU3pkP5vrQsj8kFYgskBQCEtvQKYfuLOZzT7BRoeVd8OXOouA82DozGHdTCbjsh22R+UTrLmE/tGfivkjNh5Evz/eK2BZXd4DsR0+vhgRVopbdfY4mQzyHelBhIwMY9fBqW808atksGhSqWiQXliY8le1JZXhC+yyLUI5n5j1WrLhB2mPDL38mNy0cizjIODRtTvLQUpslb1yuyn7tn1a4T+HdsHf01lieR+8dkfEZMjk9OSl8aj8ozg0vx1MZ6FbnA33+MKvIqmM4P2zAul2g+o2TgV4Z5nQ9aWPbe8eQg1u4DVMi0HllNPOo+0mktPZEkTIBXXTMx1KoGaYD5CgBY1IyqAnhbIF5nbC61Gquz9Hfs4zGf+vgTx3IY/qtNSrSauRPTR3FpJXEz/0I48ItTsc/6ARgra+t9jh6+zQPRleyTWPu8f59X+ijsCd/8FXaQgBRSCPfyLeXOGZdxQTBI=
+
