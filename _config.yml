@@ -16,3 +16,5 @@ defaults:
       values:
         layout: "post"
         comments: false
+
+staticman_url: https://eggsstaticmaninstance.herokuapp.com/v2/entry/eggsrepos/brainsoup/master/comments

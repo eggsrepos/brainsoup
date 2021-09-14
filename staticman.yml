@@ -4,7 +4,12 @@ comments:
   requiredFields: ["name", "message"]
   branch: "master"
   name: "Brain Soup Blog"
-  commitMessage: "Add Staticman data"
+  commitMessage: "Add comment"
   filename: "entry{@timestamp}"
   format: "yaml"
-  path: "_data/comments"
+  path: "/_data/comments/{options.slug}"
+generatedFields:
+  date: # Extended field (date)
+    type: date
+    options:
+      format: "timestamp-seconds"
