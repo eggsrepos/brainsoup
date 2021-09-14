@@ -84,7 +84,7 @@
 .blog-post__title {
   display: inline-block;
   margin-bottom: 0;
-  padding-inline: var(--space-xs);
+  padding: var(--space-3xs) var(--space-xs);
   background-color: $lightcolor;
   color: $darkcolor;
   border: 1px solid $darkcolor;

@@ -447,7 +447,7 @@ header, footer {
 .blog-post__title {
   display: inline-block;
   margin-bottom: 0;
-  padding-inline: var(--space-xs);
+  padding: var(--space-3xs) var(--space-xs);
   background-color: #fffff1;
   color: #000000e0;
   border: 1px solid #000000e0;
