@@ -4,8 +4,8 @@
     <input type="hidden" id="comment-replying-to-uid" name="fields[replying_to_uid]" value="">
     <input type="hidden" name="options[slug]" value="{{ page.slug }}">
     {% if site.reCaptcha.enabled %}
-    <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
-    <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.reCaptcha.secret }}">
+    <input type="hidden" name="options[reCaptcha][siteKey]" value="6LcNBmccAAAAAKvSqFQk5J1UxK0mUPUgUxYYkbow">
+    <input type="hidden" name="options[reCaptcha][secret]"  value="Q/rfLTY67fGSg9PeMpvsv9Qt+GxHknJFb+MZB+5gHutd9XGH1InK33zpRl46FfsYhbkBZUq/f4nVOEzudcwwZb2gG2prANZd7NGVZLrzQO3BK+x65mPAN0VCPW6KvGDfhiK/Teuoz7c1We71YKuMpsLqGQ/HXFC551gWGtI5oUlzUwX/d6fSpBuq1curumD46RsSI91YGRPX9EKLYTGfZU3pkP5vrQsj8kFYgskBQCEtvQKYfuLOZzT7BRoeVd8OXOouA82DozGHdTCbjsh22R+UTrLmE/tGfivkjNh5Evz/eK2BZXd4DsR0+vhgRVopbdfY4mQzyHelBhIwMY9fBqW808atksGhSqWiQXliY8le1JZXhC+yyLUI5n5j1WrLhB2mPDL38mNy0cizjIODRtTvLQUpslb1yuyn7tn1a4T+HdsHf01lieR+8dkfEZMjk9OSl8aj8ozg0vx1MZ6FbnA33+MKvIqmM4P2zAul2g+o2TgV4Z5nQ9aWPbe8eQg1u4DVMi0HllNPOo+0mktPZEkTIBXXTMx1KoGaYD5CgBY1IyqAnhbIF5nbC61Gquz9Hfs4zGf+vgTx3IY/qtNSrSauRPTR3FpJXEz/0I48ItTsc/6ARgra+t9jh6+zQPRleyTWPu8f59X+ijsCd/8FXaQgBRSCPfyLeXOGZdxQTBI=">
     {% endif %}
     
     <div class="textfield">
@@ -33,7 +33,7 @@
       </div>
   
       {% if site.reCaptcha.enabled %}
-      <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
+      <div id="reCaptcha" class="g-recaptcha" data-sitekey="6LcNBmccAAAAAKvSqFQk5J1UxK0mUPUgUxYYkbow"></div>
       {% endif %}
   
       <button class="button" id="comment-form-submit">
