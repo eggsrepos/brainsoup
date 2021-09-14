@@ -1159,7 +1159,7 @@ button:hover {
   width: 100%;
   height: 100%;
   z-index: 999;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(158, 25, 25, 0.85);
 }
 
 .show-modal .modal {
@@ -1171,7 +1171,7 @@ button:hover {
   overflow: hidden;
   z-index: 1;
   position: relative;
-  background: #fff;
+  background: #000000e0;
   box-sizing: border-box;
 }
 
@@ -1188,7 +1188,7 @@ button:hover {
   box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.14);
   padding: 16px;
   border-radius: 2px;
-  background: white;
+  background: #a7ffa3;
 }
 
 .mdl-shadow--16dp {
