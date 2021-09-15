@@ -405,9 +405,9 @@
   }
 
   a {
-  padding-inline: var(--space-2xs);
+  padding-inline: var(--space-xs);
   border: 2px solid $lightcolor;
-  @include accentfont (null, 500);  
+  @include accentfont (uppercase, 500);  
   background-image: linear-gradient($accentcolor2 50%, $lightcolor 50%);
   background-size: 100% 200%;
   transition: 0.2s ease-in;
