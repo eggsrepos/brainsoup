@@ -449,7 +449,6 @@
 .content-wrap--blog-page {  
   padding-bottom: var(--space-l);
   border-bottom: 1px solid $lightcolor;
-  margin-bottom: var(--space-m);
 }
 
 .content-body {
@@ -539,6 +538,9 @@ content: 'Show less \2191';
   z-index: 1;
 }
 
+.pagination {
+  margin-top: var(--space-m);
+}
 
 // UTILITIES
 .hidden {

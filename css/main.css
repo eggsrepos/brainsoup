@@ -980,7 +980,6 @@ figcaption {
 .content-wrap--blog-page {
   padding-bottom: var(--space-l);
   border-bottom: 1px solid #fffff1;
-  margin-bottom: var(--space-m);
 }
 
 .content-body > * + * {
@@ -1064,6 +1063,10 @@ figcaption {
   bottom: 1rem;
   right: 1rem;
   z-index: 1;
+}
+
+.pagination {
+  margin-top: var(--space-m);
 }
 
 .hidden {
