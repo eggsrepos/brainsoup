@@ -1,7 +1,7 @@
 staticman:
   branch: "master"
 comments:
-  allowedFields: ["name", "email", "url", "message", "replying_to"]
+  allowedFields: ["name", "email", "url", "message", "replying_to_uid"]
   requiredFields: ["name", "message"]
   branch: "master"
   name: "Brain Soup Blog"

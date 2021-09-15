@@ -23,7 +23,8 @@ title: Blog
     {% else %}
         {{ post.content }}
     {% endif %}
-  </article>
+    <p class="liner"><a href="{{ post.url }}#comment-section" class="liner__text">Leave a comment</a></p>
+   </article>
   {% endfor %}  
   <!-- Pagination links -->
   <div class="pagination">

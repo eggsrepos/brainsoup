@@ -5,7 +5,7 @@
 //
 // Staticman new comment form
 //
-input, select, textarea, label, button {
+.comments > * {
     @include accentfont(null, 500);
     color: $darkcolor;
     background-color: $lightcolor;

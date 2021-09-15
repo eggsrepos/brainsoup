@@ -463,7 +463,7 @@ header, footer {
   -webkit-box-decoration-break: clone;
   font-size: 2em;
   text-transform: initial;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 a .blog-post__title:hover {
@@ -922,13 +922,42 @@ figcaption {
   width: 100%;
 }
 
-.blog-post {
-  padding-bottom: var(--space-xl);
-  border-bottom: 1px solid #fffff1;
+.blog-post > * + * {
+  margin-top: var(--space-m);
 }
 
-.blog-post > *:first-child {
+.blog-post > :first-child {
   margin-bottom: var(--space-l);
+}
+
+.liner {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.liner:before, .liner:after {
+  content: '';
+  flex-grow: 1;
+  height: 2px;
+  background: #fffff1;
+  margin-block: auto;
+}
+
+.liner__text {
+  padding-inline: 1em;
+  border: 2px solid #fffff1;
+  border-radius: 3px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #fffff1;
+  color: #9E99D5;
+}
+
+.liner__text:hover {
+  background-color: #9E99D5;
+  color: #fffff1;
 }
 
 .content-body--blog:after {
@@ -980,7 +1009,6 @@ figcaption {
   opacity: 0;
   max-height: 0;
   font-size: 0;
-  margin-top: var(--space-m);
   transition: .25s ease;
   display: none;
 }
@@ -1011,7 +1039,7 @@ figcaption {
   background-color: #fffff1;
   color: #9E99D5;
   font-size: 0.875em;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .read-more-trigger:hover {
@@ -1046,7 +1074,11 @@ figcaption {
   text-align: center;
 }
 
-input, select, textarea, label, button {
+.centered {
+  margin: 0 auto;
+}
+
+.comments > * {
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   color: #000000e0;
