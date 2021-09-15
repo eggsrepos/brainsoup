@@ -5,7 +5,7 @@ comments:
   requiredFields: ["name", "message"]
   branch: "master"
   name: "Brain Soup Blog"
-  commitMessage: "New comment"
+  commitMessage: "New comment from {fields.name}"
   filename: "comment-{@timestamp}"
   format: "yaml"
   path: "_data/comments/{options.slug}"
@@ -16,7 +16,6 @@ generatedFields:
       format: "timestamp-seconds"
 transforms:
   email           : "md5"
-allowedOrigins: ["localhost", "brainsoup.me"]
 reCaptcha:
     enabled: true
     siteKey: "6LcNBmccAAAAAKvSqFQk5J1UxK0mUPUgUxYYkbow"
