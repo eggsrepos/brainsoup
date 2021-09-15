@@ -16,6 +16,9 @@ defaults:
       values:
         layout: "post"
 
+author:
+  name: Egg
+
 staticman_url: "https://eggsstaticmaninstance.herokuapp.com/v2/entry/eggsrepos/brainsoup/master/comments"
 reCaptcha:
     siteKey: "6LcNBmccAAAAAKvSqFQk5J1UxK0mUPUgUxYYkbow"
