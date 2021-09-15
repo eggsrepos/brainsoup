@@ -249,7 +249,6 @@ body {
 h1, h2 {
   font-family: 'Work Sans', sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
   line-height: 1.125;
 }
 
@@ -441,6 +440,7 @@ header, footer {
   border-bottom: 2px solid #fffff1;
   font-size: var(--step-2);
   text-shadow: -1px 1px #000000e0;
+  text-transform: uppercase;
 }
 
 .blog-post__time {

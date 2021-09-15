@@ -154,7 +154,7 @@ body {
 
 
 h1, h2 {
-  @include accentfont(uppercase);
+  @include accentfont(null);
   line-height: 1.125;
 }
 

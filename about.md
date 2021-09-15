@@ -21,7 +21,7 @@ title: About
         <img src="/assets/gd.jpg">
         <span>Behold.</span>
         </div>
-      <h2>Why "Brain Soup?"</h2>
+      <h2>Why "Brain Soup"?</h2>
       <ol>
         <li> It's creamy and delicious but sounds horrifying to those who aren't open-minded.</li>
         <li>This is a place for me to dump the omnidirectional thoughts that swirl around in my ADHD-laden brain like an overseasoned soup.</li>
