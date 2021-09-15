@@ -979,7 +979,7 @@ figcaption {
 
 .content-wrap--blog-page {
   padding-bottom: var(--space-l);
-  border-bottom: 1px solid #fffff1;
+  border-bottom: 2px solid #fffff1;
 }
 
 .content-body > * + * {
