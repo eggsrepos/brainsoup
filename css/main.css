@@ -969,18 +969,18 @@ figcaption {
   width: 100%;
 }
 
-.content-wrap {
-  padding-bottom: var(--space-l);
-  border-bottom: 1px solid #000000e0;
-  margin-bottom: var(--space-m);
-}
-
 .content-wrap > * + * {
   margin-top: var(--space-l);
 }
 
 .content-wrap > .page-header-wrap + * {
   margin-top: var(--space-xl);
+}
+
+.content-wrap--blog-page {
+  padding-bottom: var(--space-l);
+  border-bottom: 1px solid #fffff1;
+  margin-bottom: var(--space-m);
 }
 
 .content-body > * + * {

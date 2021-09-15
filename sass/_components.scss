@@ -436,9 +436,6 @@
 // SPACING
 
 .content-wrap {
-  padding-bottom: var(--space-l);
-  border-bottom: 1px solid $darkcolor;
-  margin-bottom: var(--space-m);
 
   > * + * {
   margin-top: var(--space-l);
@@ -447,6 +444,12 @@
   > .page-header-wrap + * {
     margin-top: var(--space-xl);
   }
+}
+
+.content-wrap--blog-page {  
+  padding-bottom: var(--space-l);
+  border-bottom: 1px solid $lightcolor;
+  margin-bottom: var(--space-m);
 }
 
 .content-body {
