@@ -1,5 +1,3 @@
-// Static comments
-// from: https://github.com/eduardoboucas/popcorn/blob/gh-pages/js/main.js
 (function ($) {
   var $comments = $('.js-comments');
 
@@ -8,7 +6,7 @@
 
 
     $("#comment-form-submit").html(
-      '<svg class="icon spin"><use xlink:href="#icon-loading"></use></svg> Sending...'
+      'Submitting...'
     );
     $(form).addClass('disabled');
 

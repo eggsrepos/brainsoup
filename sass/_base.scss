@@ -147,6 +147,7 @@ body, h1, h2, p, ul, ol, figure {
 
 body {
   @include primaryfont;
+  color: $lightcolor;
   font-size: var(--step-0);
   line-height: 1.6;
 }

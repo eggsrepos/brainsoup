@@ -1,0 +1,234 @@
+
+.comments {  
+//   *:not(h2) {
+    // @include accentfont(null, 400);
+//   }
+}
+
+.comments-header {
+    margin-bottom: var(--space-l);
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    
+    &:before, &:after {
+        content: '';
+        flex-grow: 1;
+        height: 2px;
+        background: $lightcolor;
+        margin-block: auto;
+    }
+
+    h2 {
+        padding: var(--space-2xs) var(--space-xs); 
+        border: 2px solid $lightcolor;    
+        background: $accentcolor2;   
+        text-transform: initial;
+    }   
+}
+
+.leave-comment-header {
+    margin-bottom: var(--space-s);
+    text-transform: initial;
+    font-weight: 600;
+}
+
+.new-comment {
+    margin-top: var(--space-l);
+    margin-inline: auto;
+    padding: var(--space-m);
+    max-width: 35rem;
+    color: $darkcolor;
+    background: $lightcolor;
+} 
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+.textfield {
+    max-width: 100%;
+    margin-bottom: var(--space-s);
+    @include accentfont (null, 600);
+    font-size: var(--step--1);
+}
+
+
+.hp {
+    display: none;
+}
+
+textarea {
+    vertical-align: top;    
+}
+
+.textfield__input {
+    width: 100%;
+    padding: var(--space-2xs);
+    border: 2px solid $darkcolor;
+    margin-top: var(--space-2xs);
+    background: transparent;
+    @include primaryfont;
+}
+
+.notify-me, .g-recaptcha {
+    padding: 0.5rem 0;
+}
+
+.submit-button {
+    @include accentfont (null, 600);
+    font-size: var(--step-0);
+    color: $darkcolor;
+    padding: 5px 7px;
+    border: 2px solid $darkcolor; 
+    background: $lightcolor;
+    background-size: 200% 100%;
+    transition: 0.2s ease-in;
+
+    &:hover {
+    color: $lightcolor;
+    background: $darkcolor;
+    }
+}
+
+//
+// Staticman existing comments
+//
+.comment {
+    @include accentfont (null, 400);
+    padding: var(--space-m);
+    margin-bottom: var(--space-m);
+    background: $lightcolor;
+    color: $darkcolor;
+}
+
+.comment__author {
+    padding-bottom: var(--space-2xs);
+    border-bottom: 2px solid $darkcolor;
+}
+.comment__admin_tag {
+    padding: 3px;
+    border-radius: 4px;
+    background: $accentcolor2;
+    color: $lightcolor;
+    font-size: var(--step--1);
+}
+
+.comment__name {
+    font-weight: 600;
+}
+
+.comment__date {
+    a {
+        &:hover {
+        text-decoration: underline;
+        }
+    }
+}
+.comment__body {
+    @include primaryfont;
+    margin-top: var(--space-2xs);
+}
+
+.comment__meta {
+    text-align: right;
+  }
+
+.comment__reply-link {
+    font-size: var(--step--1);
+    cursor: pointer;
+
+    &:hover {
+    text-decoration: underline;
+    }
+}
+
+.comment.child {
+    margin-left: 2em;
+}
+
+//
+// Pop-up modal window for Staticman comments
+//
+.show-modal {
+    overflow: hidden;
+    position: relative;
+}
+.show-modal:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+.show-modal .modal {
+    display: block;
+}
+.mdl-card {
+    min-height: 200px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    background: $lightcolor;
+    box-sizing: border-box;
+}
+.modal {
+    display: none;
+    position: fixed;
+    width: 330px;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    min-height: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,.14);
+    padding: 16px;
+    border-radius: 2px;
+    background: $lightcolor;
+}
+.mdl-shadow--16dp {
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2);
+}
+.mdl-card__supporting-text, .modal-title {
+    overflow: hidden;
+    margin-block: var(--space-m);
+    text-align: center;     
+    color: $darkcolor;
+}
+
+.mdl-card__actions {
+    text-align: center;
+}
+
+.mdl-js-button {
+    background: $lightcolor;
+    border: 1px solid $darkcolor;
+    padding: 4px 8px;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    @include accentfont (null, 500);
+
+  &:hover {
+    background-color: $darkcolor;
+    color: $lightcolor;
+  }
+}
+.disabled {
+    input,
+    button,
+    textarea,
+    label {
+        pointer-events: none;
+        cursor: not-allowed;
+        filter: alpha(opacity=65);
+        box-shadow: none;
+        opacity: 0.65;
+    }
+}

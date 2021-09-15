@@ -239,9 +239,9 @@ body, h1, h2, p, ul, ol, figure {
 }
 
 body {
-  color: #fffff1;
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
+  color: #fffff1;
   font-size: var(--step-0);
   line-height: 1.6;
 }
@@ -845,7 +845,6 @@ figcaption {
 .archive-list li {
   height: 100%;
   padding: var(--space-m);
-  border: 2px solid #000000e0;
   background: #fffff1;
   color: #000000e0;
 }
@@ -933,7 +932,7 @@ figcaption {
 .liner {
   display: flex;
   align-items: flex-start;
-  text-align: center;
+  gap: 1em;
 }
 
 .liner:before, .liner:after {
@@ -944,20 +943,19 @@ figcaption {
   margin-block: auto;
 }
 
-.liner__text {
-  padding-inline: 1em;
+.liner a {
+  padding-inline: var(--space-2xs);
   border: 2px solid #fffff1;
-  border-radius: 3px;
   font-family: 'Work Sans', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  background-color: #fffff1;
-  color: #9E99D5;
+  font-weight: 500;
+  background-image: linear-gradient(#a5b933 50%, #fffff1 50%);
+  background-size: 100% 200%;
+  transition: 0.2s ease-in;
 }
 
-.liner__text:hover {
-  background-color: #9E99D5;
-  color: #fffff1;
+.liner a:hover {
+  color: #9E99D5;
+  background-position: -100% -100%;
 }
 
 .content-body--blog:after {
@@ -1061,6 +1059,11 @@ figcaption {
   z-index: 1;
 }
 
+.pagination {
+  padding-top: var(--space-m);
+  border-top: 1px solid #fffff1;
+}
+
 .hidden {
   visibility: hidden;
 }
@@ -1078,15 +1081,41 @@ figcaption {
   margin: 0 auto;
 }
 
-.comments > * {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 500;
+.comments-header {
+  margin-bottom: var(--space-l);
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.comments-header:before, .comments-header:after {
+  content: '';
+  flex-grow: 1;
+  height: 2px;
+  background: #fffff1;
+  margin-block: auto;
+}
+
+.comments-header h2 {
+  padding: var(--space-2xs) var(--space-xs);
+  border: 2px solid #fffff1;
+  background: #a5b933;
+  text-transform: initial;
+}
+
+.leave-comment-header {
+  margin-bottom: var(--space-s);
+  text-transform: initial;
+  font-weight: 600;
+}
+
+.new-comment {
+  margin-top: var(--space-l);
+  margin-inline: auto;
+  padding: var(--space-m);
+  max-width: 35rem;
   color: #000000e0;
-  background-color: #fffff1;
-  -webkit-text-size-adjust: 100%;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
+  background: #fffff1;
 }
 
 fieldset {
@@ -1095,9 +1124,11 @@ fieldset {
 }
 
 .textfield {
-  width: 420px;
   max-width: 100%;
-  padding: 0.5rem 0;
+  margin-bottom: var(--space-s);
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: var(--step--1);
 }
 
 .hp {
@@ -1109,73 +1140,87 @@ textarea {
 }
 
 .textfield__input {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 4px 5px;
   width: 100%;
-  font-size: var(--step--1);
+  padding: var(--space-2xs);
+  border: 2px solid #000000e0;
+  margin-top: var(--space-2xs);
+  background: transparent;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
 }
 
 .notify-me, .g-recaptcha {
   padding: 0.5rem 0;
 }
 
-.button {
-  background: rgba(158, 158, 158, 0.2);
-  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.14);
-  border: none;
-  border-radius: 2px;
-  padding: 4px 8px;
-  overflow: hidden;
-  cursor: pointer;
-  transition-duration: 0.4s;
-  margin: 4px 0px 0px 0px;
-}
-
-button:hover {
-  background-color: #a5b933;
-  color: #fffff1;
-}
-
-.comment__new {
-  padding: 0px 0px 14px 0px;
-}
-
-.comment__author {
-  color: #000000e0;
-}
-
-.comment__date {
-  font-size: var(--step--1);
-}
-
-.comment__body {
+.submit-button {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
   font-size: var(--step-0);
-}
-
-.comment__meta {
-  text-align: left;
   color: #000000e0;
-  font-size: var(--step--1);
+  padding: 5px 7px;
+  border: 2px solid #000000e0;
+  background: #fffff1;
+  background-size: 200% 100%;
+  transition: 0.2s ease-in;
 }
 
-.comments__existing {
-  padding: 8px 0px 0px 0px;
+.submit-button:hover {
+  color: #fffff1;
+  background: #000000e0;
 }
 
 .comment {
-  border-top: 0px solid #a7ffa3;
-  padding: 0px 0px 0px 0px;
-  margin-bottom: 1em;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  padding: var(--space-m);
+  margin-bottom: var(--space-m);
+  background: #fffff1;
+  color: #000000e0;
 }
 
-.comment.child {
-  margin-left: 3em;
+.comment__author {
+  padding-bottom: var(--space-2xs);
+  border-bottom: 2px solid #000000e0;
+}
+
+.comment__admin_tag {
+  padding: 3px;
+  border-radius: 4px;
+  background: #a5b933;
+  color: #fffff1;
+  font-size: var(--step--1);
+}
+
+.comment__name {
+  font-weight: 600;
+}
+
+.comment__date a:hover {
+  text-decoration: underline;
+}
+
+.comment__body {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  margin-top: var(--space-2xs);
+}
+
+.comment__meta {
+  text-align: right;
 }
 
 .comment__reply-link {
-  color: #000000e0;
   font-size: var(--step--1);
   cursor: pointer;
+}
+
+.comment__reply-link:hover {
+  text-decoration: underline;
+}
+
+.comment.child {
+  margin-left: 2em;
 }
 
 .show-modal {
@@ -1191,7 +1236,7 @@ button:hover {
   width: 100%;
   height: 100%;
   z-index: 999;
-  background-color: rgba(158, 25, 25, 0.85);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .show-modal .modal {
@@ -1203,7 +1248,7 @@ button:hover {
   overflow: hidden;
   z-index: 1;
   position: relative;
-  background: #000000e0;
+  background: #fffff1;
   box-sizing: border-box;
 }
 
@@ -1220,21 +1265,38 @@ button:hover {
   box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.14);
   padding: 16px;
   border-radius: 2px;
-  background: #a7ffa3;
+  background: #fffff1;
 }
 
 .mdl-shadow--16dp {
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
-.mdl-card__supporting-text {
+.mdl-card__supporting-text, .modal-title {
   overflow: hidden;
-  padding: 16px;
-  width: 90%;
+  margin-block: var(--space-m);
+  text-align: center;
+  color: #000000e0;
 }
 
-.modal-title {
-  margin-bottom: 0px;
+.mdl-card__actions {
+  text-align: center;
+}
+
+.mdl-js-button {
+  background: #fffff1;
+  border: 1px solid #000000e0;
+  padding: 4px 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+}
+
+.mdl-js-button:hover {
+  background-color: #000000e0;
+  color: #fffff1;
 }
 
 .disabled input,

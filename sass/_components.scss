@@ -297,7 +297,6 @@
   li {
     height: 100%;
     padding: var(--space-m);
-    border: 2px solid $darkcolor;
     background: $lightcolor;
     color: $darkcolor;
     
@@ -395,7 +394,7 @@
 .liner {
   display: flex;
   align-items: flex-start;
-  text-align: center;
+  gap: 1em;
 
   &:before, &:after {
     content: '';
@@ -404,19 +403,19 @@
     background: $lightcolor;
     margin-block: auto;
   }
-}
 
-.liner__text {
-  padding-inline: 1em;
+  a {
+  padding-inline: var(--space-2xs);
   border: 2px solid $lightcolor;
-  border-radius: 3px;
-  @include accentfont (uppercase);
-  background-color: $lightcolor;
-  color: $primboxcolor;
+  @include accentfont (null, 500);  
+  background-image: linear-gradient($accentcolor2 50%, $lightcolor 50%);
+  background-size: 100% 200%;
+  transition: 0.2s ease-in;
 
-  &:hover {
-    background-color: $primboxcolor;
-    color: $lightcolor;
+    &:hover {
+    color: $primboxcolor;
+    background-position: -100% -100%;
+    }
   }
 }
 
@@ -534,6 +533,10 @@ content: 'Show less \2191';
   z-index: 1;
 }
 
+.pagination {
+  padding-top: var(--space-m);
+  border-top: 1px solid $lightcolor;
+}
 
 // UTILITIES
 .hidden {
