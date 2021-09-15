@@ -1,6 +1,3 @@
-staticman:
-  branch: "master"
-
 comments:
   allowedFields: ["name", "email", "url", "message", "replying_to_uid"]
   requiredFields: ["name", "message"]
@@ -10,12 +7,12 @@ comments:
   filename: "comment-{@timestamp}"
   format: "yaml"
   path: "_data/comments/{options.slug}"
-  generatedFields:
+generatedFields:
   date:
     type: date
     options:
       format: "iso8601"
-  transforms:
+transforms:
     email           : "md5"
 
 reCaptcha:
