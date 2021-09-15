@@ -1,6 +1,7 @@
 staticman:
   branch: "master"
-comments:
+
+  comments:
   allowedFields: ["name", "email", "url", "message", "replying_to_uid"]
   requiredFields: ["name", "message"]
   branch: "master"
@@ -9,13 +10,15 @@ comments:
   filename: "comment-{@timestamp}"
   format: "yaml"
   path: "_data/comments/{options.slug}"
-generatedFields:
+  generatedFields:
   date:
     type: date
     options:
       format: "iso8601"
+
 transforms:
   email           : "md5"
+
 reCaptcha:
     enabled: true
     siteKey: "6LcNBmccAAAAAKvSqFQk5J1UxK0mUPUgUxYYkbow"
