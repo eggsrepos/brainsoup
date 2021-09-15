@@ -436,6 +436,9 @@
 // SPACING
 
 .content-wrap {
+  padding-bottom: var(--space-l);
+  border-bottom: 1px solid $darkcolor;
+  margin-bottom: var(--space-m);
 
   > * + * {
   margin-top: var(--space-l);
@@ -533,10 +536,6 @@ content: 'Show less \2191';
   z-index: 1;
 }
 
-.pagination {
-  padding-top: var(--space-m);
-  border-top: 1px solid $lightcolor;
-}
 
 // UTILITIES
 .hidden {
