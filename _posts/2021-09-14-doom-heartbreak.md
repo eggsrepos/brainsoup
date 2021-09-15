@@ -1,11 +1,9 @@
 ---
-layout: post
 title: Doom X Heartbreak
 slug: doom x heartbreak
 date: 2021-09-14
 category: Personal
 tags: relationships breakups bass "emotional abuse"
-comments: true
 ---
 <img src="/assets/blogposts/doom.png">
 

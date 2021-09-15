@@ -15,11 +15,10 @@ defaults:
         type: "posts"
       values:
         layout: "post"
+        comments: true
 
 author:
   name: Egg
-
-comments: true
 
 staticman_url: "https://eggsstaticmaninstance.herokuapp.com/v2/entry/eggsrepos/brainsoup/master/comments"
 reCaptcha:
