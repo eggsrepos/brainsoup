@@ -1256,8 +1256,6 @@ textarea {
   position: relative;
   background: #fffff1;
   box-sizing: border-box;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 500;
 }
 
 .modal {
@@ -1285,6 +1283,8 @@ textarea {
   margin-block: var(--space-m);
   text-align: center;
   color: #000000e0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
 }
 
 .modal-title {
