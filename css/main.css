@@ -847,6 +847,7 @@ figcaption {
   padding: var(--space-m);
   background: #fffff1;
   color: #000000e0;
+  transition: .3s ease;
 }
 
 .archive-list li:hover {
