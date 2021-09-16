@@ -1,6 +1,5 @@
 ---
 title:  Baby's First Post
-slug: babys first post
 date: 2021-09-06
 category: Personal
 tag: [blogging, coding, css, sass]

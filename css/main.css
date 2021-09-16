@@ -1114,7 +1114,7 @@ figcaption {
   font-weight: 600;
 }
 
-.new-comment {
+.comment__new {
   margin-top: var(--space-l);
   margin-inline: auto;
   padding: var(--space-m);
@@ -1285,6 +1285,10 @@ textarea {
   color: #000000e0;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
+}
+
+.modal-title {
+  font-weight: 700;
 }
 
 .mdl-card__actions {
