@@ -674,7 +674,7 @@ figcaption {
 }
 
 .primary-box {
-  width: 52rem;
+  width: 50rem;
   max-width: 100%;
   padding: var(--space-l-xl);
   background-color: #9E99D5;
@@ -993,21 +993,6 @@ figcaption {
 
 .content-body ul li, .content-body ol li {
   margin-top: var(--space-xs);
-}
-
-.content-body--about {
-  --space-m: var(--space-l);
-  --space-xl: var(--space-2xl);
-  --space-xs: var(--space-s);
-  font-size: var(--step-1);
-}
-
-.content-body--about h2 {
-  font-size: var(--step-3);
-}
-
-.content-body--about figcaption {
-  font-size: var(--step-0);
 }
 
 .read-more {
