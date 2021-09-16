@@ -1283,6 +1283,8 @@ textarea {
   margin-block: var(--space-s);
   text-align: center;
   color: #000000e0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
 }
 
 .mdl-card__actions {
