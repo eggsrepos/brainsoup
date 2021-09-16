@@ -1256,8 +1256,6 @@ textarea {
   position: relative;
   background: #fffff1;
   box-sizing: border-box;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 500;
 }
 
 .modal {
@@ -1282,13 +1280,9 @@ textarea {
 
 .mdl-card__supporting-text, .modal-title {
   overflow: hidden;
-  margin-block: var(--space-m);
+  margin-block: var(--space-s);
   text-align: center;
   color: #000000e0;
-}
-
-.modal-title {
-  font-weight: 700;
 }
 
 .mdl-card__actions {
