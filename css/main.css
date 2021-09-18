@@ -933,7 +933,7 @@ figcaption {
 .liner {
   display: flex;
   align-items: flex-start;
-  gap: 1em;
+  gap: var(--space-2xs);
 }
 
 .liner:before, .liner:after {
@@ -946,6 +946,7 @@ figcaption {
 
 .liner a {
   padding-inline: var(--space-xs);
+  padding-block: var(--space-2xs);
   border: 2px solid #fffff1;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
@@ -1046,7 +1047,7 @@ figcaption {
   border: 1px solid #000000e0;
   padding: 0.3em 0.5em;
   position: fixed;
-  bottom: 1rem;
+  bottom: 2rem;
   right: 1rem;
   z-index: 1;
 }
