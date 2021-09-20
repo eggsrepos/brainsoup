@@ -33,7 +33,7 @@ tags: relationships breakups bass "emotional abuse"
 
 <p>And of course, the hours he spent teaching me how to play guitar like no one else could. Showing a level of patience, support, and encouragement that would fool anyone about his capacity as a boyfriend. I play bass now because of him. I bought Doom, my very first guitar, with him. His memory is intrinsically tied to the massive object that sits in my room staring at me every day.</p>
 
-<p>I still feel pangs of anger when I think about X and the things he did to me. Some days when I ruminate too much I even wish he were dead. For the most part, however, I feel much more stable and content than I ever have. I can pick up Doom and play a song X had taught me without being overcome with painful memories.</p>
+<p>I still feel pangs of anger when I think about X and the things he did to me. Some days when I ruminate too much I even wish he was dead. For the most part, however, I feel much more stable and content than I ever have. I can pick up Doom and play a song X had taught me without being overcome with painful memories.</p>
 
 <p>And that is why Doom is so important to me. It's not just a cheap instrument. It's not a reminder of one of the worst times of my life.</p>
 
