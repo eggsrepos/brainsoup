@@ -1,22 +1,6 @@
 //HEADER 
-.glitch-hover {
 
-  &:hover {
-    animation: glitch1 .5s infinite;
-    
-    &:nth-child(2) {
-      color: #67f3da;
-      animation: glitch2 .5s infinite;
-      }
-    
-    &:nth-child(3) {
-      color: #f16f6f;
-      animation: glitch3 .5s infinite;
-      }
-    }  
-}
-
-.site-nav__item {
+.site-nav-list__item {
   @include accentfont(uppercase);
   font-size: var(--step-3);
   letter-spacing: 0.03em;
@@ -39,32 +23,6 @@
     padding-top: .2em;
     padding-bottom: .2em;
   }  
-}
-
-//NAV LINK HOVER TILT
-.link1 {  
-  transform: rotate(20deg);
-  transition: transform .2s ease-in-out;
-}
-
-.link2 {  
-  transform: rotate(-15deg);
-  transition: transform .2s ease-in-out;
-}
-
-.link3 {  
-  transform: rotate(-17deg);
-  transition: transform .2s ease-in-out;
-}
-
-.link4 {  
-  transform: rotate(19deg);
-  transition: transform .2s ease-in-out;
-}
-
-.link1:hover, .link2:hover, .link3:hover, .link4:hover, .link5:hover{
-  transform: rotate(0deg);
-  transition: transform .2s ease-in-out;
 }
 
 // BURGER NAV CONTROLS
@@ -163,36 +121,105 @@
   transform: none;
 }
 
-// MAIN SECTION
+// 
 
-.primary-box {
-  width: 50rem;
-  max-width: 100%;
-  padding: var(--space-l-xl);
-  background-color: $primboxcolor;
+.blog-post-sig {
+ &:after {
+  content: "EgG";
+  font-family: "jrugpunk", sans-serif;
+  font-size: var(--step-5);
+  }
+}
+
+.box-border {  
+  border: 2px solid $darkcolor;
+  box-shadow: -0.4em 0.4em $darkcolor;
+}
+
+.liner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2xs);
+
+  &:before, &:after {
+    content: '';
+    flex-grow: 1;
+    height: 2px;
+    background: $lightcolor;
+    margin-block: auto;
+  }
+
+  a {
+    @include accentfont (uppercase, 600);
+    padding: var(--space-3xs) var(--space-xs);
+    border: 2px solid $lightcolor; 
+    background-image: linear-gradient(90deg, $accentcolor2 50%, $lightcolor 50%);
+    background-size: 200% 100%;
+    transition: 0.2s ease-in;
+
+    &:hover {
+    color: $primboxcolor;
+    background-position: -100% 100%;
+    }
+  }
+}
+
+// GENERAL
+
+.section-side__header, .page-header, .blog-post__title {
+  display: inline-block;
 }
 
 .page-header-wrap {
   text-align: center;
+  margin-bottom: var(--space-xl);
+
+  > * {
+    text-align: center;
+  }
 }
 
-.page-header--divider {
-  padding-bottom: var(--space-m);
-  border-bottom: 1px solid $lightcolor;
+.page-header-wrap, .blog-post__header {
+  > * + * {
+    margin-top: var(--space-2xs);
+  }
+
+  > a {
+    display: inline-block;
+  }
 }
 
-//SIDE BOX
-
-.side-box {
-  text-align: center;
-  width: 20rem;
-  padding: var(--space-s);
-  background-color: $accentcolor2;
+.blog-post {
+  > * + * {
+    margin-top: var(--space-m);  //to add spacing between split post divs
+  }
+  
+  > :first-child + * {    
+    margin-top: var(--space-l);
+  }
 }
 
-.side-box__socials-list {
-  text-align: center;
-  margin-top: var(--space-s);
+.content-body {
+  > * + * {
+    margin-top: var(--space-m);
+  }
+
+  > h2 {
+    margin-top: var(--space-xl);
+  }
+
+   ul li, ol li {
+    margin-top: var(--space-xs);
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+//SOCIALS
+
+.socials-list {
   display: flex;
   justify-content: center;
   gap: 1em;
@@ -213,13 +240,12 @@
 } 
 
 .email {
-
- &:before {
-  @include popupbox;  
-  top: 5em;
-  left: 0;
-  transform: rotate(-6deg);
-  content: "Email me!";
+  &:before {
+    @include popupbox;  
+    top: 5em;
+    left: 0;
+    transform: rotate(-6deg);
+    content: "Email me!";
  }
 
   &:hover:before { 
@@ -231,7 +257,6 @@
 }
 
 .ig {
-
   &:before {
    @include popupbox;
    top: 5em;
@@ -249,12 +274,11 @@
  }
 
  .behance {
-
   &:before {
-   @include popupbox;
-   top: 5em;
-   left: 6em;
-   content: "See my art!";
+    @include popupbox;
+    top: 5em;
+    left: 6em;
+    content: "See my art!";
   }
  
    &:hover:before { 
@@ -266,12 +290,11 @@
  }
 
  .steam {
-
   &:before {
-   @include popupbox;
-   top: 5em;
-   left: 8em;
-   content: "Game with me!";
+    @include popupbox;
+    top: 5em;
+    left: 8em;
+    content: "Game with me!";
   }
  
    &:hover:before { 
@@ -309,7 +332,7 @@
 @media (max-width: $breakpoint-1) {
   .archive-list {
     grid-template-columns: 1fr;
-}
+  }
 }
 
 //ABOUT PAGE
@@ -364,106 +387,6 @@
     color: white;
   }
 }
-
-//GALLERY PAGE
-
-.gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-
-  img {
-    width: 100%;
-  }
-}
-
-// BLOG
-
-.blog-post {
-
-  > * + * {
-    margin-top: var(--space-m);
-  }
-
-  > :first-child {    
-  margin-bottom: var(--space-l);
-  }
-}
-
-.liner {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-2xs);
-
-  &:before, &:after {
-    content: '';
-    flex-grow: 1;
-    height: 2px;
-    background: $lightcolor;
-    margin-block: auto;
-  }
-
-  a {
-    @include accentfont (uppercase, 600);
-    padding: var(--space-3xs) var(--space-xs);
-    border: 2px solid $lightcolor; 
-    background-image: linear-gradient(90deg, $accentcolor2 50%, $lightcolor 50%);
-    background-size: 200% 100%;
-    transition: 0.2s ease-in;
-
-    &:hover {
-    color: $primboxcolor;
-    background-position: -100% 100%;
-    }
-  }
-}
-
-.content-body--blog {
- &:after {
-  content: "EgG";
-  font-family: "jrugpunk", sans-serif;
-  font-size: var(--step-5);
-  }
-}
-
-.content-body {
-  img {
-    width: 100%;
-  }
-}
-
-// SPACING
-
-.content-wrap {
-
-  > * + * {
-  margin-top: var(--space-l);
-  }
-
-  > .page-header-wrap + * {
-    margin-top: var(--space-xl);
-  }
-}
-
-.content-wrap--blog-page {  
-  padding-bottom: var(--space-l);
-  border-bottom: 2px solid $lightcolor;
-}
-
-.content-body {
-  > * + * {
-    margin-top: var(--space-m);
-  }
-
-  > h2 {
-    margin-top: var(--space-xl);
-  }
-
-   ul li, ol li {
-    margin-top: var(--space-xs);
-  }
-}
-
 
 //JEKYLL STYLING
 
@@ -524,23 +447,13 @@ content: 'Show less \2191';
 }
 
 .pagination {
-  margin-top: var(--space-m);
+  display: flex;
+  justify-content: space-between; 
+  @include accentfont(uppercase, 500);
 }
 
 // UTILITIES
+
 .hidden {
   visibility: hidden;
-}
-
-.box-border {  
-  border: 2px solid $darkcolor;
-  box-shadow: -0.4em 0.4em $darkcolor;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.centered {
-  margin: 0 auto;
 }

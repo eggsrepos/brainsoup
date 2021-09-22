@@ -2,47 +2,46 @@
 layout: default
 title: Blog
 ---
-<div class="content-wrap">
-  {% for post in paginator.posts %}
-  <article class="blog-post">
-      <div class="blog-post__header">
-        <div class="blog-post__time">{{ post.date  | date: '%B %-d, %Y' }}</div>        
-        <a href="{{ post.url }}">
-          <h1 class="blog-post__title">{{ post.title }}</h1>
-        </a>
-      </div> 
-      {% if post.content contains '<!--more-->' %}
-      <div class="content-body">
-          {{ post.content | split:'<!--more-->' | first }}
-      </div>
-      <input type="checkbox" class="read-more-state" id="{{ post.url }}"/>
-      <div class="read-more content-body content-body--blog">
-        {{ post.content | split:'<!--more-->' | last }}
-      </div>
-      <label for="{{ post.url }}" class="read-more-trigger"></label>   
-    {% else %}
-        {{ post.content }}
-    {% endif %}
-    <div class="liner"><a href="{{ post.url }}#comment-section">Leave a comment</a></div>
-   </article>
-  {% endfor %}  
-  
-</div>
+{% for post in paginator.posts %}
+<article class="blog-post">
+    <div class="blog-post__header">
+      <div class="blog-post__time">{{ post.date  | date: '%B %-d, %Y' }}</div>        
+      <a href="{{ post.url }}">
+        <h1 class="blog-post__title">{{ post.title }}</h1>
+      </a>
+    </div> 
+    {% if post.content contains '<!--more-->' %}
+    <div class="content-body">
+        {{ post.content | split:'<!--more-->' | first }}
+    </div>
+    <input type="checkbox" class="read-more-state" id="{{ post.url }}"/>
+    <div class="read-more content-body blog-post-sig">
+      {{ post.content | split:'<!--more-->' | last }}
+    </div>
+    <label for="{{ post.url }}" class="read-more-trigger"></label>   
+   {% else %}
+    <div class="content-body">
+      {{ post.content }}
+    </div>
+   {% endif %}
+  <div class="liner"><a href="{{ post.url }}#comment-section">Leave a comment</a></div>
+</article>
+{% endfor %}  
 
-  <!-- Pagination links -->
-  <div class="pagination">
-    {% if paginator.next_page %}
-      <a class="left" href="{{ paginator.next_page_path }}">&larr; Older</a>    
-    {% else %}
-    <span class="hidden">&larr; Older</span>
-    {% endif %}  
-    <span class="center">
-      {{ paginator.page }} of {{ paginator.total_pages }}
-    </span>{% if paginator.previous_page %}
-    <a class="right" href="{{ paginator.previous_page_path }}">
-      Newer &rarr;
-    </a>
-    {% else %}
-    <span class="hidden">Newer &rarr;</span>
-  {% endif %}
-  </div>
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="left" href="{{ paginator.next_page_path }}">&larr; Older</a>    
+  {% else %}
+  <span class="hidden">&larr; Older</span>
+  {% endif %}  
+  <span class="center">
+    {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>{% if paginator.previous_page %}
+  <a class="right" href="{{ paginator.previous_page_path }}">
+    Newer &rarr;
+  </a>
+  {% else %}
+  <span class="hidden">Newer &rarr;</span>
+{% endif %}
+</div>

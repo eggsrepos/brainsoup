@@ -34,10 +34,10 @@
 //HEADERS
 
 .page-header {
-  @include grungefont;
-  display: inline-block;
   position: relative; 
   z-index: 0;
+
+  @include grungefont;
 
   &::before {    
     content: " ";
@@ -56,16 +56,11 @@
   }
 }
 
-.page-desc {
-  margin-top: var(--space-xs);
-  text-align: center;
-  @include accentfont(null, 500);
-}
-
-.side-header {
-  display: inline-block;
+.section-side__header {
   padding-bottom: var(--space-3xs);
   border-bottom: 2px solid $lightcolor;
+  margin-bottom: var(--space-s);
+
   font-size: var(--step-2);
   text-shadow: -1px 1px $darkcolor;
   text-transform: uppercase;
@@ -74,24 +69,22 @@
 //BLOG
 
 .blog-post__time {
-  margin-bottom: .2em;
   @include accentfont (uppercase, 500);
   color: $darkcolor;
 }
 
 .blog-post__title {
-  display: inline-block;
-  margin-bottom: 0;
   padding: var(--space-3xs) var(--space-xs);
   background-color: $lightcolor;
-  color: $darkcolor;
   border: 1px solid $darkcolor;
   box-shadow: -3px 3px $darkcolor;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+
   font-size: 2em;
   text-transform: initial;
   line-height: 1.25;
+  color: $darkcolor;
 }
 
 a .blog-post__title {  
@@ -101,7 +94,6 @@ a .blog-post__title {
     box-shadow: none;
   }
 }
-
 
 // ARCHIVE
 
@@ -117,6 +109,7 @@ a .blog-post__title {
 
 .archive-list__category {
   margin-top: var(--space-xs);
+
   font-style: italic;
   font-size: .75em;
 
@@ -134,9 +127,3 @@ figcaption {
 .pagination, footer {
   font-size: .75em;
 } 
-
-.pagination {
-  @include accentfont(uppercase, 500);
-  display: flex;
-  justify-content: space-between;
-}
