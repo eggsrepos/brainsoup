@@ -1,6 +1,6 @@
 <section class="comments" id="comment-section">    
    {% if site.data.comments[page.slug] %} 
-   <div class="comments-header">
+   <div class="comment-section-title">
     <h2>
       {% if site.data.comments[page.slug].size > 0 %}
        {{ site.data.comments[page.slug] | size }}
@@ -29,7 +29,7 @@
 
   <!-- New comment form -->
   <div id="respond" class="comment__new box-border">
-    <h2 class="leave-comment-header">Say something<small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">&nbsp;(cancel reply)</a></small></h2>
+    <h2 class="comment-form-title">Say something<small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">&nbsp;(cancel reply)</a></small></h2>
     {% include comment_form.html %}
   </div>
 </section>

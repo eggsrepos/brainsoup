@@ -1,4 +1,4 @@
-.comments-header {
+.comment-section-header {
     margin-bottom: var(--space-l);
     display: flex;
     align-items: flex-start;
@@ -20,7 +20,7 @@
     }   
 }
 
-.leave-comment-header {
+.comment-form-title {
     margin-bottom: var(--space-s);
     text-transform: initial;
     font-weight: 600;

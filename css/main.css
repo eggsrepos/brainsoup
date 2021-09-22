@@ -943,11 +943,11 @@ figcaption {
 }
 
 .liner a {
-  padding: var(--space-2xs) var(--space-xs);
-  border: 2px solid #fffff1;
   font-family: 'Work Sans', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
+  padding: var(--space-3xs) var(--space-xs);
+  border: 2px solid #fffff1;
   background-image: linear-gradient(90deg, #a5b933 50%, #fffff1 50%);
   background-size: 200% 100%;
   transition: 0.2s ease-in;
@@ -1070,14 +1070,14 @@ figcaption {
   margin: 0 auto;
 }
 
-.comments-header {
+.comment-section-header {
   margin-bottom: var(--space-l);
   display: flex;
   align-items: flex-start;
   gap: 1em;
 }
 
-.comments-header:before, .comments-header:after {
+.comment-section-header:before, .comment-section-header:after {
   content: '';
   flex-grow: 1;
   height: 2px;
@@ -1085,14 +1085,14 @@ figcaption {
   margin-block: auto;
 }
 
-.comments-header h2 {
+.comment-section-header h2 {
   padding: var(--space-2xs) var(--space-xs);
   border: 2px solid #fffff1;
   background: #a5b933;
   text-transform: initial;
 }
 
-.leave-comment-header {
+.comment-form-title {
   margin-bottom: var(--space-s);
   text-transform: initial;
   font-weight: 600;
