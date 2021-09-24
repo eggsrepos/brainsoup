@@ -114,7 +114,7 @@
 
 .menu li {
   padding: 15px 0;
-  font-size: $text-2xl;
+  font-size: var(--step-2);
 }
 
 #menuToggle input:checked ~ ul  {
@@ -169,7 +169,7 @@
     padding: var(--space-2xs) var(--space-xs);
     border: 2px solid var(--light-clr); 
     background-size: 100% 200%;
-    background-image: linear-gradient(to top, transparent 50%, var(--bg-clr) 50%);
+    background-image: linear-gradient(to top, transparent 50%, var(--secondary-clr) 50%);
     transition: all .3s ease-out;
 
     &:hover {
@@ -454,7 +454,6 @@ content: 'Show less \2191';
   padding: 0.15em 0.3em;
   background-color: var(--light-clr);
   color: var(--primary-clr);
-  font-size: $text-sm;
   font-weight: 700;
   
   &:hover {    
@@ -466,7 +465,7 @@ content: 'Show less \2191';
 .back-to-top-link {
   display: inline-block;
   text-decoration: none;
-  font-size: $text-sm;
+  font-size: var(--step--1);
   color: var(--dark-clr);
   background-color: var(--bg-clr);
   border: 1px solid var(--dark-clr);
