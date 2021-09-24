@@ -1,15 +1,15 @@
-<section class="comments" id="comment-section">    
-   {% if site.data.comments[page.slug] %} 
+<section class="comments" id="comment-section">   
    <div class="comment-section-title">
     <h2>
       {% if site.data.comments[page.slug].size > 0 %}
        {{ site.data.comments[page.slug] | size }}
       comment{% if site.data.comments[page.slug].size > 1 %}s{% endif %}
       {% else %}
-      Comments
+      Be first to comment ;)
       {% endif %}
     </h2>
-  </div>
+  </div> 
+  {% if site.data.comments[page.slug] %} 
   <!-- Existing comments -->
   <div class="comments__existing">
     {% assign comments = site.data.comments[page.slug] | where_exp: "item", "item.replying_to_uid == ''" %}
