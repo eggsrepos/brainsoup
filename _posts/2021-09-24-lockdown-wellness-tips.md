@@ -27,7 +27,7 @@ image: /assets/blogposts/meds.gif
 
 <h2>Stretch your muscles.</h2>
 <img src="/assets/blogposts/stretch.gif">
-<p>Especially under lockdown, you probably sit at your computer a lot, hunched over and sitting with poor posture all day. I do at least 10 minutes of yoga every morning to help with stiff muscles and tight joints. You don't need to pull off complicated poses or wrap your legs around your head in order to enjoy the benefits of yoga. Sun Salutations are a great and simple way to get your muscles warmed up. Start by standing straight, arms to the side and palms facing forward. Inhale as you lift your arms up to the sky. As you exhale, lower your arms and fold forward at your hips--Oh god what was that popping sound?</p>
+<p>Especially under lockdown, you probably sit at your computer a lot, hunched over and sitting with poor posture all day. I do at least 10 minutes of yoga every morning to help with tight muscles and stiff joints. You don't need to pull off complicated poses or wrap your legs around your head in order to enjoy the benefits of yoga. Sun Salutations are a great and simple way to get your muscles warmed up. Start by standing straight, arms to the side and palms facing forward. Inhale as you lift your arms up to the sky. As you exhale, lower your arms and fold forward at your hips--Oh god what was that popping sound?</p>
 
 <h2>Suck it up and take a COLD shower.</h2>
 <img src="/assets/blogposts/shower.gif">
