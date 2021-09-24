@@ -1,46 +1,43 @@
 // BASE STRUCTURE
 
-body, .flex-wrap, .site-nav-list, .side-wrap {
-  display: flex;  
-  max-width: 100%;
+body {
+  height: 100vh;
 }
 
-body {
-  width: 100%;
-  height: 100vh;
+main {
+  flex: 1;
+  background-color: var(--bg-clr);
+}
+
+header, footer {
+  background-color: var(--dark-clr);
+}
+
+body, .site-nav-list, .side-wrap, .flex-wrap {
+  display: flex;
 }
 
 body, .site-nav-list, .side-wrap {  
   flex-direction: column;
 }
 
-main {
-  flex: 1;
-  background-color: $accentcolor;
-}
-
-header, footer {
-  background-color: $darkcolor;
-}
-
 .flex-wrap {
-  margin: 3rem auto;
+  margin: 4rem auto;
   width: calc(100% - 4rem);
   justify-content: center;
   gap: 2rem;
 }
 
 // HEADER
-
-.logo {
-  max-width: 250px;
+.logo {    
+  width: 300px;
+  height: auto;
 }
 
-@media (min-width: $breakpoint-1) {  
-  .logo {    
-    min-width: 300px;
-    height: auto;
-  }
+@media (max-width: $breakpoint-1) {  
+  .logo {
+    max-width: 250px;
+  }  
 }
 
 .site-nav-list {
@@ -57,7 +54,7 @@ header, footer {
 // ACTIVATE BURGER NAV
 
 @media (max-width: $breakpoint-1) {
-  .site-nav {
+  .site-nav-list {
     display: none;
   }
 
@@ -94,7 +91,7 @@ header, footer {
 .section-primary {
   width: 50rem;
   padding: var(--space-l-xl);
-  background-color: $primboxcolor;
+  background-color: var(--primary-clr);
 
   > * + * {
     margin-top: var(--space-xl);
@@ -104,8 +101,12 @@ header, footer {
 .section-side {
   width: 20rem;
   padding: var(--space-s);
-  background-color: $accentcolor2;
+  background-color: var(--bg-clr);
   text-align: center;
+}
+
+.section-primary, .side-wrap, .section-side {
+  max-width: 100%;
 }
 
 // FOOTER

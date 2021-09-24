@@ -1,15 +1,14 @@
 // MAIN
 
-.content-body a {
+.content-body a:not([class]) {
   position: relative;
   overflow: hidden;
-  text-decoration: none;
   z-index: 2;
   
   &::after {
     position: absolute;
     content: "";
-    background: rgba($accentcolor3, 0.5);
+    background: rgba(var(--accent-clr), 0.5);
     left: 8px;
     bottom: -4px;
     width: calc(100% - 4px);
@@ -52,17 +51,17 @@
     border-radius: 16% 12% 13% 14%;
     padding: 10px 3px 3px 10px;
     z-index: -1;
-    background: $darkcolor;
+    background: var(--dark-clr);
   }
 }
 
 .section-side__header {
   padding-bottom: var(--space-3xs);
-  border-bottom: 2px solid $lightcolor;
+  border-bottom: 2px solid var(--light-clr);
   margin-bottom: var(--space-s);
 
   font-size: var(--step-2);
-  text-shadow: -1px 1px $darkcolor;
+  text-shadow: -1px 1px var(--dark-clr);
   text-transform: uppercase;
 }
 
@@ -70,21 +69,21 @@
 
 .blog-post__time {
   @include accentfont (uppercase, 500);
-  color: $darkcolor;
+  color: var(--dark-clr);
 }
 
 .blog-post__title {
   padding: var(--space-3xs) var(--space-xs);
-  background-color: $lightcolor;
-  border: 1px solid $darkcolor;
-  box-shadow: -3px 3px $darkcolor;
+  background-color: var(--light-clr);
+  border: 1px solid var(--dark-clr);
+  box-shadow: -3px 3px var(--dark-clr);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 
   font-size: 2em;
   text-transform: initial;
   line-height: 1.25;
-  color: $darkcolor;
+  color: var(--dark-clr);
 }
 
 a .blog-post__title {  
@@ -98,7 +97,7 @@ a .blog-post__title {
 // ARCHIVE
 
 .archive-list__title {
-  border-bottom: 2px solid $darkcolor;
+  border-bottom: 2px solid var(--dark-clr);
   font-size: 1.5em;
   text-transform: initial;
 }

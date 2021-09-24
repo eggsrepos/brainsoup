@@ -7,9 +7,9 @@
   line-height: 1.5;
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px; 
-  -webkit-text-stroke-color: $accentcolor3;
-  border-top: .1em solid $accentcolor2;
-  border-bottom: .1em solid $accentcolor2;
+  -webkit-text-stroke-color: var(--accent-clr);
+  border-top: .1em solid var(--secondary-clr);
+  border-bottom: .1em solid var(--secondary-clr);
   padding-top: .1em;
   padding-bottom: .1em;
 
@@ -39,13 +39,13 @@
 
 #menuToggle a  {
   text-decoration: none;
-  color: $darkcolor;
+  color: var(--dark-clr);
   @include accentfont (uppercase);  
   transition: color 0.3s ease;
 }
 
 #menuToggle a:hover  {
-  color: $lightcolor;
+  color: var(--light-clr);
 }
 
 #menuToggle input  {
@@ -67,7 +67,7 @@
   height: 4px;
   margin-bottom: 5px;
   position: relative;  
-  background: $accentcolor;
+  background: var(--bg-clr);
   border-radius: 3px;  
   z-index: 1;  
   transform-origin: 4px 0px;  
@@ -103,8 +103,8 @@
   width: 100%;
   margin: -80px 0 0 -30px;
   padding: 120px 30px 30px 30px;
-  border: solid 3px $darkcolor;  
-  background: $accentcolor;
+  border: solid 3px var(--dark-clr);
+  background: var(--secondary-clr);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;  /* to stop flickering of text in safari */  
   transform-origin: 0% 0%;
@@ -123,6 +123,21 @@
 
 // 
 
+.video-container {  
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  overflow: hidden;
+}
+
+
+.video-container iframe  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .blog-post-sig {
  &:after {
   content: "EgG";
@@ -132,8 +147,8 @@
 }
 
 .box-border {  
-  border: 2px solid $darkcolor;
-  box-shadow: -0.4em 0.4em $darkcolor;
+  border: 2px solid var(--dark-clr);
+  box-shadow: -0.4em 0.4em var(--dark-clr);
 }
 
 .liner {
@@ -141,26 +156,47 @@
   align-items: flex-start;
   gap: var(--space-2xs);
 
-  &:before, &:after {
+  &::before, &::after {
     content: '';
     flex-grow: 1;
     height: 2px;
-    background: $lightcolor;
+    background: var(--light-clr);
     margin-block: auto;
   }
 
   a {
     @include accentfont (uppercase, 600);
-    padding: var(--space-3xs) var(--space-xs);
-    border: 2px solid $lightcolor; 
-    background-image: linear-gradient(90deg, $accentcolor2 50%, $lightcolor 50%);
-    background-size: 200% 100%;
-    transition: 0.2s ease-in;
+    padding: var(--space-2xs) var(--space-xs);
+    border: 2px solid var(--light-clr); 
+    background-size: 100% 200%;
+    background-image: linear-gradient(to top, transparent 50%, var(--bg-clr) 50%);
+    transition: all .3s ease-out;
 
     &:hover {
-    color: $primboxcolor;
-    background-position: -100% 100%;
+      background-position: 100% -100%;
     }
+  }
+}
+
+.inline-icon {
+  fill: var(--light-clr);
+  vertical-align: middle;
+}
+
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  padding: var(--space-3xs) var(--space-s);
+  border: 2px solid var(--dark-clr);
+  border-radius: 8px;
+  transform: translate(0);
+  font-weight: bold;
+  color: var(--dark-clr);
+  background: var(--accent-clr);
+
+  svg {
+    fill: var(--dark-clr);
   }
 }
 
@@ -232,76 +268,71 @@
 .socials-icon {
   max-width: 35px;
   height: auto;
-  fill: $lightcolor;
+  fill: var(--light-clr);
 
   &:hover {
-    fill: $primboxcolor;
+    fill: var(--primary-clr);
   }
 } 
 
+.email, .ig, .behance, .steam {
+  position: relative;
+}
+
 .email {
-  &:before {
-    @include popupbox;  
-    top: 5em;
-    left: 0;
-    transform: rotate(-6deg);
+  &::before {
+    @include popupbox; 
+    transform: rotate(-9deg); 
     content: "Email me!";
  }
 
-  &:hover:before { 
+  &:hover::before { 
     opacity: 1;
-    top: .5em;
-    left: -1em;
-    transform: rotate(-8deg);    
+    top: -6em;
+    left: -3em;   
   }
 }
 
 .ig {
-  &:before {
+  &::before {
    @include popupbox;
-   top: 5em;
-   left: 4em;
+   transform: rotate(-8deg);
    content: "Stalk me!";
   }
  
-   &:hover:before { 
-     opacity: 1;     
-     top: 9em;
-     left: 5em;
-     transform: rotate(8deg);
+   &:hover::before { 
+     opacity: 1;
+     top: 4em;
+     left: -2em;     
      
    }
  }
 
  .behance {
-  &:before {
+  &::before {
     @include popupbox;
-    top: 5em;
-    left: 6em;
+    transform: rotate(9deg);  
     content: "See my art!";
   }
  
-   &:hover:before { 
-     opacity: 1;     
-     top: 0;
-     left: 8em;
-     transform: rotate(9deg);     
+   &:hover::before { 
+     opacity: 1;    
+     top: -7em;
+     left: -2em;   
    }
  }
 
  .steam {
-  &:before {
+  &::before {
     @include popupbox;
-    top: 5em;
-    left: 8em;
+    transform: rotate(12deg);
     content: "Game with me!";
   }
  
-   &:hover:before { 
+   &:hover::before { 
      opacity: 1;     
-     top: 8.5em;
-     left: 11em;
-     transform: rotate(-12deg);
+     top: 3em;
+     left: -2em;
      
    }
  }
@@ -318,8 +349,8 @@
   li {
     height: 100%;
     padding: var(--space-m);
-    background: $lightcolor;
-    color: $darkcolor;
+    background: var(--light-clr);
+    color: var(--dark-clr);
     transition: .2s ease;
     
     &:hover {
@@ -329,7 +360,7 @@
   }
 }
 
-@media (max-width: $breakpoint-1) {
+@media (max-width: $breakpoint-2) {
   .archive-list {
     grid-template-columns: 1fr;
   }
@@ -358,7 +389,7 @@
   z-index: 2;  
   padding: .5em;
   text-align: center;  
-  color: $darkcolor;
+  color: var(--dark-clr);
   visibility: hidden;
 
   &:target {
@@ -421,14 +452,14 @@ content: 'Show less \2191';
   display: inline-block;
   margin-top: var(--space-xs); //overrides blog-post child margins
   padding: 0.15em 0.3em;
-  background-color: $lightcolor;
-  color: $primboxcolor;
+  background-color: var(--light-clr);
+  color: var(--primary-clr);
   font-size: $text-sm;
   font-weight: 700;
   
   &:hover {    
-  background-color: $primboxcolor;
-  color: $lightcolor;
+  background-color: var(--primary-clr);
+  color: var(--light-clr);
   }
 }
 
@@ -436,9 +467,9 @@ content: 'Show less \2191';
   display: inline-block;
   text-decoration: none;
   font-size: $text-sm;
-  color: $darkcolor;
-  background-color: $accentcolor;
-  border: 1px solid $darkcolor;
+  color: var(--dark-clr);
+  background-color: var(--bg-clr);
+  border: 1px solid var(--dark-clr);
   padding: 0.3em 0.5em;
   position: fixed;
   bottom: 2rem;
@@ -448,8 +479,19 @@ content: 'Show less \2191';
 
 .pagination {
   display: flex;
-  justify-content: space-between; 
   @include accentfont(uppercase, 500);
+
+  span {
+    flex: 1;
+  }
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
 }
 
 // UTILITIES

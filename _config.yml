@@ -1,13 +1,26 @@
 markdown: kramdown
+
 kramdown:
   input: GFM
-title: Brain Soup
-plugins:
-  - jekyll-paginate
 
-paginate: 4
-paginate_path: "/blog/page:num/"
-permalink: /:categories/:title
+title: Brain Soup
+
+author:
+  name: Egg
+
+plugins:
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  collection: 'posts'
+  per_page: 4
+  permalink: '/page/:num/' 
+  sort_field: "date"
+  sort_reverse: true
+    
+permalink: /:categories/:title/
+
 defaults:
     -
       scope:
@@ -17,10 +30,12 @@ defaults:
         layout: "post"
         comments: true
 
-author:
-  name: Egg
+livereload: BOOL
 
 staticman_url: "https://eggsstaticmaninstance.herokuapp.com/v2/entry/eggsrepos/brainsoup/master/comments"
+
 reCaptcha:
     siteKey: "6LcNBmccAAAAAKvSqFQk5J1UxK0mUPUgUxYYkbow"
     secret: "UtjziDNYKQr7EGNg+udTODdTl0q6GR6QysHbZKWWbAG0ytIshTJlXRFHvQbgsOYe+qlRqzUgB/CsFOIINExOlabrbgvfHOxuBs5gZUhbtPg5SBjy1H1u+RgPWFKKL5tZZg3KCA6LnVRbesQnhsRDMFIsvZvnj5jBc59KMwj5S4x4IEUJEGJ5ZHZ6UPRzXqtzxmOiPSCnz9M4tZWDiJ+nppZuTVVLgTYOrnxPaTLo4tALSAABxX/xSTWWP8YMZkqUtScXFWACDW4A9YbVoAOO0xxDzXqFRwXJq5uLLU3u8WspCT1HKHD83pelKam1Iw+YUeNy+tcZXA0wsJdnObJvUbjRCFQn7F0aYOvRtziUkdi0KaHPI7/Y8ZwQJLcdTdhE5ZM1Aq6ulp518X4C5/pf+aghFqJGLiNV85wilMdcxeMoDI60RJifb1Os9PZjjjO80P+9zibtxm69D7zsDtnOCxVrw94H6h+cLVfTj35LIrnIwtdKwV9J5XlqTAw7/nhS+mN40P8+O7FkLLRFw4gZSKkvBhf77Lcn8ydazfLz+hU35SzOF4cOJc34swy3g7LT2fyXfK5NPyzDrqbej8QyxhCZpumQjGVtRiMJQXU7aGSt3G5/L+pOIrPATRV4Diw/a+sApdE4j5iWnH8ezTJd6nV2gcKG9vXfxbHWob1XHJY="
+
+google_analytics: UA-208328940-1

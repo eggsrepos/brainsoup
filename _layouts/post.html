@@ -17,13 +17,9 @@ title: {{ post.title }}
         
 <div class="pagination">   
     {% if page.previous.url %}
-        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Older</a>
-    {% else %}
-    <span class="hidden">&larr; Older</span>
+    <a class="left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Older</a>
     {% endif %}
     {% if page.next.url %}
-        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Newer &rarr;</a>
-    {% else %}
-    <span class="hidden">Newer &rarr;</span>
+    <a class="right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Newer &rarr;</a>
     {% endif %}
 </div>

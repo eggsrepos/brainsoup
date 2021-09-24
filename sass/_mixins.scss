@@ -16,18 +16,20 @@
 }
 
 @mixin popupbox {
-  word-break:initial;
-  z-index: 2;
   position: absolute;
-  color: $darkcolor;
-  background-color: $lightcolor;    
-  box-shadow: -5px 5px $textshadow;
-  font-size: $text-sm; 
+  word-break:initial;
+  pointer-events: none;
+  z-index: 2;
+  color: var(--dark-clr);
+  background-color: var(--light-clr);    
+  box-shadow: -5px 5px var(--dark-clr);
+  font-size: var(--step--1); 
   line-height: 1em; 
   padding: .5em;
   opacity: 0;
-  pointer-events: none;
-  transform: rotate(0deg);
+  top: 0;
+  left: 0;
+  width: 7em;
   transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -moz-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
  -o-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);

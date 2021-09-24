@@ -1,6 +1,17 @@
-/* @link https://utopia.fyi/type/calculator?c=320,14,1.2,1140,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+@media screen and (min-width: 1140px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
 
 :root {
+  --primary-clr: #9E99D5;
+  --secondary-clr: #a5b933;
+  --dark-clr: #1a1a1a;
+  --light-clr: #fdfdea;
+  --accent-clr: #89ff83;
+  --bg-clr:#dad15e;
+
   --fluid-min-width: 320;
   --fluid-max-width: 1140;
 
@@ -9,15 +20,7 @@
     (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
       (var(--fluid-max-width) - var(--fluid-min-width))
   );
-}
 
-@media screen and (min-width: 1140px) {
-  :root {
-    --fluid-screen: calc(var(--fluid-max-width) * 1px);
-  }
-}
-
-:root {
   --f--2-min: 9.72;
   --f--2-max: 11.52;
   --step--2: calc(
@@ -134,10 +137,6 @@ html {
   font-size: 16px;
 }
 
-html, body {  
-  // overflow-x: hidden;
-}
-
 @media screen and (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
@@ -150,7 +149,7 @@ body, h1, h2, p, ul, ol, figure {
 
 body {
   @include primaryfont;
-  color: $lightcolor;
+  color: var(--light-clr);
   font-size: var(--step-0);
   line-height: 1.6;
 }
@@ -186,9 +185,4 @@ ul {
 img {
   max-width: 100%;
   height: auto;
-}
-
-hr {
-  color: $lightcolor;
-  margin-top: var(--space-xl);
 }

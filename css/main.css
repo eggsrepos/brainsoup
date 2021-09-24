@@ -322,18 +322,8 @@ hr {
   margin-top: var(--space-xl);
 }
 
-body, .flex-wrap, .site-nav-list, .side-wrap {
-  display: flex;
-  max-width: 100%;
-}
-
 body {
-  width: 100%;
   height: 100vh;
-}
-
-body, .site-nav-list, .side-wrap {
-  flex-direction: column;
 }
 
 main {
@@ -345,21 +335,29 @@ header, footer {
   background-color: #000000e0;
 }
 
+body, .site-nav-list, .side-wrap, .flex-wrap {
+  display: flex;
+}
+
+body, .site-nav-list, .side-wrap {
+  flex-direction: column;
+}
+
 .flex-wrap {
-  margin: 3rem auto;
+  margin: 4rem auto;
   width: calc(100% - 4rem);
   justify-content: center;
   gap: 2rem;
 }
 
 .logo {
-  max-width: 250px;
+  width: 300px;
+  height: auto;
 }
 
-@media (min-width: 575.98px) {
+@media (max-width: 575.98px) {
   .logo {
-    min-width: 300px;
-    height: auto;
+    max-width: 250px;
   }
 }
 
@@ -375,7 +373,7 @@ header, footer {
 }
 
 @media (max-width: 575.98px) {
-  .site-nav {
+  .site-nav-list {
     display: none;
   }
   .burger {
@@ -420,21 +418,24 @@ header, footer {
   text-align: center;
 }
 
+.section-primary, .side-wrap, .section-side {
+  max-width: 100%;
+}
+
 .flex-wrap--footer {
   margin-block: 1rem;
 }
 
-.content-body a {
+.content-body a:not([class]) {
   position: relative;
   overflow: hidden;
-  text-decoration: none;
   z-index: 2;
 }
 
-.content-body a::after {
+.content-body a:not([class])::after {
   position: absolute;
   content: "";
-  background: rgba(167, 255, 163, 0.5);
+  background: rgba(137, 255, 131, 0.5);
   left: 8px;
   bottom: -4px;
   width: calc(100% - 4px);
@@ -443,14 +444,14 @@ header, footer {
   z-index: -1;
 }
 
-.content-body a:hover:after {
+.content-body a:not([class]):hover:after {
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
 }
 
-.content-body a.removelinkstyle:after {
+.content-body a:not([class]).removelinkstyle:after {
   display: none;
 }
 
@@ -553,7 +554,7 @@ figcaption {
   -webkit-text-fill-color: transparent;
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #a7ffa3;
+  -webkit-text-stroke-color: #89ff83;
   border-top: 0.1em solid #a5b933;
   border-bottom: 0.1em solid #a5b933;
   padding-top: .1em;
@@ -666,6 +667,21 @@ figcaption {
   transform: none;
 }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .blog-post-sig:after {
   content: "EgG";
   font-family: "jrugpunk", sans-serif;
@@ -683,7 +699,7 @@ figcaption {
   gap: var(--space-2xs);
 }
 
-.liner:before, .liner:after {
+.liner::before, .liner::after {
   content: '';
   flex-grow: 1;
   height: 2px;
@@ -695,16 +711,37 @@ figcaption {
   font-family: 'Work Sans', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  padding: var(--space-3xs) var(--space-xs);
+  padding: var(--space-2xs) var(--space-xs);
   border: 2px solid #fffff1;
-  background-image: linear-gradient(90deg, #a5b933 50%, #fffff1 50%);
-  background-size: 200% 100%;
-  transition: 0.2s ease-in;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to top, transparent 50%, #a5b933 50%);
+  transition: all .3s ease-out;
 }
 
 .liner a:hover {
-  color: #9E99D5;
-  background-position: -100% 100%;
+  background-position: 100% -100%;
+}
+
+.inline-icon {
+  fill: #fffff1;
+  vertical-align: middle;
+}
+
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  padding: var(--space-3xs) var(--space-s);
+  border: 2px solid #000000e0;
+  border-radius: 8px;
+  transform: translate(0);
+  font-weight: bold;
+  color: #000000e0;
+  background: #89ff83;
+}
+
+.btn-contact svg {
+  fill: #000000e0;
 }
 
 .section-side__header, .page-header, .blog-post__title {
@@ -772,10 +809,15 @@ figcaption {
   fill: #9E99D5;
 }
 
-.email:before {
-  word-break: initial;
-  z-index: 2;
+.email, .ig, .behance, .steam {
+  position: relative;
+}
+
+.email::before {
   position: absolute;
+  word-break: initial;
+  pointer-events: none;
+  z-index: 2;
   color: #000000e0;
   background-color: #fffff1;
   box-shadow: -5px 5px #444;
@@ -783,29 +825,28 @@ figcaption {
   line-height: 1em;
   padding: .5em;
   opacity: 0;
-  pointer-events: none;
-  transform: rotate(0deg);
+  top: 0;
+  left: 0;
+  width: 7em;
   transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -moz-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -o-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -webkit-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
-  top: 5em;
-  left: 0;
-  transform: rotate(-6deg);
+  transform: rotate(-9deg);
   content: "Email me!";
 }
 
-.email:hover:before {
+.email:hover::before {
   opacity: 1;
-  top: .5em;
-  left: -1em;
-  transform: rotate(-8deg);
+  top: -6em;
+  left: -3em;
 }
 
-.ig:before {
-  word-break: initial;
-  z-index: 2;
+.ig::before {
   position: absolute;
+  word-break: initial;
+  pointer-events: none;
+  z-index: 2;
   color: #000000e0;
   background-color: #fffff1;
   box-shadow: -5px 5px #444;
@@ -813,28 +854,28 @@ figcaption {
   line-height: 1em;
   padding: .5em;
   opacity: 0;
-  pointer-events: none;
-  transform: rotate(0deg);
+  top: 0;
+  left: 0;
+  width: 7em;
   transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -moz-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -o-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -webkit-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
-  top: 5em;
-  left: 4em;
+  transform: rotate(-8deg);
   content: "Stalk me!";
 }
 
-.ig:hover:before {
+.ig:hover::before {
   opacity: 1;
-  top: 9em;
-  left: 5em;
-  transform: rotate(8deg);
+  top: 4em;
+  left: -2em;
 }
 
-.behance:before {
-  word-break: initial;
-  z-index: 2;
+.behance::before {
   position: absolute;
+  word-break: initial;
+  pointer-events: none;
+  z-index: 2;
   color: #000000e0;
   background-color: #fffff1;
   box-shadow: -5px 5px #444;
@@ -842,28 +883,28 @@ figcaption {
   line-height: 1em;
   padding: .5em;
   opacity: 0;
-  pointer-events: none;
-  transform: rotate(0deg);
+  top: 0;
+  left: 0;
+  width: 7em;
   transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -moz-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -o-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -webkit-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
-  top: 5em;
-  left: 6em;
+  transform: rotate(9deg);
   content: "See my art!";
 }
 
-.behance:hover:before {
+.behance:hover::before {
   opacity: 1;
-  top: 0;
-  left: 8em;
-  transform: rotate(9deg);
+  top: -7em;
+  left: -2em;
 }
 
-.steam:before {
-  word-break: initial;
-  z-index: 2;
+.steam::before {
   position: absolute;
+  word-break: initial;
+  pointer-events: none;
+  z-index: 2;
   color: #000000e0;
   background-color: #fffff1;
   box-shadow: -5px 5px #444;
@@ -871,22 +912,21 @@ figcaption {
   line-height: 1em;
   padding: .5em;
   opacity: 0;
-  pointer-events: none;
-  transform: rotate(0deg);
+  top: 0;
+  left: 0;
+  width: 7em;
   transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -moz-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -o-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -webkit-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
-  top: 5em;
-  left: 8em;
+  transform: rotate(12deg);
   content: "Game with me!";
 }
 
-.steam:hover:before {
+.steam:hover::before {
   opacity: 1;
-  top: 8.5em;
-  left: 11em;
-  transform: rotate(-12deg);
+  top: 3em;
+  left: -2em;
 }
 
 .archive-list {
@@ -909,7 +949,7 @@ figcaption {
   box-shadow: none;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .archive-list {
     grid-template-columns: 1fr;
   }
@@ -1024,10 +1064,21 @@ figcaption {
 
 .pagination {
   display: flex;
-  justify-content: space-between;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.pagination span {
+  flex: 1;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
 }
 
 .hidden {
