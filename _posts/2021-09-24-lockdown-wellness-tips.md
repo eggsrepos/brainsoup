@@ -41,4 +41,4 @@ image: /assets/blogposts/meds.gif
 <img src="/assets/blogposts/spa.gif">
 <p>You have all this free time, why not set some of it aside to pamper yourself as a form of self-care? Put on a sheetmask! And exfoliate those icky feet for once. Pumice stones are the way to go, but if you don't have one, you can use a nail clipper to trim off the callouses left by your ill-fitting Birkenstocks. Oh. That's um... that's a lot of blood. I better go and take care of that.</p>
 
-<p>That's all my tips for today, I hope you found them useful. These are hard, uncertain times, but you <em>are</em> in control. There's no need to be depressed. Just remember to live, laugh, love. See you next time!</p>
+<p>That's all my tips for today, I hope you found them useful. These are hard, uncertain times, but you <em>are</em> in control. There's no need to be depressed. Just remember to live, laugh, love (and maybe stock up on bandaids). See you next time!</p>
