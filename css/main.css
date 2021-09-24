@@ -495,7 +495,8 @@ body, .site-nav-list, .side-wrap {
   color: var(--dark-clr);
 }
 
-.blog-post__title {
+h1.blog-post__title {
+  display: inline;
   padding: var(--space-3xs) var(--space-xs);
   background-color: var(--light-clr);
   border: 1px solid var(--dark-clr);
@@ -504,13 +505,8 @@ body, .site-nav-list, .side-wrap {
   -webkit-box-decoration-break: clone;
   font-size: 2em;
   text-transform: initial;
-  line-height: 1.25;
+  line-height: 1.5;
   color: var(--dark-clr);
-}
-
-a .blog-post__title:hover {
-  transform: translate(-3px, 3px);
-  box-shadow: none;
 }
 
 .archive-list__title {
@@ -541,7 +537,7 @@ figcaption {
 }
 
 .pagination, footer {
-  font-size: .75em;
+  font-size: var(--step--1);
 }
 
 .site-nav-list__item {
@@ -759,10 +755,6 @@ figcaption {
 
 .page-header-wrap > * + *, .blog-post__header > * + * {
   margin-top: var(--space-2xs);
-}
-
-.page-header-wrap > a, .blog-post__header > a {
-  display: inline-block;
 }
 
 .blog-post > * + * {
@@ -1068,7 +1060,7 @@ figcaption {
   text-transform: uppercase;
 }
 
-.pagination span {
+.pagination > * {
   flex: 1;
 }
 
@@ -1105,6 +1097,7 @@ figcaption {
   border: 2px solid var(--light-clr);
   background: var(--secondary-clr);
   text-transform: initial;
+  font-size: var(--step-1);
 }
 
 .comment-form-title {

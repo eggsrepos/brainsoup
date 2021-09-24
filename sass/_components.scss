@@ -219,10 +219,6 @@
   > * + * {
     margin-top: var(--space-2xs);
   }
-
-  > a {
-    display: inline-block;
-  }
 }
 
 .blog-post {
@@ -480,7 +476,7 @@ content: 'Show less \2191';
   display: flex;
   @include accentfont(uppercase, 500);
 
-  span {
+  > * {
     flex: 1;
   }
 }
