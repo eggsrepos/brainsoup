@@ -3,6 +3,7 @@ title: Doom X Heartbreak
 date: 2021-09-14
 category: Personal
 tags: relationships breakups bass "emotional abuse"
+image: /assets/blogposts/doom.png
 ---
 <img src="/assets/blogposts/doom.png">
 

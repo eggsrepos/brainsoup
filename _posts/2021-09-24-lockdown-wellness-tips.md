@@ -3,6 +3,7 @@ title: Lockdown Wellness Tips from a Goblin
 date: 2021-09-24
 category: Lifestyle
 tags: lockdown covid19 self-isolation wellness "mental health" self-care health lifestyle satire
+image: /assets/blogposts/meds.gif
 ---
 
 <p>Up until recently, when much of the world was stuck in a purgatory of lockdown restrictions, us lucky ones in Vietnam were basking in the luxuries of triple digit covid numbers and loose social distancing measures. Now the tables have turned, and not only have we been under a strict lockdown for the past 4 months, but those of us residing in Saigon are even under a military-enforced lockdown.</p>
