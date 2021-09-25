@@ -47,7 +47,7 @@ fieldset {
 .textfield {
     max-width: 100%;
     margin-bottom: var(--space-s);
-    @include accentfont (null, 600);
+    @include accentfont;
     font-size: var(--step--1);
 }
 
@@ -75,7 +75,7 @@ textarea {
 }
 
 .submit-button {
-    @include accentfont (null, 600);
+    @include accentfont;
     font-size: var(--step-0);
     color: var(--dark-clr);
     padding: 5px 7px;
@@ -94,7 +94,7 @@ textarea {
 // Staticman existing comments
 //
 .comment {
-    @include accentfont (null, 400);
+    @include accentfont;
     padding: var(--space-m);
     margin-bottom: var(--space-m);
     background: var(--light-clr);
@@ -197,7 +197,7 @@ textarea {
     margin-block: var(--space-s);
     text-align: center;     
     color: var(--dark-clr);    
-    @include accentfont (null, 500);
+    @include accentfont;
 }
 
 .modal-title {
@@ -216,7 +216,7 @@ textarea {
     cursor: pointer;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    @include accentfont (null, 500);
+    @include accentfont;
 
   &:hover {
     background-color: var(--dark-clr);

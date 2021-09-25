@@ -2,7 +2,7 @@
 title: Lockdown Wellness Tips from a Goblin
 date: 2021-09-24
 category: Lifestyle
-tags: lockdown covid19 self-isolation wellness "mental health" self-care health lifestyle satire
+tags: lockdown covid19 self-isolation wellness "mental health" self-improvement self-care satire
 image: /assets/blogposts/meds.gif
 ---
 

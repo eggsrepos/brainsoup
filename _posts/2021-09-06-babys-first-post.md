@@ -2,7 +2,7 @@
 title:  Baby's First Post
 date: 2021-09-06
 category: Personal
-tag: [blogging, coding, css, sass]
+tag: blogging coding
 ---
 
 <p>After almost 2 weeks of blood, sweat and tears (only the sweat part is literal) I've finally launched this godforsaken thing.

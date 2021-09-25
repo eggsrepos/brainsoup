@@ -8,12 +8,7 @@
 		<meta name="HandheldFriendly" content="true">	
 		<meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.logo | absolute_url }}{% endif %}">
 		<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-		<meta property="og:description"
-		content="{% if page.excerpt %}
-				{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}
-			{% else %}
-				{{ site.description }}
-			{% endif %}">
+		<meta property="og:description"	content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{ site.description }}{% endif %}">
 			<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />		
 			<link rel="stylesheet" href="/css/main.css" />
 		<!-- fonts -->
@@ -61,8 +56,8 @@
 					</li>
 				</ul>
 				
-				<a class="glitch-hover logo" href="/" alt="Brain Soup">
-					<img src="/assets/bslogo2.png">
+				<a class="glitch-hover" href="/" alt="Brain Soup">
+					<img src="/assets/bslogo2.png" class="logo">
 				</a>				
 
 				<ul class="site-nav-list">
@@ -77,6 +72,9 @@
 		</header>			
 		<main>
 			<div class="flex-wrap flex-wrap--main"> 
+				<div class="section-primary box-border">
+					{{ content }}
+				</div>
 				<div class="section-side-wrap">
 					<div class="section-side box-border">
 						<h1 class="section-side__header">Me on the web</h1>
@@ -104,10 +102,7 @@
 						</ul>				 
 					</div> <!-- end section-side -->
 			  </div>
-				<div class="section-primary box-border">
-					{{ content }}
-				</div>
-			</div>
+			</div> <!-- end flex-wrap--main -->
 				<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">Lazy way up &uarr;</a>
 		</main>		
 		<footer>

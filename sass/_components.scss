@@ -1,10 +1,8 @@
 //HEADER 
 
 .site-nav-list__item {
-  @include accentfont(uppercase);
   font-size: var(--step-3);
   letter-spacing: 0.03em;
-  line-height: 1.5;
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px; 
   -webkit-text-stroke-color: var(--primary-clr);
@@ -35,67 +33,69 @@
   z-index: 1;  
   -webkit-user-select: none;
   user-select: none;
-}
+  
+  a  {
+    color: var(--dark-clr);
+    transition: color 0.3s ease;
+  
+    &:hover  {
+      color: var(--light-clr);
+    }
+  }
 
-#menuToggle a  {
-  text-decoration: none;
-  color: var(--dark-clr);
-  @include accentfont (uppercase);  
-  transition: color 0.3s ease;
-}
+  input  {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -8px;
+    left: -7px;  
+    cursor: pointer;  
+    opacity: 0;
+    z-index: 2;   
+    -webkit-touch-callout: none;
+  }
 
-#menuToggle a:hover  {
-  color: var(--light-clr);
-}
+  span  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;  
+    background: var(--accent-clr);
+    border-radius: 3px;  
+    z-index: 1;  
+    transform-origin: 4px 0px;  
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
 
-#menuToggle input  {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -8px;
-  left: -7px;  
-  cursor: pointer;  
-  opacity: 0;
-  z-index: 2;   
-  -webkit-touch-callout: none;
-}
+    &:first-child  {
+    transform-origin: 0% 0%;
+    }
 
-#menuToggle span  {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;  
-  background: var(--accent-clr);
-  border-radius: 3px;  
-  z-index: 1;  
-  transform-origin: 4px 0px;  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
+    &:nth-last-child(2)  {
+      transform-origin: 0% 100%;
+    }
+  }
 
-#menuToggle span:first-child  {
-  transform-origin: 0% 0%;
-}
+  input:checked ~ span  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
 
-#menuToggle span:nth-last-child(2)  {
-  transform-origin: 0% 100%;
-}
+  input:checked ~ span:nth-last-child(3)  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2); 
+  }
 
-#menuToggle input:checked ~ span  {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
+  input:checked ~ span:nth-last-child(2)  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
 
-#menuToggle input:checked ~ span:nth-last-child(3)  {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);  }
-
-#menuToggle input:checked ~ span:nth-last-child(2)  {
-  transform: rotate(-45deg) translate(0, -1px);
+  input:checked ~ ul  {
+    transform: none;
+  }
 }
 
 .menu  {
@@ -109,16 +109,12 @@
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-.menu li {
-  padding: 10px 0;
-  font-size: var(--step-4);
-  background: var(--accent-clr);
-}
-
-#menuToggle input:checked ~ ul  {
-  transform: none;
+  
+  li {
+    padding: 10px 0;
+    font-size: var(--step-4);
+    background: var(--accent-clr);
+  }
 }
 
 // 
@@ -128,7 +124,6 @@
   padding-bottom: 56.25%; /* 16:9 */
   overflow: hidden;
 }
-
 
 .video-container iframe  {
   position: absolute;
@@ -151,7 +146,7 @@
   box-shadow: -0.4em 0.4em var(--dark-clr);
 }
 
-.liner {
+.comments-link {
   display: flex;
   align-items: flex-start;
   gap: var(--space-2xs);
@@ -165,7 +160,7 @@
   }
 
   a {
-    @include accentfont (uppercase, 600);
+    @include accentfont;
     padding: var(--space-3xs) var(--space-xs);
     border: 2px solid var(--light-clr); 
     background-size: 100% 200%;
@@ -178,7 +173,7 @@
   }
 }
 
-.inline-icon {
+.comments-icon {
   fill: var(--light-clr);
   vertical-align: middle;
 }
@@ -190,14 +185,13 @@
   padding: var(--space-3xs) var(--space-s);
   border: 2px solid var(--dark-clr);
   border-radius: 8px;
-  transform: translate(0);
   font-weight: bold;
   color: var(--dark-clr);
   background: var(--accent-clr);
+}
 
-  svg {
-    fill: var(--dark-clr);
-  }
+.btn-contact__svg {
+  fill: var(--dark-clr);
 }
 
 // GENERAL
@@ -215,7 +209,7 @@
   }
 }
 
-.page-header-wrap, .blog-post__header {
+.page-header-wrap {
   > * + * {
     margin-top: var(--space-s);
   }
@@ -226,8 +220,8 @@
     margin-top: var(--space-m);  //to add spacing between split post divs
   }
   
-  > :first-child + * {    
-    margin-top: var(--space-l);
+  > .blog-post__header + * {    
+    margin-top: var(--space-l); //to add space between header and content
   }
 }
 
@@ -262,7 +256,8 @@
 }
 
 .socials-icon {
-  max-width: 35px;
+  width: 35px;
+  max-width: 100%;
   height: auto;
   fill: var(--light-clr);
 
@@ -338,7 +333,7 @@
 
 .archive-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 1em;
 
@@ -356,9 +351,9 @@
   }
 }
 
-@media (max-width: $breakpoint-2) {
+@media (min-width: $breakpoint-2) {
   .archive-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -369,7 +364,7 @@
   margin-inline: auto;
 }
 
-@media (min-width: 610px) {
+@media (min-width: $breakpoint-2) {
   .float-md-left {
     float: left;
     margin: 0 var(--space-l) var(--space-s) 0;
@@ -446,11 +441,10 @@ content: 'Show less \2191';
 
 .read-more-trigger {  
   display: inline-block;
-  margin-top: var(--space-xs); //overrides blog-post child margins
   padding: 0.15em 0.3em;
   background-color: var(--light-clr);
   color: var(--primary-clr);
-  font-weight: 700;
+  font-weight: bold;
   
   &:hover {    
   background-color: var(--primary-clr);
@@ -461,7 +455,6 @@ content: 'Show less \2191';
 .back-to-top-link {
   display: inline-block;
   text-decoration: none;
-  font-size: var(--step--1);
   color: var(--dark-clr);
   background-color: var(--accent-clr);
   border: 1px solid var(--dark-clr);
@@ -469,12 +462,11 @@ content: 'Show less \2191';
   position: fixed;
   bottom: 2rem;
   right: 1rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .pagination {
   display: flex;
-  @include accentfont(uppercase, 500);
 
   > * {
     flex: 1;
