@@ -380,7 +380,7 @@ body, .section-side-wrap, .flex-wrap--main {
 }
 
 .section-primary {
-  width: 55rem;
+  width: 52rem;
   padding: var(--space-l-xl);
   background-color: var(--primary-clr);
 }
