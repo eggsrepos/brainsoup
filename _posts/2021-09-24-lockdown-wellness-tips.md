@@ -23,7 +23,7 @@ image: /assets/blogposts/meds.gif
 <img src="/assets/blogposts/breakfast.gif">
 <p>Eggs are a breakfast staple for a reason. Cheap, easy to cook, and loaded with protein to get you energized for the day. We're all groggy and lazy in the morning--you don't want to spend ages prepping just to get a filling breakfast in you--so I've developed a very streamlined process for cooking my eggs.</p>
 
-<p>All I do is heat up my skillet (I recommend cast iron since it serves a double duty as both a tool of cookery <em>and</em> weightlifting to get those saggy arms nice and ripped while you toss stir-fries), get the oil left in the skillet from whatever I cooked last night nice and hot (frugal hack), crack my egg on a FLAT surface to avoid getting shell pieces in my beautiful sunny-side up, get shell pieces in there anyway, remove said shell pieces using one of the egg shell halves (cooking hack), break the yolk of my beautiful sunny-side up in the process, try not to internalize it as a metaphor for my life and cry, place the egg on some cold leftover rice because at this point I couldn't be assed to heat it up anymore... and enjoy!
+<p>First, I heat up my skillet. I recommend cast iron since it doubles as both a tool of cookery <em>and</em> weightlifting, to get those saggy arms nice and ripped just from tossing stir-fries. Get the leftover oil from whatever I cooked last night nice and hot (frugal hack). Crack my egg on a FLAT surface to avoid getting shell pieces in my beautiful sunny-side up. Get shell pieces in there anyway. Use one half of the egg shell to remove those pieces (cooking hack). Break the yolk of my beautiful sunny-side up in the process. Try not to internalize it as a metaphor for my life and cry. Place the egg on some cold leftover rice, because at this point I couldn't be assed to heat it up anymore. Enjoy!
 
 <h2>Stretch your muscles.</h2>
 <img src="/assets/blogposts/stretch.gif">
@@ -35,7 +35,7 @@ image: /assets/blogposts/meds.gif
 
 <h2>Try aromatherapy.</h2>
 <img src="/assets/blogposts/diffuser.gif">
-<p>Diffusers are totally worth the investment. Essential oils offer a variety health effects and make your home smell like a dang spa. Lemongrass for example can help with nausea. Just add 5 drops to your diffuser. Add 5 more if the scent seems a little weak. Maybe another 5 drops. Still can't smell anything? Fuck it just dump 10 more in. Now let the diffuser do its thing and enjoy your naturally-fragranced home. That... might have been too much. Ugh, the smell is making me nauseous. All right, go ahead and open your windows to let fresh air circulate. And while you do that, try not to knock the ashtray with a week's worth of cigarette butts out the window. Your neighbours won't be too happy with you.</p>
+<p>Diffusers are totally worth the investment. Essential oils offer a variety health effects and make your home smell like a dang spa. Lemongrass for example can help with nausea. Just add 5 drops to your diffuser. Add 5 more if the scent seems a little weak. Maybe another 5 drops. Still can't smell anything? Fuck it just dump 10 more in. Now let the diffuser do its thing and enjoy your naturally-fragranced home. That... might have been too much. Ugh, the smell is making me nauseous. All right, go ahead and open your windows to let some fresh air circulate. Oh, and while you do that, try not to drop the ashtray filled with a week's worth of cigarette butts out the window. Your neighbours won't be too happy with you.</p>
 
 <h2>Treat yourself to a spa day.</h2>
 <img src="/assets/blogposts/spa.gif">
