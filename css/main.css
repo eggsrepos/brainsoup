@@ -171,10 +171,9 @@
 :root {
   --primary-clr: #9E99D5;
   --secondary-clr: #a5b933;
+  --accent-clr: #e7d95b;
   --dark-clr: #1a1a1a;
   --light-clr: #fdfdea;
-  --accent-clr: #89ff83;
-  --bg-clr:#dad15e;
   --f--2-min: 9.72;
   --f--2-max: 11.52;
   --step--2: calc(
@@ -269,6 +268,8 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  scrollbar-color: var(--primary-clr) var(--accent-clr);
+  scrollbar-width: thin;
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -328,7 +329,7 @@ body {
 
 main {
   flex: 1;
-  background-color: var(--bg-clr);
+  background-color: var(--accent-clr);
 }
 
 header, footer {
@@ -386,7 +387,7 @@ body, .site-nav-list, .section-side-wrap {
 }
 
 .section-primary {
-  width: 50rem;
+  width: 55rem;
   padding: var(--space-l-xl);
   background-color: var(--primary-clr);
 }
@@ -426,32 +427,33 @@ body, .site-nav-list, .section-side-wrap {
   margin-block: 1rem;
 }
 
-content-body a:not([class]) {
+.content-body a:not([class]) {
+  font-weight: bold;
   position: relative;
   overflow: hidden;
   z-index: 2;
 }
 
-content-body a:not([class])::after {
+.content-body a:not([class])::after {
   position: absolute;
   content: "";
-  background: #89ff83b3;
-  left: 8px;
-  bottom: -4px;
-  width: calc(100% - 4px);
-  height: calc(100% - 8px);
+  background: rgba(0, 0, 0, 0.7);
+  left: 7px;
+  bottom: -3px;
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
   transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
   z-index: -1;
 }
 
-content-body a:not([class]):hover:after {
+.content-body a:not([class]):hover:after {
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
 }
 
-content-body a:not([class]).removelinkstyle:after {
+.content-body a:not([class]).removelinkstyle:after {
   display: none;
 }
 
@@ -550,7 +552,7 @@ figcaption {
   -webkit-text-fill-color: transparent;
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--accent-clr);
+  -webkit-text-stroke-color: var(--primary-clr);
   border-top: 0.1em solid var(--secondary-clr);
   border-bottom: 0.1em solid var(--secondary-clr);
   padding-top: .1em;
@@ -571,8 +573,8 @@ figcaption {
 #menuToggle {
   display: block;
   position: relative;
-  top: 30px;
-  left: 30px;
+  top: 35px;
+  left: 35px;
   z-index: 1;
   user-select: none;
 }
@@ -609,7 +611,7 @@ figcaption {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: var(--bg-clr);
+  background: var(--accent-clr);
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
@@ -642,11 +644,10 @@ figcaption {
 .menu {
   position: absolute;
   width: 100%;
-  margin: -80px 0 0 -30px;
-  padding: 120px 30px 30px 30px;
+  margin: -62px 0 0 -35px;
+  padding: 80px 35px 35px 35px;
   border: solid 3px var(--dark-clr);
-  background: var(--secondary-clr);
-  list-style-type: none;
+  background: var(--accent-clr);
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
   transform-origin: 0% 0%;
@@ -655,8 +656,9 @@ figcaption {
 }
 
 .menu li {
-  padding: 15px 0;
-  font-size: var(--step-2);
+  padding: 10px 0;
+  font-size: var(--step-4);
+  background: var(--accent-clr);
 }
 
 #menuToggle input:checked ~ ul {
@@ -754,7 +756,7 @@ figcaption {
 }
 
 .page-header-wrap > * + *, .blog-post__header > * + * {
-  margin-top: var(--space-2xs);
+  margin-top: var(--space-s);
 }
 
 .blog-post > * + * {
@@ -798,7 +800,7 @@ figcaption {
 }
 
 .socials-icon:hover {
-  fill: var(--primary-clr);
+  fill: var(--accent-clr);
 }
 
 .email, .ig, .behance, .steam {
@@ -824,7 +826,6 @@ figcaption {
   -moz-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -o-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -webkit-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
-  transform: rotate(-9deg);
   content: "Email me!";
 }
 
@@ -832,6 +833,7 @@ figcaption {
   opacity: 1;
   top: -6em;
   left: -3em;
+  transform: rotate(-9deg);
 }
 
 .ig::before {
@@ -853,7 +855,6 @@ figcaption {
   -moz-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -o-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -webkit-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
-  transform: rotate(-8deg);
   content: "Stalk me!";
 }
 
@@ -861,6 +862,7 @@ figcaption {
   opacity: 1;
   top: 4em;
   left: -2em;
+  transform: rotate(-8deg);
 }
 
 .behance::before {
@@ -882,7 +884,6 @@ figcaption {
   -moz-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -o-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -webkit-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
-  transform: rotate(9deg);
   content: "See my art!";
 }
 
@@ -890,6 +891,7 @@ figcaption {
   opacity: 1;
   top: -7em;
   left: -2em;
+  transform: rotate(12deg);
 }
 
 .steam::before {
@@ -911,7 +913,6 @@ figcaption {
   -moz-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -o-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
   -webkit-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
-  transform: rotate(12deg);
   content: "Game with me!";
 }
 
@@ -919,6 +920,7 @@ figcaption {
   opacity: 1;
   top: 3em;
   left: -2em;
+  transform: rotate(12deg);
 }
 
 .archive-list {
@@ -1044,7 +1046,7 @@ figcaption {
   text-decoration: none;
   font-size: var(--step--1);
   color: var(--dark-clr);
-  background-color: var(--bg-clr);
+  background-color: var(--accent-clr);
   border: 1px solid var(--dark-clr);
   padding: 0.3em 0.5em;
   position: fixed;

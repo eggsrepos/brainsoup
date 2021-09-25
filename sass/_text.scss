@@ -1,6 +1,7 @@
 // MAIN
 
-content-body a:not([class]) {
+.content-body a:not([class]) {
+  font-weight: bold;
   position: relative;
   overflow: hidden;
   z-index: 2;
@@ -8,11 +9,11 @@ content-body a:not([class]) {
   &::after {
     position: absolute;
     content: "";
-    background: #89ff83b3;
-    left: 8px;
-    bottom: -4px;
-    width: calc(100% - 4px);
-    height: calc(100% - 8px);
+    background: rgba(0, 0, 0, 0.7);
+    left: 7px;
+    bottom: -3px;
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
     transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
     z-index: -1;
   }

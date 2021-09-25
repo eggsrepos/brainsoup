@@ -6,7 +6,7 @@ body {
 
 main {
   flex: 1;
-  background-color: var(--bg-clr);
+  background-color: var(--accent-clr);
 }
 
 header, footer {
@@ -71,7 +71,7 @@ body, .site-nav-list, .section-side-wrap {
 }
 
 .section-primary {
-  width: 50rem;
+  width: 55rem;
   padding: var(--space-l-xl);
   background-color: var(--primary-clr);
 

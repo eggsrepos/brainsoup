@@ -19,10 +19,9 @@
 :root {
   --primary-clr: #9E99D5;
   --secondary-clr: #a5b933;
+  --accent-clr: #e7d95b;
   --dark-clr: #1a1a1a;
   --light-clr: #fdfdea;
-  --accent-clr: #89ff83;
-  --bg-clr:#dad15e;
 
   --f--2-min: 9.72;
   --f--2-max: 11.52;
@@ -138,6 +137,9 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+
+  scrollbar-color: var(--primary-clr) var(--accent-clr);
+  scrollbar-width: thin;
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {

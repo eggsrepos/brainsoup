@@ -7,7 +7,7 @@
   line-height: 1.5;
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px; 
-  -webkit-text-stroke-color: var(--accent-clr);
+  -webkit-text-stroke-color: var(--primary-clr);
   border-top: .1em solid var(--secondary-clr);
   border-bottom: .1em solid var(--secondary-clr);
   padding-top: .1em;
@@ -30,8 +30,8 @@
 #menuToggle  {
   display: block;
   position: relative;
-  top: 30px;
-  left: 30px;  
+  top: 35px;
+  left: 35px;  
   z-index: 1;  
   -webkit-user-select: none;
   user-select: none;
@@ -67,7 +67,7 @@
   height: 4px;
   margin-bottom: 5px;
   position: relative;  
-  background: var(--bg-clr);
+  background: var(--accent-clr);
   border-radius: 3px;  
   z-index: 1;  
   transform-origin: 4px 0px;  
@@ -101,11 +101,10 @@
 .menu  {
   position: absolute;
   width: 100%;
-  margin: -80px 0 0 -30px;
-  padding: 120px 30px 30px 30px;
+  margin: -62px 0 0 -35px;
+  padding: 80px 35px 35px 35px;
   border: solid 3px var(--dark-clr);
-  background: var(--secondary-clr);
-  list-style-type: none;
+  background: var(--accent-clr);
   -webkit-font-smoothing: antialiased;  /* to stop flickering of text in safari */  
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);  
@@ -113,8 +112,9 @@
 }
 
 .menu li {
-  padding: 15px 0;
-  font-size: var(--step-2);
+  padding: 10px 0;
+  font-size: var(--step-4);
+  background: var(--accent-clr);
 }
 
 #menuToggle input:checked ~ ul  {
@@ -217,7 +217,7 @@
 
 .page-header-wrap, .blog-post__header {
   > * + * {
-    margin-top: var(--space-2xs);
+    margin-top: var(--space-s);
   }
 }
 
@@ -267,7 +267,7 @@
   fill: var(--light-clr);
 
   &:hover {
-    fill: var(--primary-clr);
+    fill: var(--accent-clr);
   }
 } 
 
@@ -278,7 +278,6 @@
 .email {
   &::before {
     @include popupbox; 
-    transform: rotate(-9deg); 
     content: "Email me!";
  }
 
@@ -286,13 +285,13 @@
     opacity: 1;
     top: -6em;
     left: -3em;   
+    transform: rotate(-9deg); 
   }
 }
 
 .ig {
   &::before {
    @include popupbox;
-   transform: rotate(-8deg);
    content: "Stalk me!";
   }
  
@@ -300,6 +299,7 @@
      opacity: 1;
      top: 4em;
      left: -2em;     
+     transform: rotate(-8deg);
      
    }
  }
@@ -307,21 +307,20 @@
  .behance {
   &::before {
     @include popupbox;
-    transform: rotate(9deg);  
     content: "See my art!";
   }
  
    &:hover::before { 
      opacity: 1;    
      top: -7em;
-     left: -2em;   
+     left: -2em;  
+     transform: rotate(12deg);   
    }
  }
 
  .steam {
   &::before {
     @include popupbox;
-    transform: rotate(12deg);
     content: "Game with me!";
   }
  
@@ -329,6 +328,7 @@
      opacity: 1;     
      top: 3em;
      left: -2em;
+     transform: rotate(12deg);
      
    }
  }
@@ -463,7 +463,7 @@ content: 'Show less \2191';
   text-decoration: none;
   font-size: var(--step--1);
   color: var(--dark-clr);
-  background-color: var(--bg-clr);
+  background-color: var(--accent-clr);
   border: 1px solid var(--dark-clr);
   padding: 0.3em 0.5em;
   position: fixed;
