@@ -166,7 +166,7 @@
 
   a {
     @include accentfont (uppercase, 600);
-    padding: var(--space-2xs) var(--space-xs);
+    padding: var(--space-3xs) var(--space-xs);
     border: 2px solid var(--light-clr); 
     background-size: 100% 200%;
     background-image: linear-gradient(to top, transparent 50%, var(--secondary-clr) 50%);
