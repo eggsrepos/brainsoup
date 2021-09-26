@@ -414,7 +414,9 @@ body, .section-side-wrap, .flex-wrap--main {
 }
 
 .flex-wrap--footer {
-  margin-block: 1rem;
+  margin-block: var(--space-m);
+  font-weight: 300;
+  font-size: var(--step--1);
 }
 
 .site-nav-list__item, .pagination, a.nav-item, .blog-post__time, .archive-list__date, .comments-link {
@@ -477,7 +479,7 @@ body, .section-side-wrap, .flex-wrap--main {
 
 .section-side__header {
   padding-bottom: var(--space-3xs);
-  border-bottom: 2px solid var(--light-clr);
+  border-bottom: 2px solid;
   margin-bottom: var(--space-s);
   font-size: var(--step-2);
   text-transform: uppercase;
@@ -489,21 +491,22 @@ body, .section-side-wrap, .flex-wrap--main {
 
 .blog-post__time {
   font-weight: 500;
+  margin-bottom: var(--space-2xs);
 }
 
 h1.blog-post__title {
   display: inline;
   padding: var(--space-3xs) var(--space-xs);
   background-color: var(--light-clr);
-  border: 1px solid var(--dark-clr);
-  box-shadow: -3px 3px var(--dark-clr);
+  border: 1px solid;
+  box-shadow: -3px 3px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   line-height: 1.5;
 }
 
 .archive-list__title {
-  border-bottom: 2px solid var(--dark-clr);
+  border-bottom: 2px solid;
   font-size: var(--step-2);
 }
 
@@ -521,6 +524,11 @@ figcaption {
   font-size: var(--step--1);
   font-style: italic;
   text-align: center;
+}
+
+.flex-wrap--footer {
+  font-weight: 300;
+  font-size: var(--step--1);
 }
 
 .site-nav-list__item {
@@ -635,7 +643,6 @@ figcaption {
 .menu li {
   padding: 10px 0;
   font-size: var(--step-4);
-  background: var(--accent-clr);
 }
 
 .video-container {
@@ -664,13 +671,13 @@ figcaption {
   box-shadow: -0.4em 0.4em var(--dark-clr);
 }
 
-.comments-link {
+.comments-link, .comment-section-title {
   display: flex;
   align-items: flex-start;
   gap: var(--space-2xs);
 }
 
-.comments-link::before, .comments-link::after {
+.comments-link::before, .comments-link::after, .comment-section-title::before, .comment-section-title::after {
   content: '';
   flex-grow: 1;
   height: 2px;
@@ -681,7 +688,7 @@ figcaption {
 .comments-link a {
   font-family: 'Work Sans', sans-serif;
   padding: var(--space-3xs) var(--space-xs);
-  border: 2px solid var(--light-clr);
+  border: 2px solid;
   background-size: 100% 200%;
   background-image: linear-gradient(to top, transparent 50%, var(--secondary-clr) 50%);
   transition: all .3s ease-out;
@@ -691,7 +698,7 @@ figcaption {
   background-position: 100% -100%;
 }
 
-.comments-icon {
+.comments-link__svg {
   fill: var(--light-clr);
   vertical-align: middle;
 }
@@ -701,7 +708,7 @@ figcaption {
   align-items: center;
   gap: .5em;
   padding: var(--space-3xs) var(--space-s);
-  border: 2px solid var(--dark-clr);
+  border: 2px solid;
   border-radius: 8px;
   font-weight: bold;
   color: var(--dark-clr);
@@ -718,14 +725,10 @@ figcaption {
 
 .page-header-wrap {
   text-align: center;
-  margin-bottom: var(--space-xl);
 }
 
-.page-header-wrap > * {
-  text-align: center;
-}
-
-.page-header-wrap > * + * {
+.page-desc {
+  display: inline-block;
   margin-top: var(--space-s);
 }
 
@@ -930,10 +933,10 @@ figcaption {
 
 .popup {
   position: fixed;
-  top: 30%;
-  left: 60%;
+  top: 20%;
+  left: 50%;
   transform: translate(-50%, 0);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   z-index: 2;
   padding: .5em;
   text-align: center;
@@ -951,10 +954,6 @@ figcaption {
   width: 400px;
   height: auto;
   margin-block: .3em;
-}
-
-.popup span {
-  font-size: var(--step-0);
 }
 
 .close-popup {
@@ -996,10 +995,11 @@ figcaption {
 
 .read-more-trigger {
   display: inline-block;
-  padding: 0.15em 0.3em;
+  padding-inline: 0.3em;
   background-color: var(--light-clr);
   color: var(--primary-clr);
   font-weight: bold;
+  transition: 0.3s ease;
 }
 
 .read-more-trigger:hover {
@@ -1009,15 +1009,15 @@ figcaption {
 
 .back-to-top-link {
   display: inline-block;
-  text-decoration: none;
-  color: var(--dark-clr);
-  background-color: var(--accent-clr);
-  border: 1px solid var(--dark-clr);
-  padding: 0.3em 0.5em;
   position: fixed;
   bottom: 2rem;
   right: 1rem;
   z-index: 2;
+  padding: 0.3em 0.5em;
+  color: var(--dark-clr);
+  background-color: var(--accent-clr);
+  border: 1px solid;
+  font-size: var(--step--1);
 }
 
 .pagination {
@@ -1036,24 +1036,8 @@ figcaption {
   text-align: center;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
 .comment-section-title {
   margin-bottom: var(--space-l);
-  display: flex;
-  align-items: flex-start;
-  gap: 1em;
-  text-align: center;
-}
-
-.comment-section-title:before, .comment-section-title:after {
-  content: '';
-  flex-grow: 1;
-  height: 2px;
-  background: var(--light-clr);
-  margin-block: auto;
 }
 
 .comment-section-title h2 {

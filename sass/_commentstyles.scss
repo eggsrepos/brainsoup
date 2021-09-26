@@ -1,18 +1,6 @@
 .comment-section-title {
     margin-bottom: var(--space-l);
-    display: flex;
-    align-items: flex-start;
-    gap: 1em;
-    text-align: center;
-    
-    &:before, &:after {
-        content: '';
-        flex-grow: 1;
-        height: 2px;
-        background: var(--light-clr);
-        margin-block: auto;
-    }
-
+  
     h2 {
         padding: var(--space-2xs) var(--space-xs); 
         border: 2px solid var(--light-clr);    

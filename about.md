@@ -8,14 +8,14 @@ title: About
 <div class="content-body">
   <figure class="bio-pic float-md-left">
     <img src="/assets/selfieportrait.png">
-    <figcaption>Figure 1: Overcooked egg.</figcaption>
+    <figcaption>Figure 1: Fried egg</figcaption>
   </figure>  
   <p>An. Also referred to as Egg. Sometimes "fucking pothead" or "demon."</p>
   <p>Made in Canada, currently living in Vietnam. Daddy was a fisherman and mommy raised me on pasta puttanesca.</p>
   <p>I graduated with an illustration degree and now do standup comedy, which earned me a giant <a href="#gd">glass dildo</a> earlier this year at a comedy competition.
   I dig horror movies and practical effects. My favourite video game is Bioshock and my favourite bands are Mr. Bungle, Melvins, and Primus. My buttermilk pancakes are amazing. No that wasn't a euphemism for anything. I make really good pancakes.</p>
   <div id="gd" class="popup">
-    <a href="#/" class="close-popup removelinkstyle">&times;</a>
+    <a href="#/" class="close-popup">&times;</a>
     <img src="/assets/gd.jpg">
     <span>Behold.</span>
     </div>

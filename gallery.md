@@ -4,7 +4,7 @@ title: Gallery
 ---
 <div class="page-header-wrap">
   <h1 class="page-header">Eye Bleach Gallery</h1>
-  <p>Curated internet pictures for your viewing pleasure.</p>
+  <span class="page-desc">Curated internet pictures for your viewing pleasure.</span>
 </div>
 <div class="content-body">   
 {% for image in site.static_files %}

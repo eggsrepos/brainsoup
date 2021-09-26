@@ -100,5 +100,7 @@ body, .section-side-wrap, .flex-wrap--main {
 // FOOTER
     
 .flex-wrap--footer {
-  margin-block: 1rem; //override default wrapper margin
+  margin-block: var(--space-m); //override default wrapper margin
+  font-weight: 300;
+  font-size: var(--step--1);
 }
