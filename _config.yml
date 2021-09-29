@@ -6,11 +6,14 @@ description: Personal site of a funny, failed artist.
 
 logo: /assets/bslogo2.png/
 
+url: https://www.brainsoup.me
+
 author:
   name: Egg
 
 plugins:
   - jekyll-paginate-v2
+  - jekyll-seo-tag
 
 pagination:
   enabled: true
@@ -20,7 +23,7 @@ pagination:
   sort_field: "date"
   sort_reverse: true
     
-permalink: /:categories/:title/
+permalink: /:title/
 
 defaults:
     -
