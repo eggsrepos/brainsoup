@@ -350,19 +350,20 @@ body, .section-side-wrap, .flex-wrap--main {
 }
 
 .logo {
-  max-width: 200px;
+  width: 250px;
+  max-width: 100%;
 }
 
-.site-nav-list {
+.site-nav {
   display: none;
 }
 
 @media (min-width: 576px) {
   .logo {
-    max-width: 300px;
+    width: 300px;
     height: auto;
   }
-  .site-nav-list {
+  .site-nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -417,12 +418,12 @@ body, .section-side-wrap, .flex-wrap--main {
   margin-block: var(--space-m);
 }
 
-.site-nav-list__item, .pagination, a.nav-item, .blog-post__time, .archive-list__date, .comments-link {
+.site-nav a, .site-nav-mobile a, .blog-post__time, .archive-list__date, .comments-link, .pagination {
   font-family: 'Work Sans', sans-serif;
   text-transform: uppercase;
 }
 
-.site-nav-list__item, .pagination, a.nav-item, .comments-link {
+.site-nav a, .site-nav-mobile a, .comments-link, .pagination {
   font-weight: bold;
 }
 
@@ -529,7 +530,7 @@ figcaption {
   font-size: var(--step--1);
 }
 
-.site-nav-list__item {
+.site-nav a {
   font-size: var(--step-3);
   letter-spacing: 0.03em;
   -webkit-text-fill-color: transparent;
@@ -542,7 +543,7 @@ figcaption {
   padding-bottom: .1em;
 }
 
-.site-nav-list__item:hover {
+.site-nav a:hover {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%239bb623' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E"), url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%239bb623' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
   background-position: top, bottom;
   background-repeat: repeat-x, repeat-x;
@@ -624,7 +625,7 @@ figcaption {
   transform: none;
 }
 
-.menu {
+.site-nav-mobile {
   position: absolute;
   width: 100%;
   margin: -62px 0 0 -35px;
@@ -638,7 +639,7 @@ figcaption {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-.menu li {
+.site-nav-mobile li {
   padding: 10px 0;
   font-size: var(--step-4);
 }

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Gallery
+title: Eye Bleach Gallery
 ---
 <div class="page-header-wrap">
   <h1 class="page-header">Eye Bleach Gallery</h1>

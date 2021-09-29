@@ -1,9 +1,9 @@
-.site-nav-list__item, .pagination, a.nav-item, .blog-post__time, .archive-list__date, .comments-link {
+.site-nav a, .site-nav-mobile a, .blog-post__time, .archive-list__date, .comments-link, .pagination {
   @include accentfont;
   text-transform: uppercase;
 }
 
-.site-nav-list__item, .pagination, a.nav-item, .comments-link {  
+.site-nav a, .site-nav-mobile a, .comments-link, .pagination {  
   font-weight: bold;
 }
 
