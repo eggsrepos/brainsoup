@@ -415,8 +415,6 @@ body, .section-side-wrap, .flex-wrap--main {
 
 .flex-wrap--footer {
   margin-block: var(--space-m);
-  font-weight: 300;
-  font-size: var(--step--1);
 }
 
 .site-nav-list__item, .pagination, a.nav-item, .blog-post__time, .archive-list__date, .comments-link {
@@ -698,7 +696,7 @@ figcaption {
   background-position: 100% -100%;
 }
 
-.comments-link__svg {
+.comments-link svg {
   fill: var(--light-clr);
   vertical-align: middle;
 }
@@ -715,7 +713,7 @@ figcaption {
   background: var(--accent-clr);
 }
 
-.btn-contact__svg {
+.btn-contact svg {
   fill: var(--dark-clr);
 }
 
@@ -766,14 +764,14 @@ figcaption {
   display: inline;
 }
 
-.socials-icon {
+.socials-list svg {
   width: 35px;
   max-width: 100%;
   height: auto;
   fill: var(--light-clr);
 }
 
-.socials-icon:hover {
+.socials-list svg:hover {
   fill: var(--accent-clr);
 }
 

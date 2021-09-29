@@ -172,11 +172,11 @@
       background-position: 100% -100%;
     }
   }
-}
 
-.comments-link__svg {
+  svg {
   fill: var(--light-clr);
   vertical-align: middle;
+  }
 }
 
 .btn-contact {
@@ -189,10 +189,10 @@
   font-weight: bold;
   color: var(--dark-clr);
   background: var(--accent-clr);
-}
 
-.btn-contact__svg {
+  svg {
   fill: var(--dark-clr);
+  }
 }
 
 // GENERAL
@@ -248,16 +248,16 @@
   li {
     display: inline;
   }
-}
 
-.socials-icon {
+  svg {
   width: 35px;
   max-width: 100%;
   height: auto;
   fill: var(--light-clr);
 
-  &:hover {
-    fill: var(--accent-clr);
+    &:hover {
+      fill: var(--accent-clr);
+    }
   }
 } 
 
