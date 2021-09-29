@@ -5,7 +5,7 @@ category: Personal
 tags: relationships breakups "emotional abuse" "toxic relationships" self-improvement
 image: /assets/blogposts/doom.png
 ---
-<img src="/assets/blogposts/doom.png">
+<figure><img src="/assets/blogposts/doom.png"></figure>
 
 <p>This is my bass guitar, Doom. It's not a particularly cool or expensive guitar. No fancy pickups, no custom body, nothing. Two of the knobs have even taken it upon themselves to fall off when I practice. It's basic. It's boring. And it's one of the most important things I own.</p>
 <!--more-->

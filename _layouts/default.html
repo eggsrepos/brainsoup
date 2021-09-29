@@ -16,6 +16,7 @@
 		{% include analytics.html %}
 		{% endif %}
 		{% seo %}
+		<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}" />
 	</head>	
 	<body>		
 		<header id="top">		

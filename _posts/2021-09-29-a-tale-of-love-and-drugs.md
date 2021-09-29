@@ -5,7 +5,7 @@ category: Personal
 tags: empathy "cognitive empathy" "emotional empathy" psychedelics psilocybin shrooms self-improvement self-development cynicism misanthropy "emotional healing" relationships
 image: /assets/blogposts/scorpion.png
 ---
-<img src="/assets/blogposts/scorpion.png">
+<figure><img src="/assets/blogposts/scorpion.png"></figure>
 
 <p>One of the most comforting truths I often come back to is in the fluid nature of the self. For some people, that truth is terrifying. The prospect of changing yourself on an inner level is a Lovecraftian horror to them. But whether or not you consciously try to become someone else, it happens anyway. You are not a static being. You are slowly transmuting everyday without even noticing.</p>
 <!--more-->
