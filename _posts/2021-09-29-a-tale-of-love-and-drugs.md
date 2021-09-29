@@ -1,6 +1,6 @@
 ---
 title: "A Tale of Love & Drugs: How I Stopped Being Such a Callous Bitch (Sort of)"
-date: 2021-09-27
+date: 2021-09-29
 category: Personal
 tags: empathy "cognitive empathy" "emotional empathy" psychedelics psilocybin shrooms self-improvement self-development cynicism misanthropy "emotional healing" relationships
 image: /assets/blogposts/scorpion.png
