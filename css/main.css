@@ -334,7 +334,7 @@ body, .section-side-wrap, .flex-wrap--main {
     justify-items: center;
     align-items: center;
     grid-auto-flow: column;
-    grid-template: repeat(2, auto)/repeat(3, 1fr);
+    grid-template: repeat(2, 1fr)/repeat(3, 1fr);
     gap: var(--space-m);
   }
   .site-nav li:not(.logo) {
