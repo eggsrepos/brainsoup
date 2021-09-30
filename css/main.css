@@ -114,42 +114,13 @@
 }
 
 .glitch-hover:hover {
-  animation: glitch1 .5s infinite;
-}
-
-.glitch-hover:hover:nth-child(2) {
   color: #67f3da;
   animation: glitch2 .5s infinite;
 }
 
-.glitch-hover:hover:nth-child(3) {
+.glitch-hover:hover:nth-child(2) {
   color: #f16f6f;
   animation: glitch3 .5s infinite;
-}
-
-.link1 {
-  transform: rotate(20deg);
-  transition: transform .2s ease-in-out;
-}
-
-.link2 {
-  transform: rotate(-15deg);
-  transition: transform .2s ease-in-out;
-}
-
-.link3 {
-  transform: rotate(-17deg);
-  transition: transform .2s ease-in-out;
-}
-
-.link4 {
-  transform: rotate(19deg);
-  transition: transform .2s ease-in-out;
-}
-
-.link1:hover, .link2:hover, .link3:hover, .link4:hover, .link5:hover {
-  transform: rotate(0deg);
-  transition: transform .2s ease-in-out;
 }
 
 :root {
@@ -312,7 +283,7 @@ p {
 }
 
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
@@ -343,33 +314,36 @@ body, .section-side-wrap, .flex-wrap--main {
 }
 
 .flex-wrap {
-  margin: 4rem auto;
+  margin: var(--space-xl) auto;
   width: calc(100% - 4rem);
   justify-content: center;
   gap: 2rem;
 }
 
-.logo {
-  width: 250px;
-  max-width: 100%;
-}
-
-.site-nav {
+.site-nav li:not(.logo) {
   display: none;
 }
 
-@media (min-width: 576px) {
-  .logo {
-    width: 300px;
-    height: auto;
-  }
+.site-nav .logo {
+  max-width: 250px;
+}
+
+@media (min-width: 768px) {
   .site-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-template: repeat(2, auto)/repeat(3, 1fr);
+    gap: var(--space-m);
+  }
+  .site-nav li:not(.logo) {
     text-align: center;
-    max-width: 15rem;
-    gap: 6em;
+    display: inline-block;
+  }
+  .site-nav .logo {
+    max-width: 300px;
+    grid-area: 1 / 2 / span 2 / span 1;
   }
   .burger {
     display: none;
@@ -418,13 +392,20 @@ body, .section-side-wrap, .flex-wrap--main {
   margin-block: var(--space-m);
 }
 
-.site-nav a, .site-nav-mobile a, .blog-post__time, .archive-list__date, .comments-link, .pagination {
+.site-nav a, .site-nav-mobile a, .comments-link, .pagination, .blog-post__time, .archive-list__date {
   font-family: 'Work Sans', sans-serif;
   text-transform: uppercase;
 }
 
 .site-nav a, .site-nav-mobile a, .comments-link, .pagination {
   font-weight: bold;
+}
+
+.site-nav a {
+  line-height: 1;
+  font-size: var(--step-3);
+  letter-spacing: 0.03em;
+  display: block;
 }
 
 .content-body a:not([class]) {
@@ -530,28 +511,30 @@ figcaption {
   font-size: var(--step--1);
 }
 
-.site-nav a {
-  font-size: var(--step-3);
-  letter-spacing: 0.03em;
+.site-nav li:not(.logo) {
   -webkit-text-fill-color: transparent;
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--primary-clr);
-  border-top: 0.1em solid var(--secondary-clr);
-  border-bottom: 0.1em solid var(--secondary-clr);
-  padding-top: .1em;
-  padding-bottom: .1em;
+  border-block: 0.2em solid var(--secondary-clr);
+  padding-block: var(--space-3xs);
+  transform: rotate(-20deg);
+  transition: transform .2s ease-in-out;
 }
 
-.site-nav a:hover {
+.site-nav li:not(.logo):nth-child(3n+1) {
+  transform: rotate(20deg);
+  transition: transform .2s ease-in-out;
+}
+
+.site-nav li:not(.logo):hover {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%239bb623' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E"), url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%239bb623' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
   background-position: top, bottom;
   background-repeat: repeat-x, repeat-x;
   background-size: 20%;
-  border-top: 0;
-  border-bottom: 0;
-  padding-top: .2em;
-  padding-bottom: .2em;
+  border-block: 0;
+  padding-block: var(--space-2xs);
+  transform: rotate(0);
 }
 
 #menuToggle {

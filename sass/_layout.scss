@@ -22,7 +22,7 @@ body, .section-side-wrap, .flex-wrap--main {
 }
 
 .flex-wrap {
-  margin: 4rem auto;
+  margin: var(--space-xl) auto;
   width: calc(100% - 4rem);
   justify-content: center;
   gap: 2rem;
@@ -30,28 +30,36 @@ body, .section-side-wrap, .flex-wrap--main {
 
 // HEADER
 
-.logo {
-  width: 250px;
-  max-width: 100%;
-} 
+.site-nav {  
+  li:not(.logo) {
+    display: none;
+  }
 
-.site-nav {
-  display: none;
+  .logo {
+    max-width: 250px;
+  }
 }
 
-@media (min-width: $breakpoint-1) {  
-  .logo {    
-  width: 300px;
-  height: auto;
-  } 
-  .site-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
+@media (min-width: $breakpoint-2) { 
+  .site-nav {    
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-template: repeat(2, auto) / repeat(3, 1fr);
+    gap: var(--space-m);
+
+    li:not(.logo) {
     text-align: center;
-    max-width: 15rem;
-    gap: 6em;
-  }  
+    display: inline-block;
+    }
+
+    .logo {
+      max-width: 300px;
+      grid-area: 1 / 2 / span 2 / span 1;
+    }
+  }
+
   .burger {
     display: none;
   }

@@ -1,10 +1,17 @@
-.site-nav a, .site-nav-mobile a, .blog-post__time, .archive-list__date, .comments-link, .pagination {
+.site-nav a, .site-nav-mobile a, .comments-link, .pagination, .blog-post__time, .archive-list__date {
   @include accentfont;
   text-transform: uppercase;
 }
 
 .site-nav a, .site-nav-mobile a, .comments-link, .pagination {  
   font-weight: bold;
+}
+
+.site-nav a {
+  line-height: 1;  
+  font-size: var(--step-3);
+  letter-spacing: 0.03em;
+  display: block;
 }
 
 // MAIN

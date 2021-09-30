@@ -111,45 +111,12 @@
 
 
 .glitch-hover {
-
   &:hover {
-    animation: glitch1 .5s infinite;
-    
-    &:nth-child(2) {
       color: #67f3da;
-      animation: glitch2 .5s infinite;
-      }
-    
-    &:nth-child(3) {
+      animation: glitch2 .5s infinite; 
+    &:nth-child(2) {
       color: #f16f6f;
       animation: glitch3 .5s infinite;
-      }
-    }  
-}
-
-//NAV LINK HOVER TILT
-
-.link1 {  
-  transform: rotate(20deg);
-  transition: transform .2s ease-in-out;
-}
-
-.link2 {  
-  transform: rotate(-15deg);
-  transition: transform .2s ease-in-out;
-}
-
-.link3 {  
-  transform: rotate(-17deg);
-  transition: transform .2s ease-in-out;
-}
-
-.link4 {  
-  transform: rotate(19deg);
-  transition: transform .2s ease-in-out;
-}
-
-.link1:hover, .link2:hover, .link3:hover, .link4:hover, .link5:hover{
-  transform: rotate(0deg);
-  transition: transform .2s ease-in-out;
+    }
+  }  
 }
