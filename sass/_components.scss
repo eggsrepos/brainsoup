@@ -31,7 +31,7 @@
   -webkit-user-select: none;
   user-select: none;
   
-  a  {
+  a {
     color: var(--dark-clr);
     transition: color 0.3s ease;
   
@@ -211,6 +211,7 @@ svg {
   svg {
     width: 32px;
     transition: 0.2s ease;
+    fill: var(--dark-clr);
     
     &:hover {
       fill: var(--accent-clr);
