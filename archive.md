@@ -1,8 +1,6 @@
 ---
 layout: default
 title: Archive
-pagination:
-  enabled: true
 ---
 <div class="page-header-wrap">
   <h1 class="page-header">Explore previous posts</h1>
