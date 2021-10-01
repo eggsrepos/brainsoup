@@ -17,9 +17,10 @@ plugins:
 
 pagination:
   enabled: true
+  debug: true
   collection: 'posts'
   per_page: 4
-  permalink: '/page/:num/' 
+  permalink: '/:num/'
   sort_field: "date"
   sort_reverse: true
     

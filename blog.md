@@ -40,7 +40,8 @@ pagination:
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="left" href="{{ paginator.next_page_path }}">&larr; Older</a>    
+    <a href="{{ paginator.next_page_path }}">&larr; Older</a>    
+  {% else %}<span></span>
   {% endif %}  
   <span class="center">
     {{ paginator.page }} of {{ paginator.total_pages }}
@@ -49,6 +50,7 @@ pagination:
   <a class="right" href="{{ paginator.previous_page_path }}">
     Newer &rarr;
   </a>
-{% endif %}
+  {% else %}<span></span>
+  {% endif %}
 </div>
 {% endif %}
