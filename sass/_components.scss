@@ -1,5 +1,4 @@
 //HEADER 
-
 .site-nav li:not(.logo) {
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px; 
@@ -22,9 +21,7 @@
     transform: rotate(0);
   }
 }
-
 // BURGER NAV CONTROLS
-
 #menuToggle  {
   display: block;
   position: relative;
@@ -161,7 +158,7 @@
 
 .comments-link {
   a {
-    @include accentfont;
+    font-family: var(--ss-font);
     padding: var(--space-3xs) var(--space-xs);
     border: 2px solid; 
     background-size: 100% 200%;
@@ -196,18 +193,20 @@
 }
 
 // GENERAL
-
-.section-side__header, .page-header, .blog-post__title {
+.section-side__header, .blog-post__title {
   display: inline-block;
 }
 
-.page-header-wrap {
+.page-header-wrap, .page-header-wrap > * {
   text-align: center;
 }
 
-.page-desc {
-  display: inline-block;
+.page-header-wrap > * + * {
   margin-top: var(--space-s);
+}
+
+.page-header {
+  display:inline;
 }
 
 .blog-post {
@@ -239,7 +238,6 @@
 }
 
 //SOCIALS
-
 .socials-list {
   display: flex;
   justify-content: center;
@@ -324,7 +322,6 @@
  }
 
 //ARCHIVE PAGE
-
 .archive-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -345,7 +342,6 @@
 }
 
 //ABOUT PAGE
-
 .bio-pic {
   max-width: 20rem;
   margin-inline: auto;
@@ -363,12 +359,12 @@
   top: 20%;
   left: 50%;  
   transform: translate(-50%, 0);
-  background: rgba(white, .9);
-  z-index: 2;  
-  padding: .5em;
-  text-align: center;  
-  color: var(--dark-clr);
   visibility: hidden;
+  z-index: 2;  
+  padding-inline: .25em;
+  background: var(--accent-clr);
+  border: 2px solid var(--dark-clr);
+  color: var(--dark-clr);  
 
   &:target {
     visibility: visible;
@@ -378,14 +374,15 @@
     display: block;
     max-width: 100%;
     width: 400px;
-    height: auto;
-    margin-block: .3em;
+  }
+
+  p {
+    text-align: center;
   }
 }
 
-.close-popup {
-  font-size: var(--step-4);
-  display: inline-block;
+.close {
+  font-size: var(--step-2);
   line-height: 1;
 
   &:hover {
@@ -394,7 +391,6 @@
 }
 
 //JEKYLL STYLING
-
 .read-more {
   opacity: 0;
   max-height: 0;
@@ -459,7 +455,6 @@ content: 'Show less \2191';
 }
 
 // UTILITIES
-
 .right {
   text-align: right;
 }

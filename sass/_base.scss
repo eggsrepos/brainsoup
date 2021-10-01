@@ -1,8 +1,6 @@
 :root {  
-
   --fluid-min-width: 320;
   --fluid-max-width: 1140;
-
   --fluid-screen: 100vw;
   --fluid-bp: calc(
     (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
@@ -22,7 +20,9 @@
   --accent-clr: #e7d95b;
   --dark-clr: #1a1a1a;
   --light-clr: #fdfdea;
-
+  --mono-font: 'Roboto Mono', monospace;
+  --ss-font: 'Work Sans', sans-serif;
+  --accent-font:'jrugpunk', 'Work Sans', sans-serif;
   --f--2-min: 9.72;
   --f--2-max: 11.52;
   --step--2: calc(
@@ -126,9 +126,7 @@
   --space-l-xl: calc(((var(--fc-l-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-l-min)) * var(--fluid-bp));
   --space-xl-2xl: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-2xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
   --space-2xl-3xl: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-3xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
-
 }
-
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -137,7 +135,6 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-
   scrollbar-color: var(--primary-clr) var(--accent-clr);
   scrollbar-width: thin;
 }
@@ -153,15 +150,14 @@ body, h1, h2, p, ul, ol, figure {
 }
 
 body {
-  @include primaryfont;
+  font-family: var(--mono-font);
   color: var(--light-clr);
   font-size: var(--step-0);
   line-height: 1.75;
 }
 
-
 h1, h2, h3 {
-  @include accentfont;
+  font-family: var(--ss-font);
   line-height: 1.125;
 }
 

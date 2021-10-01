@@ -11,10 +11,17 @@
 		<!-- fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400,700&family=Work+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 		{% seo %}
 		<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}" />
-		{% include analytics.html %}
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-208328940-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-208328940-1');
+		</script>
 	</head>	
 	<body>		
 		<header id="top">		
@@ -44,7 +51,7 @@
 					{% endfor %}
 					<li class="glitch-hover logo">
 						<a href="/" alt="Brain Soup">
-						<img src="/assets/bslogo2.png" width="300px" height="300px" alt="Brain Soup Logo">
+						<img src="https://res.cloudinary.com/dqmzgagnv/image/upload/v1633006385/bslogo_gkpjni.png" width="300px" height="300px" alt="Brain Soup Logo">
 						</a>
 					</li>
 				</ul>		
@@ -56,6 +63,10 @@
 					{{ content }}
 				</div>
 				<div class="section-side-wrap">
+					<div class="section-side box-border">	
+						<h1 class="section-side__header">Inspirational Quote</h1>					
+						<a class="twitter-timeline" href="https://twitter.com/anarelaxis?ref_src=twsrc%5Etfw" data-tweet-limit="1" data-chrome="noheader nofooter"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 						
+					</div>
 					<div class="section-side box-border">
 						<h1 class="section-side__header">Me on the web</h1>
 						<ul class="socials-list">
@@ -80,7 +91,7 @@
 								</a>
 							</li>
 						</ul>				 
-					</div> <!-- end section-side -->
+					</div>
 			  </div>
 			</div> <!-- end flex-wrap--main -->
 				<a href="#top" class="back-to-top-link" aria-label="Scroll to Top">Lazy way up &uarr;</a>

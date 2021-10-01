@@ -7,7 +7,7 @@ title: About
 </div>
 <div class="content-body">
   <figure class="bio-pic float-md-left">
-    <img src="/assets/selfieportrait.png">
+    <img src="https://res.cloudinary.com/dqmzgagnv/image/upload/v1633092745/selfieportrait_i0ul5f.jpg">
     <figcaption>Figure 1: Fried egg</figcaption>
   </figure>  
   <p>An. Also referred to as Egg. Sometimes "fucking pothead" or "demon."</p>
@@ -15,9 +15,9 @@ title: About
   <p>I graduated with an illustration degree and now do standup comedy, which earned me a giant <a href="#gd">glass dildo</a> earlier this year at a comedy competition.
   I dig horror movies and practical effects. My favourite video game is Bioshock and my favourite bands are Mr. Bungle, Melvins, and Primus. My buttermilk pancakes are amazing. No that wasn't a euphemism for anything. I make really good pancakes.</p>
   <div id="gd" class="popup">
-    <a href="#/" class="close-popup">&times;</a>
-    <img src="/assets/gd.jpg">
-    <span>Behold.</span>
+    <a href="#/" class="close">&times;</a>
+    <img src="https://res.cloudinary.com/dqmzgagnv/image/upload/v1633005590/gd_sucl3c.jpg">
+    <p>Behold.</p>
     </div>
   <h2>Why "Brain Soup"?</h2>
   <ol>

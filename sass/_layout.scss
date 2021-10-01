@@ -1,5 +1,4 @@
 // BASE STRUCTURE
-
 body {
   height: 100vh;
 }
@@ -17,7 +16,7 @@ body, .flex-wrap, .section-side-wrap {
   display: flex;
 }
 
-body, .section-side-wrap, .flex-wrap--main {  
+body, .flex-wrap--main {  
   flex-direction: column;
 }
 
@@ -29,7 +28,6 @@ body, .section-side-wrap, .flex-wrap--main {
 }
 
 // HEADER
-
 .site-nav {  
   li:not(.logo) {
     display: none;
@@ -46,7 +44,7 @@ body, .section-side-wrap, .flex-wrap--main {
     justify-items: center;
     align-items: center;
     grid-auto-flow: column;
-    grid-template: repeat(2, auto) / repeat(3, 1fr);
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     gap: var(--space-m);
 
     li:not(.logo) {
@@ -66,7 +64,6 @@ body, .section-side-wrap, .flex-wrap--main {
 }
 
 // MAIN
-
 .flex-wrap--main {
   align-items: center;
 }
@@ -83,12 +80,12 @@ body, .section-side-wrap, .flex-wrap--main {
 
 .section-side-wrap {
   gap: 2rem;
-  flex-flow: row wrap;
   justify-content: center;
 }
 
 .section-side {
-  width: 20rem;
+  width: 25rem;
+  align-self: flex-start;
   padding: var(--space-s);
   background-color: var(--secondary-clr);
   text-align: center;
@@ -98,16 +95,17 @@ body, .section-side-wrap, .flex-wrap--main {
   max-width: 100%;
 }
 
-
 @media (min-width: $breakpoint-4) {
   .flex-wrap--main {
     flex-direction: row;
     align-items: flex-start;
-  }  
+  } 
+  .section-side-wrap {
+    flex-direction: column;
+  }
 }
 
-// FOOTER
-    
+// FOOTER    
 .flex-wrap--footer {
   margin-block: var(--space-m); //override default wrapper margin
 }

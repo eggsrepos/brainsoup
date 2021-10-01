@@ -1,16 +1,3 @@
-@mixin primaryfont {
-  font-family: 'Roboto Mono', monospace;
-}
-
-@mixin accentfont {
-  font-family: 'Work Sans', sans-serif;
-}
-
-@mixin grungefont {
-  font-family: 'jrugpunk', 'Work Sans', sans-serif;
-  text-transform: uppercase;
-}
-
 @mixin popupbox {
   position: absolute;
   color: var(--dark-clr);

@@ -1,5 +1,5 @@
 .site-nav a, .site-nav-mobile a, .comments-link, .pagination, .blog-post__time, .archive-list__date {
-  @include accentfont;
+  font-family: var(--ss-font);
   text-transform: uppercase;
 }
 
@@ -15,7 +15,6 @@
 }
 
 // MAIN
-
 .content-body a:not([class]) {
   font-weight: bold;
   position: relative;
@@ -42,15 +41,13 @@
   }
 }
 
-
 //HEADERS
-
 .page-header {
   position: relative; 
   z-index: 0;
-
-  @include grungefont;
-
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  font-size: var(--step-4);
   &::before {    
     content: " ";
     height: 85%;
@@ -64,7 +61,7 @@
     border-radius: 16% 12% 13% 14%;
     padding: 10px 3px 3px 10px;
     z-index: -1;
-    background: var(--dark-clr);
+    background: var(--dark-clr);  
   }
 }
 
@@ -78,7 +75,6 @@
 }
 
 //BLOG
-
 .blog-post__header {
   color: var(--dark-clr);
 }
@@ -101,7 +97,6 @@ h1.blog-post__title {
 }
 
 // ARCHIVE
-
 .archive-list__title {
   border-bottom: 2px solid;
   font-size: var(--step-2);
@@ -123,7 +118,6 @@ figcaption {
   font-style: italic;
   text-align: center;
 }
-
 
 .flex-wrap--footer {  
   font-weight: 300;

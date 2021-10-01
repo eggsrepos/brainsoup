@@ -4,7 +4,7 @@ title: Brain Soup
 
 description: Personal site of a funny, failed artist.
 
-logo: /assets/bslogo2.png/
+logo: https://res.cloudinary.com/dqmzgagnv/image/upload/v1633006385/bslogo_gkpjni.png
 
 url: https://www.brainsoup.me
 
@@ -45,3 +45,10 @@ reCaptcha:
     secret: "UtjziDNYKQr7EGNg+udTODdTl0q6GR6QysHbZKWWbAG0ytIshTJlXRFHvQbgsOYe+qlRqzUgB/CsFOIINExOlabrbgvfHOxuBs5gZUhbtPg5SBjy1H1u+RgPWFKKL5tZZg3KCA6LnVRbesQnhsRDMFIsvZvnj5jBc59KMwj5S4x4IEUJEGJ5ZHZ6UPRzXqtzxmOiPSCnz9M4tZWDiJ+nppZuTVVLgTYOrnxPaTLo4tALSAABxX/xSTWWP8YMZkqUtScXFWACDW4A9YbVoAOO0xxDzXqFRwXJq5uLLU3u8WspCT1HKHD83pelKam1Iw+YUeNy+tcZXA0wsJdnObJvUbjRCFQn7F0aYOvRtziUkdi0KaHPI7/Y8ZwQJLcdTdhE5ZM1Aq6ulp518X4C5/pf+aghFqJGLiNV85wilMdcxeMoDI60RJifb1Os9PZjjjO80P+9zibtxm69D7zsDtnOCxVrw94H6h+cLVfTj35LIrnIwtdKwV9J5XlqTAw7/nhS+mN40P8+O7FkLLRFw4gZSKkvBhf77Lcn8ydazfLz+hU35SzOF4cOJc34swy3g7LT2fyXfK5NPyzDrqbej8QyxhCZpumQjGVtRiMJQXU7aGSt3G5/L+pOIrPATRV4Diw/a+sApdE4j5iWnH8ezTJd6nV2gcKG9vXfxbHWob1XHJY="
 
 google_analytics: UA-208328940-1
+
+cloudinary:
+  cloud_name: dqmzgagnv
+  verbose: true
+
+twitter:
+  username: anarelaxis
