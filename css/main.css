@@ -270,11 +270,11 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: var(--step-3);
+  font-size: var(--step-4);
 }
 
 h2 {
-  font-size: var(--step-2);
+  font-size: var(--step-3);
 }
 
 a {
@@ -371,6 +371,7 @@ body, .flex-wrap--main {
 .section-side-wrap {
   gap: 2rem;
   justify-content: center;
+  flex-flow: row wrap;
 }
 
 .section-side {
@@ -391,7 +392,7 @@ body, .flex-wrap--main {
     align-items: flex-start;
   }
   .section-side-wrap {
-    flex-direction: column;
+    flex-flow: column;
   }
 }
 
@@ -399,7 +400,7 @@ body, .flex-wrap--main {
   margin-block: var(--space-m);
 }
 
-.site-nav a, .site-nav-mobile a, .comments-link, .pagination, .blog-post__time, .archive-list__date {
+.site-nav a, .site-nav-mobile a, .comments-link, .pagination, .blog-post__date, .archive-list__date {
   font-family: var(--ss-font);
   text-transform: uppercase;
 }
@@ -416,7 +417,6 @@ body, .flex-wrap--main {
 }
 
 .content-body a:not([class]) {
-  font-weight: bold;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -425,11 +425,11 @@ body, .flex-wrap--main {
 .content-body a:not([class])::after {
   position: absolute;
   content: "";
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--accent-clr);
   left: 7px;
   bottom: -3px;
   width: calc(100% - 5px);
-  height: calc(100% - 5px);
+  height: 25%;
   transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
   z-index: -1;
 }
@@ -446,7 +446,6 @@ body, .flex-wrap--main {
   z-index: 0;
   font-family: var(--accent-font);
   text-transform: uppercase;
-  font-size: var(--step-4);
 }
 
 .page-header::before {
@@ -466,10 +465,12 @@ body, .flex-wrap--main {
 }
 
 .section-side__header {
+  display: block;
+  color: var(--dark-clr);
   padding-bottom: var(--space-3xs);
   border-bottom: 2px solid;
   margin-bottom: var(--space-s);
-  font-size: var(--step-2);
+  font-size: var(--step-1);
   text-transform: uppercase;
 }
 
@@ -477,12 +478,11 @@ body, .flex-wrap--main {
   color: var(--dark-clr);
 }
 
-.blog-post__time {
+.blog-post__date, .archive-list__date {
   font-weight: 500;
-  margin-bottom: var(--space-2xs);
 }
 
-h1.blog-post__title {
+.blog-post__title {
   display: inline;
   padding: var(--space-3xs) var(--space-xs);
   background-color: var(--light-clr);
@@ -490,18 +490,17 @@ h1.blog-post__title {
   box-shadow: -3px 3px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+  font-size: var(--step-3);
   line-height: 1.5;
 }
 
 .archive-list__title {
   border-bottom: 2px solid;
-  font-size: var(--step-2);
+  font-size: var(--step-1);
 }
 
 .archive-list__category {
-  margin-top: var(--space-xs);
   font-style: italic;
-  font-size: var(--step-0);
 }
 
 .archive-list__category:before {
@@ -635,6 +634,11 @@ figcaption {
   font-size: var(--step-4);
 }
 
+svg {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -690,7 +694,6 @@ figcaption {
 
 .comments-link svg {
   fill: var(--light-clr);
-  vertical-align: middle;
 }
 
 .btn-contact {
@@ -705,14 +708,6 @@ figcaption {
   background: var(--accent-clr);
 }
 
-.btn-contact svg {
-  fill: var(--dark-clr);
-}
-
-.section-side__header, .blog-post__title {
-  display: inline-block;
-}
-
 .page-header-wrap, .page-header-wrap > * {
   text-align: center;
 }
@@ -725,11 +720,24 @@ figcaption {
   display: inline;
 }
 
+.meta-sharelinks {
+  margin-top: var(--space-xs);
+}
+
+.meta-sharelinks svg {
+  width: 32px;
+  transition: 0.2s ease;
+}
+
+.meta-sharelinks svg:hover {
+  fill: var(--accent-clr);
+}
+
 .blog-post > * + * {
   margin-top: var(--space-m);
 }
 
-.blog-post > .blog-post__header + * {
+.content-body {
   margin-top: var(--space-l);
 }
 
@@ -749,6 +757,10 @@ figcaption {
   width: 100%;
 }
 
+.content-body--split {
+  margin-top: 0;
+}
+
 .socials-list {
   display: flex;
   justify-content: center;
@@ -760,9 +772,7 @@ figcaption {
 }
 
 .socials-list svg {
-  width: 35px;
-  max-width: 100%;
-  height: auto;
+  width: 38px;
   fill: var(--light-clr);
 }
 
@@ -882,8 +892,8 @@ figcaption {
 .steam:hover::before {
   opacity: 1;
   top: 3em;
-  left: -2em;
-  transform: rotate(12deg);
+  left: -1em;
+  transform: rotate(-12deg);
 }
 
 .archive-list {

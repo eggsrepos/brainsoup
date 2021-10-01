@@ -81,6 +81,7 @@ body, .flex-wrap--main {
 .section-side-wrap {
   gap: 2rem;
   justify-content: center;
+  flex-flow: row wrap;
 }
 
 .section-side {
@@ -101,7 +102,7 @@ body, .flex-wrap--main {
     align-items: flex-start;
   } 
   .section-side-wrap {
-    flex-direction: column;
+    flex-flow: column;
   }
 }
 
