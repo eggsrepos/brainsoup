@@ -727,7 +727,7 @@ svg {
 .meta-sharelinks svg {
   width: 32px;
   transition: 0.2s ease;
-  fill: var(--dark-color);
+  fill: var(--dark-clr);
 }
 
 .meta-sharelinks svg:hover {
