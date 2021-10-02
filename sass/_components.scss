@@ -164,6 +164,7 @@ svg {
 .comments-link {
   a {
     font-family: var(--ss-font);
+    font-weight: 500;
     padding: var(--space-3xs) var(--space-xs);
     border: 2px solid; 
     background-size: 100% 200%;
@@ -193,7 +194,7 @@ svg {
 }
 
 // GENERAL
-.page-header-wrap, .page-header-wrap > * {
+.page-header-wrap, .page-header-wrap > *, .blog-post__header, .blog-post__header > * {
   text-align: center;
 }
 
@@ -209,9 +210,9 @@ svg {
     margin-top: var(--space-xs);
 
   svg {
-    width: 32px;
+    width: 28px;
     transition: 0.2s ease;
-    fill: var(--dark-clr);
+    fill: var(--light-clr);
     
     &:hover {
       fill: var(--accent-clr);
@@ -340,7 +341,7 @@ svg {
     padding: var(--space-m);
     background: var(--light-clr);
     color: var(--dark-clr);
-    transition: .2s ease;
+    transition: .1s ease;
     
     &:hover {
       transform: translate(-0.4em, 0.4em);
@@ -413,8 +414,8 @@ display: none;
 
 .read-more-state:checked ~ .read-more {
 opacity: 1;
-font-size: inherit;
 max-height: 999em;
+font-size: inherit;
 display: inherit;
 }
 
@@ -431,6 +432,7 @@ content: 'Show less \2191';
   padding-inline: 0.3em;
   background-color: var(--light-clr);
   color: var(--primary-clr);
+  font-size: var(--step--1);
   font-weight: bold;
   transition: 0.3s ease;
   

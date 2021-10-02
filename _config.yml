@@ -19,7 +19,7 @@ pagination:
   enabled: true
   debug: true
   collection: 'posts'
-  per_page: 4
+  per_page: 5
   permalink: '/:num/'
   sort_field: "date"
   sort_reverse: true

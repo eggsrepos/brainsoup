@@ -83,6 +83,11 @@
   font-weight: 500;
 }
 
+.blog-post__date {
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
 .blog-post__title {
   display: inline;
   padding: var(--space-3xs) var(--space-xs);
@@ -126,6 +131,5 @@ figcaption {
 }
 
 .flex-wrap--footer {  
-  font-weight: 300;
   font-size: var(--step--1);
 }

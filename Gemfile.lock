@@ -5,6 +5,14 @@ GIT
   specs:
     eventmachine (1.2.7)
 
+GIT
+  remote: https://github.com/mohkale/jekyll-paginate-v2.git
+  revision: 01d7bfbe9a88f28c05c144d52c0df5d75f65a32a
+  branch: liquid-cache-bypass
+  specs:
+    jekyll-paginate-v2 (3.0.0)
+      jekyll (>= 3.0, < 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,8 +47,6 @@ GEM
     jekyll-cloudinary (1.14.1)
       fastimage (~> 2.0)
       jekyll (>= 3.6, < 5)
-    jekyll-paginate-v2 (3.0.0)
-      jekyll (>= 3.0, < 5.0)
     jekyll-sass-converter (2.1.0)
       sassc (> 2.0.1, < 3.0)
     jekyll-seo-tag (2.7.1)
@@ -79,7 +85,7 @@ DEPENDENCIES
   eventmachine (= 1.2.7)!
   jekyll (~> 4.2)
   jekyll-cloudinary
-  jekyll-paginate-v2 (~> 3.0)
+  jekyll-paginate-v2 (~> 3.0)!
   jekyll-seo-tag
   webrick (~> 1.7)
 

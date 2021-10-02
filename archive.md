@@ -1,12 +1,15 @@
 ---
 layout: default
 title: Archive
+pagination:
+  enabled: true
+  per_page: 10
 ---
 <div class="page-header-wrap">
   <h1 class="page-header">Explore previous posts</h1>
 </div>
 <ul class="archive-list">
-{% for post in site.posts %}
+{% for post in paginator.posts %}
     <a href="{{ post.url }}">
         <li class="box-border">
             <h2 class="archive-list__title">{{ post.title}}</h2>
