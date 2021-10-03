@@ -31,6 +31,7 @@
   z-index: 1;  
   -webkit-user-select: none;
   user-select: none;
+  pointer-events: none;
   
   a {
     color: var(--dark-clr);
@@ -42,13 +43,14 @@
   }
 
   input  {
-    display: block;
+    display: inline-block;
     width: 40px;
     height: 32px;
     position: absolute;
     top: -8px;
     left: -7px;  
     cursor: pointer;  
+    pointer-events: all;
     opacity: 0;
     z-index: 2;   
     -webkit-touch-callout: none;
@@ -56,13 +58,13 @@
 
   span  {
     display: block;
+    position: relative;  
+    z-index: 1;  
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
-    position: relative;  
     background: var(--accent-clr);
     border-radius: 3px;  
-    z-index: 1;  
     transform-origin: 4px 0px;  
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 opacity 0.55s ease;
@@ -98,6 +100,7 @@
 
 .site-nav-mobile  {
   position: absolute;
+  pointer-events: all;
 
   width: 100%;
   margin: -62px 0 0 -35px;

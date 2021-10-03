@@ -1,0 +1,54 @@
+#modetoggle {
+  display:none;
+}
+
+.modetoggle-btn {  
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  position: absolute;
+  top: 35px;
+  right: 35px;
+
+  &::before {
+    content: 'I like the dark';
+    font-size: var(--step--1);
+  }
+}
+
+.switch {
+  position: relative;
+  height: 24px;
+  width: 45px;
+  border-radius: 24px;
+  border: 2px solid var(--accent-clr);
+  background: var(--accent-clr);
+  transition: 0.4s;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.switch::after{
+content: '';
+position: absolute;
+top: 0px;
+left: 0px;
+width: 20px;
+height: 20px;
+background: var(--dark-clr);
+border-radius: 20px;
+transition: 0.3s;
+}
+
+#modetoggle:checked ~ header > .modetoggle-btn > .switch {
+  border: 2px solid var(--primary-clr);
+  background: var(--primary-clr);
+}
+
+#modetoggle:checked ~ header > .modetoggle-btn > .switch::after {
+  transform: translateX(21px);
+}
+
+#modetoggle:checked ~ header > .modetoggle-btn::before {
+  content: 'Hell yea';
+}

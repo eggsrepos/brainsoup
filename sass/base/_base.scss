@@ -1,3 +1,8 @@
+[data-theme="dark"] {
+  --bg-clr: var(--dark-clr);
+  --border-clr: rgb(80, 80, 80);
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -20,7 +25,10 @@ body, h1, h2, p, ul, ol, figure {
 
 body {
   width: 100vw;
+  height: 100vh;
+  background: var(--dark-clr);
   overflow-x: hidden;
+  
   font-family: var(--mono-font);
   font-size: var(--step-0);
   font-weight: 400;
@@ -62,7 +70,9 @@ ul {
 
 img, svg {
   max-width: 100%;
+  height: auto;
   vertical-align: middle;
+
 }
 
 

@@ -20,6 +20,9 @@
   --accent-clr: #e7d95b;
   --dark-clr: #1a1a1a;
   --light-clr: #fdfdea;
+  
+  --bg-clr: var(--accent-clr);
+  --border-clr: var(--dark-clr);
 
   --mono-font: 'Roboto Mono', monospace;
   --ss-font: 'Work Sans', sans-serif;
