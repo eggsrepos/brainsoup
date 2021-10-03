@@ -591,11 +591,11 @@ body, .flex-wrap--main {
 }
 
 .flex-wrap--header {
-  margin: var(--space-2xl) auto;
+  margin: var(--space-xl) auto;
 }
 
 .flex-wrap--main {
-  margin: var(--space-xl) auto;
+  margin: var(--space-l) auto;
 }
 
 .flex-wrap--footer {
@@ -735,8 +735,8 @@ body, .flex-wrap--main {
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--primary-clr);
-  border-block: 0.2em solid var(--secondary-clr);
-  padding-block: var(--space-3xs);
+  border: 0.2em 0 0.2em 0 solid var(--secondary-clr);
+  padding: var(--space-3xs) 0 var(--space-3xs) 0;
   -webkit-transform: rotate(-12deg);
           transform: rotate(-12deg);
   -webkit-transition: -webkit-transform .2s ease-in-out;
@@ -759,8 +759,8 @@ body, .flex-wrap--main {
   background-position: top, bottom;
   background-repeat: repeat-x, repeat-x;
   background-size: 20%;
-  border-block: 0;
-  padding-block: var(--space-2xs);
+  border: 0;
+  padding: var(--space-2xs) 0 var(--space-2xs) 0;
   -webkit-transform: rotate(0);
           transform: rotate(0);
 }
@@ -1162,7 +1162,7 @@ body, .flex-wrap--main {
 
 .archive-list__excerpt {
   line-height: 1.5;
-  margin-block: var(--space-xs);
+  margin: var(--space-xs) 0 var(--space-xs) 0;
 }
 
 .archive-list__category {
@@ -1463,7 +1463,7 @@ textarea {
 
 .mdl-card__supporting-text, .modal-title {
   overflow: hidden;
-  margin-block: var(--space-s);
+  margin: var(--space-s);
   text-align: center;
 }
 
