@@ -583,7 +583,6 @@ body, .flex-wrap--main {
 }
 
 .flex-wrap {
-  margin-inline: auto;
   width: calc(100% - 4rem);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -592,15 +591,15 @@ body, .flex-wrap--main {
 }
 
 .flex-wrap--header {
-  margin-block: var(--space-2xl);
+  margin: var(--space-2xl) auto;
 }
 
 .flex-wrap--main {
-  margin-block: var(--space-xl);
+  margin: var(--space-xl) auto;
 }
 
 .flex-wrap--footer {
-  margin-block: var(--space-m);
+  margin: var(--space-m) auto;
 }
 
 .site-nav li:not(.logo) {
