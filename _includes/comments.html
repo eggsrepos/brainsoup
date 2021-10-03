@@ -1,6 +1,6 @@
-<section class="comments" id="comments">   
-   <div class="comment-section-title">
-    <h2>
+<section class="comments" id="comments-section">   
+  <div class="divider">
+    <h2 class="comments-section__title">
       {% if site.data.comments[page.slug].size > 0 %}
        {{ site.data.comments[page.slug] | size }}
       comment{% if site.data.comments[page.slug].size > 1 %}s{% endif %}
@@ -28,8 +28,8 @@
   {% endif %}
 
   <!-- New comment form -->
-  <div id="respond" class="comment__new box-border">
-    <h2 class="comment-form-title">Say something<small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">&nbsp;(cancel reply)</a></small></h2>
+  <div id="respond" class="comment-form box-border">
+    <h3 class="comment-form__title">Say something<small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">&nbsp;(cancel reply)</a></small></h3>
     {% include comment_form.html %}
   </div>
 </section>

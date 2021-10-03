@@ -1,0 +1,27 @@
+body {
+  height: 100vh;
+}
+
+main {
+  flex: 1;
+  background-color: var(--accent-clr);
+}
+
+header, footer {
+  background-color: var(--dark-clr);
+}
+
+body, .flex-wrap, .section-side-wrap {
+  display: flex;
+}
+
+body, .flex-wrap--main {  
+  flex-direction: column;
+}
+
+.flex-wrap {
+  margin: var(--space-xl) auto;
+  width: calc(100% - 4rem);
+  justify-content: center;
+  gap: 2rem;
+}

@@ -14,32 +14,31 @@
       </label>
     </div>
   
-      <div class="textfield narrowfield">
-        <label for="comment-form-name">Name
-          <input class="textfield__input" name="fields[name]" type="text" id="comment-form-name" placeholder="Your name (required)" required/>
-        </label>
-      </div>
-  
-      <div class="textfield narrowfield">
-        <label for="comment-form-email">E-mail
-          <input class="textfield__input" name="fields[email]" type="email" id="comment-form-email" placeholder="Your email (optional)"/>
-        </label>
-      </div>
-  
-      <div class="textfield narrowfield hp">
-        <label for="hp">
-          <input class="textfield__input" name="fields[hp]" id="hp" type="text" placeholder="Leave blank">
-        </label>
-      </div>
-  
-      {% if site.reCaptcha.enabled %}
-      <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
-      {% endif %}
-  
-      <button class="submit-button" id="comment-form-submit">
-        Submit
-      </button>
-  
+    <div class="textfield narrowfield">
+      <label for="comment-form-name">Name
+        <input class="textfield__input" name="fields[name]" type="text" id="comment-form-name" placeholder="Your name (required)" required/>
+      </label>
+    </div>
+
+    <div class="textfield narrowfield">
+      <label for="comment-form-email">E-mail
+        <input class="textfield__input" name="fields[email]" type="email" id="comment-form-email" placeholder="Your email (optional)"/>
+      </label>
+    </div>
+
+    <div class="textfield narrowfield hp">
+      <label for="hp">
+        <input class="textfield__input" name="fields[hp]" id="hp" type="text" placeholder="Leave blank">
+      </label>
+    </div>
+
+    {% if site.reCaptcha.enabled %}
+    <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
+    {% endif %}
+
+    <button class="submit-button" id="comment-form-submit">
+      Submit
+    </button>  
   </form>
   
   <article class="modal">

@@ -1,0 +1,41 @@
+.section-primary {
+  > * + * {
+    margin-top: var(--space-xl);
+  }
+}
+
+.page-header-wrap > * + * {
+  margin-top: var(--space-s);
+}
+
+.content-body {
+  margin-top: var(--space-l); 
+
+  > * + * {
+    margin-top: var(--space-m);
+  }
+
+  > h2 {
+    margin-top: var(--space-xl);
+  }
+
+   ul li, ol li {
+    margin-top: var(--space-xs);
+  }
+}
+
+.blog-post > * + * {
+  margin-top: var(--space-m);
+  }
+  
+.blog-post__date {
+  margin-bottom: var(--space-xs);
+}
+
+.content-body--split {
+  margin-top: 0;
+}
+
+.meta-sharelinks {
+  margin-top: var(--space-xs);
+}

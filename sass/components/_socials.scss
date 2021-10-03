@@ -1,0 +1,100 @@
+.socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+
+  li {
+    display: inline;
+  }
+
+  svg {
+  width: 38px;
+  fill: var(--light-clr);
+
+    &:hover {
+      fill: var(--accent-clr);
+    }
+  }
+} 
+
+.email, .ig, .behance, .steam {
+  position: relative;
+}
+
+.email::before, .ig::before, .behance::before, .steam::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  pointer-events: none;
+
+  background-color: var(--light-clr);    
+  box-shadow: -5px 5px var(--dark-clr);
+  padding: .75em;
+  color: var(--dark-clr);
+  
+  font-size: var(--step--1); 
+  line-height: 1em; 
+  text-align: center;
+
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+  -moz-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+ -o-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+ -webkit-transition: all 0.4s cubic-bezier(0.2, 0.5, 0.15, 1.5);
+}
+
+.email {
+  &::before {
+    content: "Email me";
+ }
+
+  &:hover::before { 
+    opacity: 1;
+    top: -6em;
+    left: -3em;   
+    transform: rotate(-9deg); 
+  }
+}
+
+.ig {
+  &::before {
+   content: "Stalk me";
+  }
+ 
+   &:hover::before { 
+     opacity: 1;
+     top: 4em;
+     left: -2em;     
+     transform: rotate(-8deg);
+     
+   }
+ }
+
+ .behance {
+  &::before {
+    content: "See my art";
+  }
+ 
+   &:hover::before { 
+     opacity: 1;    
+     top: -7em;
+     left: -2em;  
+     transform: rotate(12deg);   
+   }
+ }
+
+ .steam {
+  &::before {
+    content: "Game with me";
+  }
+ 
+   &:hover::before { 
+     opacity: 1;     
+     top: 3em;
+     left: -1em;
+     transform: rotate(-12deg);
+     
+   }
+ }
