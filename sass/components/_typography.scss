@@ -1,4 +1,4 @@
-.site-nav a, .site-nav-mobile a {
+.site-nav a, .site-nav-mobile a, .modal-title {
   font-family: var(--ss-font);
 }
 
@@ -11,7 +11,13 @@
   text-transform: uppercase;
 }
 
-.site-nav a, .site-nav-mobile a, .btn-contact, .read-more-trigger, .comments-link {  
+.site-nav a,
+.site-nav-mobile a,
+.modal-title,
+.textfield label,
+.btn-contact,
+.read-more-trigger,
+.comments-link {  
   font-weight: bold;
 }
 
@@ -68,7 +74,7 @@
   z-index: 0;
 
   font-family: var(--accent-font);
-  font-size: var(--step-4); 
+  font-size: var(--step-3); 
 
   &::before {    
     content: " ";
@@ -130,13 +136,18 @@
 }
 
 figcaption {
+  text-align: center;
   font-style: italic;
 }
 
 .comment__admin_tag,
-.comment__reply-link
+.comment__reply-link,
 {
   font-size: var(--step--1);
+}
+
+.modal-title {
+  font-size: var(--step-1);
 }
 
 footer {

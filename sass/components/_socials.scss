@@ -8,8 +8,8 @@
   }
 
   svg {
-  width: 38px;
-  fill: var(--light-clr);
+  width: 3rem;
+  fill: var(--dark-clr);
 
     &:hover {
       fill: var(--accent-clr);
@@ -29,6 +29,7 @@
 
   pointer-events: none;
 
+  width: 8rem;
   background-color: var(--light-clr);    
   box-shadow: -5px 5px var(--dark-clr);
   padding: .75em;
@@ -79,7 +80,7 @@
  
    &:hover::before { 
      opacity: 1;    
-     top: -7em;
+     top: -5em;
      left: -2em;  
      transform: rotate(12deg);   
    }

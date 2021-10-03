@@ -152,6 +152,8 @@ body, h1, h2, p, ul, ol, figure {
 }
 
 body {
+  width: 100vw;
+  overflow-x: hidden;
   font-family: var(--mono-font);
   font-size: var(--step-0);
   font-weight: 400;
@@ -191,9 +193,9 @@ ul {
   padding: 0;
 }
 
-img {
+img, svg {
   max-width: 100%;
-  height: auto;
+  vertical-align: middle;
 }
 
 @-webkit-keyframes glitch {
@@ -480,6 +482,74 @@ img {
           animation: glitch2 .5s infinite;
 }
 
+@-webkit-keyframes lds-heart {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  5% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  39% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@keyframes lds-heart {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  5% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  39% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 body {
   height: 100vh;
 }
@@ -618,10 +688,10 @@ body, .flex-wrap--main {
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--primary-clr);
-  border-block: 0.1em solid var(--secondary-clr);
+  border-block: 0.2em solid var(--secondary-clr);
   padding-block: var(--space-3xs);
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
+  -webkit-transform: rotate(-12deg);
+          transform: rotate(-12deg);
   -webkit-transition: -webkit-transform .2s ease-in-out;
   transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
@@ -756,15 +826,78 @@ body, .flex-wrap--main {
   padding: 10px 0;
 }
 
+.loader {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-clr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader.hidden {
+  -webkit-animation: fadeOut 1s forwards;
+          animation: fadeOut 1s forwards;
+}
+
+.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 40px 40px;
+          transform-origin: 40px 40px;
+}
+
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: var(--primary-clr);
+  -webkit-animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+          animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: var(--primary-clr);
+}
+
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+
+.no-js .loader {
+  display: none;
+}
+
 .box-border {
   border: 2px solid var(--dark-clr);
   -webkit-box-shadow: -0.4em 0.4em var(--dark-clr);
           box-shadow: -0.4em 0.4em var(--dark-clr);
-}
-
-svg {
-  vertical-align: middle;
-  max-width: 100%;
 }
 
 .divider {
@@ -799,7 +932,7 @@ svg {
 }
 
 .meta-sharelinks svg {
-  width: 28px;
+  width: 25px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   fill: var(--dark-clr);
@@ -828,7 +961,7 @@ svg {
 }
 
 .archive-list li {
-  padding: var(--space-m);
+  padding: var(--space-l);
   background: var(--light-clr);
   color: var(--dark-clr);
   -webkit-transition: .1s ease;
@@ -947,7 +1080,7 @@ svg {
   margin-top: 0;
 }
 
-.site-nav a, .site-nav-mobile a {
+.site-nav a, .site-nav-mobile a, .modal-title {
   font-family: var(--ss-font);
 }
 
@@ -960,7 +1093,13 @@ svg {
   text-transform: uppercase;
 }
 
-.site-nav a, .site-nav-mobile a, .btn-contact, .read-more-trigger, .comments-link {
+.site-nav a,
+.site-nav-mobile a,
+.modal-title,
+.textfield label,
+.btn-contact,
+.read-more-trigger,
+.comments-link {
   font-weight: bold;
 }
 
@@ -1017,7 +1156,7 @@ svg {
   position: relative;
   z-index: 0;
   font-family: var(--accent-font);
-  font-size: var(--step-4);
+  font-size: var(--step-3);
 }
 
 .page-header::before {
@@ -1081,12 +1220,17 @@ svg {
 }
 
 figcaption {
+  text-align: center;
   font-style: italic;
 }
 
 .comment__admin_tag,
 .comment__reply-link {
   font-size: var(--step--1);
+}
+
+.modal-title {
+  font-size: var(--step-1);
 }
 
 footer {
@@ -1108,8 +1252,8 @@ footer {
 }
 
 .socials-list svg {
-  width: 38px;
-  fill: var(--light-clr);
+  width: 3rem;
+  fill: var(--dark-clr);
 }
 
 .socials-list svg:hover {
@@ -1126,6 +1270,7 @@ footer {
   left: 0;
   z-index: 2;
   pointer-events: none;
+  width: 8rem;
   background-color: var(--light-clr);
   -webkit-box-shadow: -5px 5px var(--dark-clr);
           box-shadow: -5px 5px var(--dark-clr);
@@ -1171,7 +1316,7 @@ footer {
 
 .behance:hover::before {
   opacity: 1;
-  top: -7em;
+  top: -5em;
   left: -2em;
   -webkit-transform: rotate(12deg);
           transform: rotate(12deg);
@@ -1323,7 +1468,7 @@ textarea {
   width: 100%;
   height: 100%;
   z-index: 999;
-  background-color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .show-modal .modal {
@@ -1366,10 +1511,6 @@ textarea {
   overflow: hidden;
   margin-block: var(--space-s);
   text-align: center;
-}
-
-.modal-title {
-  font-weight: 700;
 }
 
 .mdl-card__actions {

@@ -1,12 +1,11 @@
-//HEADER 
 .site-nav li:not(.logo) {
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px; 
   -webkit-text-stroke-color: var(--primary-clr);
-  border-block: .1em solid var(--secondary-clr);
+  border-block: .2em solid var(--secondary-clr);
   padding-block: var(--space-3xs);
 
-  transform: rotate(-20deg);
+  transform: rotate(-12deg);
   transition: transform .2s ease-in-out;
 
   &:nth-child(3n+1) {  

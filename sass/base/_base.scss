@@ -19,6 +19,8 @@ body, h1, h2, p, ul, ol, figure {
 }
 
 body {
+  width: 100vw;
+  overflow-x: hidden;
   font-family: var(--mono-font);
   font-size: var(--step-0);
   font-weight: 400;
@@ -58,7 +60,10 @@ ul {
   padding: 0;
 }
 
-img {
+img, svg {
   max-width: 100%;
-  height: auto;
+  vertical-align: middle;
 }
+
+
+
