@@ -27,15 +27,11 @@
 .blog-post > * + * {
   margin-top: var(--space-m);
   }
-  
-.blog-post__date {
-  margin-bottom: var(--space-xs);
+
+.blog-post__header > * + * {
+  margin-top: var(--space-xs);
 }
 
 .content-body--split {
   margin-top: 0;
-}
-
-.meta-sharelinks {
-  margin-top: var(--space-xs);
 }

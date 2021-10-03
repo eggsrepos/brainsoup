@@ -74,14 +74,12 @@ content: 'Show less \2191';
   display: inline-block;
 
   padding-inline: 0.3em;
-  background-color: var(--light-clr);
-
-  color: var(--primary-clr);
+  border: 1px solid;
 
   transition: 0.3s ease;
   
   &:hover {    
-  background-color: var(--primary-clr);
-  color: var(--light-clr);
+  background-color: var(--light-clr);
+  color: var(--primary-clr);
   }
 }

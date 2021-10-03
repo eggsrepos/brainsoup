@@ -166,15 +166,15 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: var(--step-2);
-}
-
-h2 {
   font-size: var(--step-1);
 }
 
-h3 {
+h2 {
   font-size: var(--step-0);
+}
+
+h3 {
+  font-size: var(--step--1);
 }
 
 a {
@@ -939,16 +939,12 @@ svg {
   margin-top: var(--space-m);
 }
 
-.blog-post__date {
-  margin-bottom: var(--space-xs);
+.blog-post__header > * + * {
+  margin-top: var(--space-xs);
 }
 
 .content-body--split {
   margin-top: 0;
-}
-
-.meta-sharelinks {
-  margin-top: var(--space-xs);
 }
 
 .site-nav a, .site-nav-mobile a {
@@ -1064,8 +1060,6 @@ svg {
   border: 1px solid;
   -webkit-box-shadow: -3px 3px;
           box-shadow: -3px 3px;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
 }
 
 .archive-list__title {
@@ -1485,13 +1479,12 @@ textarea {
 .read-more-trigger {
   display: inline-block;
   padding-inline: 0.3em;
-  background-color: var(--light-clr);
-  color: var(--primary-clr);
+  border: 1px solid;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 .read-more-trigger:hover {
-  background-color: var(--primary-clr);
-  color: var(--light-clr);
+  background-color: var(--light-clr);
+  color: var(--primary-clr);
 }
