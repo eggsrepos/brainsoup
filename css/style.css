@@ -735,7 +735,8 @@ body, .flex-wrap--main {
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--primary-clr);
-  border: 0.2em 0 0.2em 0 solid var(--secondary-clr);
+  border-top: 0.2em solid var(--secondary-clr);
+  border-bottom: 0.2em solid var(--secondary-clr);
   padding: var(--space-3xs) 0 var(--space-3xs) 0;
   -webkit-transform: rotate(-12deg);
           transform: rotate(-12deg);
