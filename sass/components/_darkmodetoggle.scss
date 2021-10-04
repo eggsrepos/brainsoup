@@ -7,11 +7,11 @@
   gap: 10px;
   align-items: center;
   position: absolute;
-  top: 35px;
-  right: 35px;
+  top: 20px;
+  right: 20px;
 
   &::before {
-    content: 'I like the dark';
+    content: 'lil darker';
     font-size: var(--step--1);
   }
 }

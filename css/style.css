@@ -10,12 +10,6 @@
   font-display: fallback;
 }
 
-@font-face {
-  font-family: 'Merchant Copy';
-  src: url("/assets/fonts/MerchantCopy.ttf");
-  font-display: fallback;
-}
-
 :root {
   --fluid-min-width: 320;
   --fluid-max-width: 1140;
@@ -133,7 +127,7 @@
 
 [data-theme="dark"] {
   --bg-clr: var(--dark-clr);
-  --border-clr: rgb(80, 80, 80);
+  --border-clr: white;
 }
 
 *, *:before, *:after {
@@ -591,7 +585,7 @@ body, .flex-wrap--main {
 }
 
 .flex-wrap--header {
-  margin: var(--space-xl) auto;
+  margin: var(--space-2xl) auto;
 }
 
 .flex-wrap--main {
@@ -769,8 +763,8 @@ body, .flex-wrap--main {
 #menuToggle {
   display: block;
   position: relative;
-  top: 35px;
-  left: 35px;
+  top: 20px;
+  left: 20px;
   z-index: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -857,8 +851,8 @@ body, .flex-wrap--main {
   position: absolute;
   pointer-events: all;
   width: 100%;
-  margin: -62px 0 0 -35px;
-  padding: 80px 35px 35px 35px;
+  margin: -47px 0 0 -20px;
+  padding: 60px 20px;
   border: solid 3px var(--dark-clr);
   background: var(--accent-clr);
   -webkit-font-smoothing: antialiased;
@@ -874,6 +868,7 @@ body, .flex-wrap--main {
 }
 
 .site-nav-mobile li {
+  text-align: center;
   padding: 10px 0;
 }
 
@@ -1661,12 +1656,12 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 35px;
-  right: 35px;
+  top: 20px;
+  right: 20px;
 }
 
 .modetoggle-btn::before {
-  content: 'I like the dark';
+  content: 'lil darker';
   font-size: var(--step--1);
 }
 
