@@ -1126,14 +1126,14 @@ footer {
 
 .box-border {
   border: 2px solid var(--dark-clr);
-  -webkit-box-shadow: -0.4em 0.4em var(--dark-clr);
-          box-shadow: -0.4em 0.4em var(--dark-clr);
+  -webkit-box-shadow: -5px 5px var(--dark-clr);
+          box-shadow: -5px 5px var(--dark-clr);
 }
 
 .box-border-layout {
   border: 2px solid var(--border-clr);
-  -webkit-box-shadow: -0.4em 0.4em var(--border-clr);
-          box-shadow: -0.4em 0.4em var(--border-clr);
+  -webkit-box-shadow: -5px 5px var(--border-clr);
+          box-shadow: -5px 5px var(--border-clr);
   -webkit-transition: .6s ease;
   transition: .6s ease;
 }
