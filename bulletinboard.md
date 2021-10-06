@@ -16,7 +16,7 @@ title: Bulletin Board
 
 <div class="comment-form box-border">
   <h2 class="comment-form__title">Leave a note on the bulletin board</h2>
-  <form class="js-form form" method="post" action="https://eggsstaticmaninstance.herokuapp.com/v2/entry/eggsrepos/brainsoup/master/guestbook">
+  <form class="js-form form" method="post" action="https://eggsstaticmaninstance.herokuapp.com/v2/entry/eggsrepos/brainsoup/master/bulletinboard">
     {% if site.reCaptcha.enabled %}
     <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
     <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.reCaptcha.secret }}">

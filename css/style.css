@@ -688,7 +688,7 @@ body, .flex-wrap--main {
     -ms-grid-rows: (1fr)[3];
     -ms-grid-columns: (1fr)[3];
         grid-template: repeat(3, 1fr)/repeat(3, 1fr);
-    gap: var(--space-xl);
+    gap: var(--space-xl) var(--space-m);
   }
   .site-nav li:not(.logo) {
     text-align: center;

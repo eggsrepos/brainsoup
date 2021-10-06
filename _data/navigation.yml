@@ -1,7 +1,7 @@
-- name: Who?
-  link: /about/
 - name: The Soup
   link: /blog/
+- name: Who?
+  link: /about/
 - name: Eye Bleach
   link: /eyebleach/
 - name: Archive

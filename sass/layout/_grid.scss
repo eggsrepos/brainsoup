@@ -80,7 +80,7 @@ body, .flex-wrap--main {
     align-items: center;
     grid-auto-flow: column;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-    gap: var(--space-xl);
+    gap: var(--space-xl) var(--space-m);
 
     li:not(.logo) {
     text-align: center;
