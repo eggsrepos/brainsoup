@@ -9,40 +9,35 @@
   align-items: center;
 }
 
-.lds-heart {
-  display: inline-block;
+.lds-heart-wrapper {
   position: relative;
-  width: 80px;
-  height: 80px;
   transform: rotate(45deg);
-  transform-origin: 40px 40px;
 }
-.lds-heart div {
-  top: 32px;
-  left: 32px;
+
+.lds-heart {
   position: absolute;
-  width: 32px;
-  height: 32px;
-  background: var(--primary-clr);
+  width: 50px;
+  height: 50px;
+  background: var(--primary-clr);;
   animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.lds-heart div:after,
-.lds-heart div:before {
+.lds-heart::after,
+.lds-heart::before {
   content: " ";
   position: absolute;
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
   background: var(--primary-clr);
 }
-.lds-heart div:before {
-  left: -24px;
-  border-radius: 50% 0 0 50%;
+.lds-heart::before {
+  left: -27px;
+  border-radius: 50%;
 }
-.lds-heart div:after {
-  top: -24px;
-  border-radius: 50% 50% 0 0;
+.lds-heart::after {
+  top: -27px;
+  border-radius: 50%;
 }
 
 .no-js .loader { 

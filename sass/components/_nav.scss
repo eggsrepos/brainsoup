@@ -6,11 +6,11 @@
   border-bottom: .2em solid var(--secondary-clr);
   padding: var(--space-3xs) 0 var(--space-3xs) 0;
 
-  transform: rotate(-12deg);
+  transform: rotate(-13deg);
   transition: transform .2s ease-in-out;
 
-  &:nth-child(3n+1) {  
-    transform: rotate(20deg);
+  &:nth-child(2n+1) {  
+    transform: rotate(13deg);
     transition: transform .2s ease-in-out;
   }
   &:hover {

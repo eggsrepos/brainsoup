@@ -1,6 +1,6 @@
 [data-theme="dark"] {
   --bg-clr: var(--dark-clr);
-  --border-clr: white;
+  --border-clr: transparent;
 }
 
 *, *:before, *:after {
@@ -70,10 +70,10 @@ ul {
 
 img, svg {
   max-width: 100%;
-  height: auto;
+  height: auto;  
   vertical-align: middle;
-
 }
 
-
-
+.content-body img {
+  width: 100%;
+}

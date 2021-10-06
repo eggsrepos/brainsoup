@@ -1,7 +1,7 @@
 ---
 title:  Baby's First Post
 date: 2021-09-06
-category: Personal
+category: Website
 tag: blogging coding
 ---
 

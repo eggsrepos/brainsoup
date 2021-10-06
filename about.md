@@ -2,9 +2,10 @@
 layout: default
 title: About
 ---
-<div class="page-header-wrap">
-  <h1 class="page-header">Who the hell are you?</h1>
+<div class="page-header">
+  <h1 class="page-header__title">Who the hell are you?</h1>
 </div>
+
 <div class="content-body">
   <figure class="bio-pic float-md-left">
     <img src="https://res.cloudinary.com/dqmzgagnv/image/upload/v1633092745/selfieportrait_i0ul5f.jpg">

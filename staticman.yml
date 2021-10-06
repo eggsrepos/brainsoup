@@ -1,8 +1,26 @@
+guestbook:
+  allowedFields: ["name", "email", "url", "message"]
+  requiredFields: ["name", "message"]
+  branch: "master"
+  name: "Guestbook Entry"
+  commitMessage: "New guestbook entry from {fields.name}"
+  filename: "gb-{@timestamp}"
+  format: "yaml"
+  path: "_data/guestbook"
+  generatedFields:
+    date:
+      type: date
+      options:
+          format: "iso8601"
+  transforms:
+      email: "md5"
+  moderation: false
+
 comments:
   allowedFields: ["name", "email", "url", "message", "replying_to_uid"]
   requiredFields: ["name", "message"]
   branch: "master"
-  name: "Brain Soup Blog"
+  name: "Blog Comment"
   commitMessage: "New comment from {fields.name}"
   filename: "comment-{@timestamp}"
   format: "yaml"
@@ -13,8 +31,8 @@ comments:
       options:
           format: "iso8601"
   transforms:
-      email           : "md5"
-moderation: false
+      email: "md5"
+  moderation: false
 
 reCaptcha:
     enabled: true

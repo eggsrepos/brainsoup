@@ -9,18 +9,27 @@ pagination:
   <div class="blog-post__header">
     <div class="blog-post__date">{{ post.date  | date: '%B %-d, %Y' }}</div>        
     <h1 class="blog-post__title box-border"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <div class="meta-sharelinks">
-      <a href="https://twitter.com/intent/tweet?text={{ post.title }}&url={{ site.url }}{{ post.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm18.862 9.237c.208 4.617-3.235 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.079-4.03 3.198-4.03.944 0 1.797.398 2.396 1.037.748-.147 1.451-.42 2.085-.796-.245.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.44.656-.997 1.234-1.638 1.697z"/></svg></a>
-      <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ post.url }}" rel="nofollow" target="_blank" title="Share on Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm16 7h-1.923c-.616 0-1.077.252-1.077.889v1.111h3l-.239 3h-2.761v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/></svg></a>
-      <a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ post.url }}" rel="nofollow" target="_blank" title="Share on Pinterest"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm12 20c-.825 0-1.62-.125-2.369-.357.326-.531.813-1.402.994-2.098l.499-1.901c.261.498 1.023.918 1.833.918 2.413 0 4.151-2.219 4.151-4.976 0-2.643-2.157-4.62-4.932-4.62-3.452 0-5.286 2.317-5.286 4.841 0 1.174.625 2.634 1.624 3.1.151.07.232.039.268-.107l.222-.907c.019-.081.01-.15-.056-.23-.331-.4-.595-1.138-.595-1.825 0-1.765 1.336-3.472 3.612-3.472 1.965 0 3.341 1.339 3.341 3.255 0 2.164-1.093 3.663-2.515 3.663-.786 0-1.374-.649-1.185-1.446.226-.951.663-1.977.663-2.664 0-.614-.33-1.127-1.012-1.127-.803 0-1.448.831-1.448 1.943 0 .709.239 1.188.239 1.188s-.793 3.353-.938 3.977c-.161.691-.098 1.662-.028 2.294-2.974-1.165-5.082-4.06-5.082-7.449 0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg></a>
-    </div>
+    <!-- <div class="sharelinks">
+      <div class="sharelinks__title">Share</div>
+      <ul class="sharelinks__list">
+          <li>
+            <a href="https://twitter.com/intent/tweet?text={{ post.title }}&url={{ site.url }}{{ post.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter" class="fa fa-twitter"></a>
+          </li>
+          <li>
+            <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ post.url }}" rel="nofollow" target="_blank" title="Share on Facebook" class="fa fa-facebook"></a>
+          </li>
+          <li>
+            <a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ post.url }}" rel="nofollow" target="_blank" title="Share on Pinterest" class="fa fa-pinterest"></a>
+          </li>
+      </ul>
+    </div> -->
   </div>   
   {% if post.content contains '<!--more-->' %}
   <div class="content-body">
       {{ post.content | split:'<!--more-->' | first }}
   </div>
   <input type="checkbox" class="read-more-state" id="{{ post.url }}"/>
-  <div class="read-more content-body content-body--split blog-post-sig">
+  <div class="read-more content-body blog-post-sig">
     {{ post.content | split:'<!--more-->' | last }}
   </div>
   <label for="{{ post.url }}" class="read-more-trigger"></label>   

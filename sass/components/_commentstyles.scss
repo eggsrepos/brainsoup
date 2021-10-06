@@ -64,6 +64,7 @@ textarea {
     background: var(--light-clr);
     background-size: 200% 100%;
     transition: 0.2s ease;
+    font-family: var(--mono-font);
 
     &:hover {
     color: var(--light-clr);
@@ -137,8 +138,8 @@ textarea {
     content: '';
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 999;
     background: rgba(255, 255, 255, 0.85);
 }

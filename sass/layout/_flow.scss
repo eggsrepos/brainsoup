@@ -4,18 +4,20 @@
   }
 }
 
-.page-header-wrap > * + * {
+.page-header__desc {
   margin-top: var(--space-s);
 }
 
-.content-body {
-  margin-top: var(--space-l); 
+.float-md-left + p {
+  margin-top: 0;
+}
 
+.content-body { 
   > * + * {
     margin-top: var(--space-m);
   }
 
-  > h2 {
+  > * + h2, * + h3 {
     margin-top: var(--space-xl);
   }
 
@@ -25,13 +27,13 @@
 }
 
 .blog-post > * + * {
-  margin-top: var(--space-m);
-  }
+  margin-top: var(--space-l);
+}
 
 .blog-post__header > * + * {
   margin-top: var(--space-xs);
 }
 
-.content-body--split {
+.content-body + .content-body {
   margin-top: 0;
 }

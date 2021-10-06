@@ -5,8 +5,8 @@ pagination:
   enabled: true
   per_page: 10
 ---
-<div class="page-header-wrap">
-  <h1 class="page-header">Explore previous posts</h1>
+<div class="page-header">
+  <h1 class="page-header__title">Explore previous posts</h1>
 </div>
 <ul class="archive-list">
 {% for post in paginator.posts %}
