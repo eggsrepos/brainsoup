@@ -23,7 +23,7 @@ title: Bulletin Board
     {% endif %}
     
   <div class="textfield">
-    <label for="comment-form-message">Your message
+    <label for="comment-form-message">Message
       <textarea class="textfield__input" name="fields[message]" type="text" id="comment-form-message" placeholder="What do you think?" required rows="6"></textarea>
     </label>
   </div>
