@@ -1,12 +1,12 @@
-guestbook:
+bulletinboard:
   allowedFields: ["name", "email", "url", "message"]
   requiredFields: ["name", "message"]
   branch: "master"
   name: "Guestbook Entry"
-  commitMessage: "New guestbook entry from {fields.name}"
-  filename: "gb-{@timestamp}"
+  commitMessage: "New bulletin entry from {fields.name}"
+  filename: "bb-{@timestamp}"
   format: "yaml"
-  path: "_data/guestbook"
+  path: "_data/bulletinboard"
   generatedFields:
     date:
       type: date

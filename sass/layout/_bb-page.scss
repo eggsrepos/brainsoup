@@ -1,0 +1,37 @@
+.gb-entries-wrap {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+
+  margin: 0 0 var(--space-2xl) 0;
+}
+
+.gb-entry {
+  width: 15rem;
+  padding: var(--space-m);
+  background: var(--light-clr);
+  transform: rotate(-7deg);
+
+  &:nth-child(even) {
+    transform: rotate(5deg);
+  }
+
+  > * + * {
+    margin-top: var(--space-xs);
+  }
+}
+
+.gb-entry__author {
+  color: var(--secondary-clr);
+  font-family: var(--mono-font);
+  font-size: var(--step--1);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.gb-entry__content {  
+  color: var(--dark-clr);
+  text-align: left;
+  font-size: var(--step--1);
+}

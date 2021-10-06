@@ -1,9 +1,21 @@
 ---
-layout: guestbook
-title: Guestbook
+layout: bulletin
+title: Bulletin Board
 ---
+{% if site.data.bulletinboard.size > 0 %}
+<div class="gb-entries-wrap">
+  {% for item in site.data.bulletinboard %}
+  {% assign entry = item[1] %}
+  <div class="gb-entry box-border">
+    <p class="gb-entry__content">{{ entry.message }}</p>
+    <p class="gb-entry__author">- {{ entry.name }}</p>
+  </div>  
+  {% endfor %}
+</div>
+{% endif %}
+
 <div class="comment-form box-border">
-  <h2 class="comment-form__title">Enjoyed your stay? Sign the guestbook</h2>
+  <h2 class="comment-form__title">Leave a note on the bulletin board</h2>
   <form class="js-form form" method="post" action="https://eggsstaticmaninstance.herokuapp.com/v2/entry/eggsrepos/brainsoup/master/guestbook">
     {% if site.reCaptcha.enabled %}
     <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
@@ -18,13 +30,13 @@ title: Guestbook
 
   <div class="textfield narrowfield">
     <label for="comment-form-name">Name
-      <input class="textfield__input" name="fields[name]" type="text" id="comment-form-name" placeholder="Your name (required)" required/>
+      <input class="textfield__input" name="fields[name]" type="text" id="comment-form-name" placeholder="(Required)" required/>
     </label>
   </div>
 
   <div class="textfield narrowfield">
     <label for="comment-form-email">E-mail
-      <input class="textfield__input" name="fields[email]" type="email" id="comment-form-email" placeholder="Your email (optional)"/>
+      <input class="textfield__input" name="fields[email]" type="email" id="comment-form-email" placeholder="(Optional)"/>
     </label>
   </div>
 
