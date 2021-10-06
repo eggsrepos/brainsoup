@@ -2,6 +2,10 @@
   font-family: var(--ss-font);
 }
 
+.textfield__input, .submit-button {
+  font-family: var(--mono-font);
+}
+
 .site-nav a,
 .site-nav-mobile a,
 .pagination,
@@ -14,7 +18,6 @@
 .site-nav a,
 .site-nav-mobile a,
 .modal-title,
-.textfield label,
 .btn-contact,
 .read-more-trigger,
 .comments-link {  

@@ -51,7 +51,6 @@ textarea {
     padding: var(--space-2xs);
     border: 2px solid;
     background: transparent;
-    font-family: var(--mono-font);
 }
 
 .notify-me, .g-recaptcha {
@@ -64,7 +63,6 @@ textarea {
     background: var(--light-clr);
     background-size: 200% 100%;
     transition: 0.2s ease;
-    font-family: var(--mono-font);
 
     &:hover {
     color: var(--light-clr);

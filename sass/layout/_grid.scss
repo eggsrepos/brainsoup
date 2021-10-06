@@ -15,7 +15,6 @@ body, .flex-wrap--main {
 .flex-wrap {
   max-width: calc(100% - 4rem);
   justify-content: center;
-  gap: 2rem;
 }
 
 .flex-wrap--header {
@@ -25,6 +24,7 @@ body, .flex-wrap--main {
 .flex-wrap--main {
   margin: var(--space-xl) auto;  
   align-items: center;
+  gap: 4rem;
 }
 
 .flex-wrap--footer {

@@ -605,7 +605,6 @@ body, .flex-wrap--main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 2rem;
 }
 
 .flex-wrap--header {
@@ -617,6 +616,7 @@ body, .flex-wrap--main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 4rem;
 }
 
 .flex-wrap--footer {
@@ -993,6 +993,10 @@ body, .flex-wrap--main {
   font-family: var(--ss-font);
 }
 
+.textfield__input, .submit-button {
+  font-family: var(--mono-font);
+}
+
 .site-nav a,
 .site-nav-mobile a,
 .pagination,
@@ -1005,7 +1009,6 @@ body, .flex-wrap--main {
 .site-nav a,
 .site-nav-mobile a,
 .modal-title,
-.textfield label,
 .btn-contact,
 .read-more-trigger,
 .comments-link {
@@ -1495,7 +1498,6 @@ textarea {
   padding: var(--space-2xs);
   border: 2px solid;
   background: transparent;
-  font-family: var(--mono-font);
 }
 
 .notify-me, .g-recaptcha {
@@ -1509,7 +1511,6 @@ textarea {
   background-size: 200% 100%;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  font-family: var(--mono-font);
 }
 
 .submit-button:hover {
