@@ -2,7 +2,11 @@
   font-family: var(--ss-font);
 }
 
-.textfield__input, .submit-button {
+.modal-title {
+  font-size: var(--step-1);
+}
+
+.textfield__input, .submit-button, .mdl-js-button {
   font-family: var(--mono-font);
 }
 
@@ -95,15 +99,15 @@
   background-color: var(--light-clr);
 }
 
-.archive-list__title {
+.archive-text__title {
   border-bottom: 2px solid;
 }
 
-.archive-list__excerpt {
-  margin: 1.5em 0;
+.archive-text__excerpt {
+  margin: 1.5em 0;  
 }
 
-.archive-list__category {  
+.archive-text__category {  
   font-style: italic;
 
   &:before {
@@ -121,10 +125,6 @@ figcaption {
 .comment__reply-link
 {
   font-size: var(--step--1);
-}
-
-.modal-title {
-  font-size: var(--step-1);
 }
 
 footer {

@@ -1,3 +1,9 @@
+.section-primary-wrap {
+  > * + * {
+    margin-top: var(--space-l);
+  }
+}
+
 .section-primary {
   > * + * {
     margin-top: var(--space-xl);

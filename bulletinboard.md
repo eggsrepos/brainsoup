@@ -3,12 +3,12 @@ layout: bulletin
 title: Bulletin Board
 ---
 {% if site.data.bulletinboard.size > 0 %}
-<div class="gb-entries-wrap">
+<div class="bb-wrap">
   {% for item in site.data.bulletinboard %}
   {% assign entry = item[1] %}
-  <div class="gb-entry box-border">
-    <p class="gb-entry__content">{{ entry.message }}</p>
-    <p class="gb-entry__author">- {{ entry.name }}</p>
+  <div class="bb-item box-border">
+    <p class="bb-item__message">{{ entry.message }}</p>
+    <p class="bb-item__author">- {{ entry.name }}</p>
   </div>  
   {% endfor %}
 </div>

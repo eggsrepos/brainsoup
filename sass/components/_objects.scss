@@ -3,12 +3,6 @@
   box-shadow: -5px 5px var(--dark-clr);
 }
 
-.box-border-layout {  
-  border: 2px solid var(--border-clr);
-  box-shadow: -5px 5px var(--border-clr);  
-  transition: .6s ease;
-}
-
 .divider {
   display: flex;
   gap: var(--space-2xs);
@@ -32,28 +26,44 @@
 
 .pagination {
   display: flex;
+  color: var(--dark-clr);
   > * {
     flex: 1;
   }
 }
 
-
 .archive-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
+}
 
-  li {
-    padding: var(--space-l);
-    background: var(--light-clr);
-    color: var(--dark-clr);
-    transition: .1s ease;
-    
-    &:hover {
-      transform: translate(-0.4em, 0.4em);
-      box-shadow: none;
-    }
+.archive-item {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: var(--space-l);
+  background: var(--light-clr);
+  color: var(--dark-clr);
+  transition: .1s ease;
+  
+  &:hover {
+    transform: translate(-0.4em, 0.4em);
+    box-shadow: none;
   }
+}
+
+.archive-thumbnail {
+  flex-shrink: 0;
+  width: 12em;
+  height: 12em;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.archive-thumbnail img {
+  width: 20rem;
+  max-width: unset;
 }
 
 .bio-pic {
@@ -76,7 +86,8 @@
   
   background: var(--accent-clr);
   padding: 0 5px;
-  border: 2px solid var(--dark-clr);
+  border: 3px solid var(--dark-clr);
+  box-shadow: -7px 7px rgba(0, 0, 0, 0.4);
 
   color: var(--dark-clr);  
   
@@ -88,6 +99,7 @@
   }
   img {
     width: 400px;
+    display: block;
   }
   p {
     text-align: center;
@@ -123,7 +135,7 @@
   gap: .5em;
 
   padding: var(--space-3xs) var(--space-s);
-  border: 2px solid;
+  border: 3px solid;
   border-radius: 8px;
   background: var(--accent-clr);
 

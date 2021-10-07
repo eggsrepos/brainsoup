@@ -2,18 +2,22 @@
 layout: default
 title: {{ post.title }}
 ---
-<article class="blog-post">
-    <div class="blog-post__header">
-        <div class="blog-post__date">{{ page.date  | date: '%B %-d, %Y' }}</div>
-        <h1 class="blog-post__title box-border">{{ page.title }}</h1>
-    </div>    
-    <div class="content-body blog-post-sig">
-        {{ content }}   
-    </div> 
-</article>
-{% if page.comments == true %}
-{% include comments.html %}
-{% endif %}
+<div class="section-primary">
+    <article class="blog-post">
+        <div class="blog-post__header">
+            <div class="blog-post__date">{{ page.date  | date: '%B %-d, %Y' }}</div>
+            <h1 class="blog-post__title box-border">{{ page.title }}</h1>
+        </div>
+        <div class="content-body blog-post-sig">
+            {{ content }}
+        </div>
+    </article>
+</div>
+<div class="section-primary">
+    {% if page.comments == true %}
+    {% include comments.html %}
+    {% endif %}
+</div>
         
 <div class="pagination">   
     {% if page.previous.url %}

@@ -1,4 +1,4 @@
-.gb-entries-wrap {
+.bb-wrap {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -7,7 +7,7 @@
   margin: 0 0 var(--space-2xl) 0;
 }
 
-.gb-entry {
+.bb-item {
   width: 15rem;
   padding: var(--space-m);
   background: var(--light-clr);
@@ -22,7 +22,7 @@
   }
 }
 
-.gb-entry__author {
+.bb-item__author {
   color: var(--secondary-clr);
   font-family: var(--mono-font);
   font-size: var(--step--1);
@@ -30,7 +30,7 @@
   text-transform: uppercase;
 }
 
-.gb-entry__content {  
+.bb-item__message {  
   color: var(--dark-clr);
   text-align: left;
   font-size: var(--step--1);
