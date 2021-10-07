@@ -14,8 +14,7 @@ bulletinboard:
           format: "iso8601"
   transforms:
       email: "md5"
-  moderation: true
-
+  moderation: false
 comments:
   allowedFields: ["name", "email", "url", "message", "replying_to_uid"]
   requiredFields: ["name", "message"]
