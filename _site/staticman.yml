@@ -1,0 +1,39 @@
+bulletinboard:
+  allowedFields: ["name", "email", "url", "message"]
+  requiredFields: ["name", "message"]
+  branch: "master"
+  name: "Guestbook Entry"
+  commitMessage: "New bulletin entry from {fields.name}"
+  filename: "bb-{@timestamp}"
+  format: "yaml"
+  path: "_data/bulletinboard"
+  generatedFields:
+    date:
+      type: date
+      options:
+          format: "iso8601"
+  transforms:
+      email: "md5"
+  moderation: false
+comments:
+  allowedFields: ["name", "email", "url", "message", "replying_to_uid"]
+  requiredFields: ["name", "message"]
+  branch: "master"
+  name: "Blog Comment"
+  commitMessage: "New comment from {fields.name}"
+  filename: "comment-{@timestamp}"
+  format: "yaml"
+  path: "_data/comments/{options.slug}"
+  generatedFields:
+    date:
+      type: date
+      options:
+          format: "iso8601"
+  transforms:
+      email: "md5"
+  moderation: false
+
+reCaptcha:
+    enabled: true
+    siteKey: "6LcNBmccAAAAAKvSqFQk5J1UxK0mUPUgUxYYkbow"
+    secret: "UtjziDNYKQr7EGNg+udTODdTl0q6GR6QysHbZKWWbAG0ytIshTJlXRFHvQbgsOYe+qlRqzUgB/CsFOIINExOlabrbgvfHOxuBs5gZUhbtPg5SBjy1H1u+RgPWFKKL5tZZg3KCA6LnVRbesQnhsRDMFIsvZvnj5jBc59KMwj5S4x4IEUJEGJ5ZHZ6UPRzXqtzxmOiPSCnz9M4tZWDiJ+nppZuTVVLgTYOrnxPaTLo4tALSAABxX/xSTWWP8YMZkqUtScXFWACDW4A9YbVoAOO0xxDzXqFRwXJq5uLLU3u8WspCT1HKHD83pelKam1Iw+YUeNy+tcZXA0wsJdnObJvUbjRCFQn7F0aYOvRtziUkdi0KaHPI7/Y8ZwQJLcdTdhE5ZM1Aq6ulp518X4C5/pf+aghFqJGLiNV85wilMdcxeMoDI60RJifb1Os9PZjjjO80P+9zibtxm69D7zsDtnOCxVrw94H6h+cLVfTj35LIrnIwtdKwV9J5XlqTAw7/nhS+mN40P8+O7FkLLRFw4gZSKkvBhf77Lcn8ydazfLz+hU35SzOF4cOJc34swy3g7LT2fyXfK5NPyzDrqbej8QyxhCZpumQjGVtRiMJQXU7aGSt3G5/L+pOIrPATRV4Diw/a+sApdE4j5iWnH8ezTJd6nV2gcKG9vXfxbHWob1XHJY="
