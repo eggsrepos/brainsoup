@@ -33,7 +33,7 @@ fieldset {
     padding: 0;
 }
 
-.textfield {
+.textfield, .frc-captcha {
     margin-bottom: var(--space-s);
 }
 
@@ -53,7 +53,7 @@ textarea {
     background: transparent;
 }
 
-.notify-me, .g-recaptcha {
+.notify-me {
     padding: 0.5rem 0;
 }
 
