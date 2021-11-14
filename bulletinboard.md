@@ -43,7 +43,7 @@ title: Bulletin Board
     </label>
   </div>
 
-  <div class="frc-captcha" data-sitekey="FCMG67I39NQD4M26"></div>
+  <div class="frc-captcha hidden" data-sitekey="FCMG67I39NQD4M26"></div>
 
   <button class="submit-button" id="comment-form-submit">
     Submit
