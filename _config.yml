@@ -41,3 +41,6 @@ livereload: BOOL
 
 twitter:
   username: anarelaxis
+
+exclude:
+  - sass
